@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#myPageheader{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+
+#user{
+    margin-right: 3rem;
+    margin-top: 2rem;
+}
+
+#myPageMain{
+    display: flex;
+}
+
+#myPageContent{
+    margin: 0 auto;
+    width: 1200px;
+    height: 900px;
+    border: 1px solid black;
+}
+
+#tabs{
+    margin-top: 50px;
+    width: 20%;
+    background-color: orange;
+}
+
+.tablist{
+    list-style-type: none;
+}
+
+.tab{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+}
+
+#logoutButton{
+    margin-top: 33rem;
+    margin-left: 1.5rem;
+    padding: 15px 30px;
+}
+
+.bodyConditionGraphs{
+    padding: 0 50px;
+}
+#bodyChart{
+    width: 700px;
+    height: 310px;
+    margin-top: 50px;
+}
+
+#conditionChart{
+    width: 700px;
+    height: 310px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#userBodyInfo{
+    margin-top: 50px;
+    width: 300px;
+    height: 720px;
+    border: 1px solid black;
+}
