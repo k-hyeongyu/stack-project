@@ -1,10 +1,12 @@
 
 import './App.css';
-import MyPage from './mypage/MyPage';
+import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 
 function App() {
   return (
-    <MyPage />
+    
+      <MainPage />
+    
   );
 }
 
