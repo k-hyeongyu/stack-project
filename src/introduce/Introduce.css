@@ -1,4 +1,3 @@
-
 .intro-vid-container {
     /* 부모 요소가 있어야 video가 absolute 포지셔닝될 수 있습니다. */
     /* 보통 화면 전체를 커버하기 위해 뷰포트 크기를 사용합니다. */
@@ -16,7 +15,17 @@
     flex-direction: column;
     color: white;
     text-align: center;
-} 
+}
+
+.intro-logo {
+    width: 500px;
+    height: auto;
+    margin-bottom: 30px;
+
+    opacity: 0;
+    animation: logoEffect 2s forwards;
+    animation-delay: 0.5s;
+}
 
 .intro-vid {
     position: absolute;
@@ -24,14 +33,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-
-    /* ***** 여기를 변경합니다 ***** */
     object-fit: cover;
     /* 비디오 비율 유지하며 컨테이너 안에 다 들어오도록 */
-    /* *************************** */
-
     z-index: -1;
-
     filter: brightness(65%);
 }
 
@@ -39,10 +43,85 @@
     width: 300px;
     height: 90px;
     border-radius: 50px;
-    background-color: #d14029;
+    /* background-color: #ffa500; */
+    background-color: #FF9933;
     border-style: none;
     color: white;
     font-size: 2rem;
     font-weight: 500;
-    margin-top: 130px;
+    /* margin-top: 50px; */
+
+    opacity: 0;
+    animation: slide-up 2.5s forwards;
+    animation-delay: 3.3s;
+}
+
+.intro-button:hover {
+    cursor: pointer;
+    background-color: #FF8C00;
+    color: white;
+    /* background-color: white;
+    color: #FF9933; */
+
+}
+
+.intro-header {
+    /* color: #ffa500; */
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+    font-size: 25px;
+}
+
+.intro-header .fa-solid:hover {
+    cursor: pointer;
+}
+
+.gowun-batang-regular {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 60px;
+}
+
+.gowun-batang-bold {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 60px;
+    font-size: 28px;
+}
+
+p {
+    margin: 30px;
+    font-size: 25px;
+}
+
+/* 버튼 효과 */
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+/* 로고 효과 */
+@keyframes logoEffect {
+    0% {
+        opacity: 0;
+        transform: scale(1.7);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
