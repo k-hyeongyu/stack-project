@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -22,7 +22,9 @@ ChartJS.register(
     Legend
 );
 
-const BodyChart = () => {
+const BodyChart = (props) => {
+    
+    
     // 1. 월별 레이블 생성 (데이터 자체에는 YYYY년 MM월 형식을 유지)
     // 콜백 함수에서 이 정보를 사용하여 년도 표시 여부를 결정할 것임
     const generateMonthlyDataPoints = () => {
@@ -42,63 +44,20 @@ const BodyChart = () => {
     };
 
     const monthlyDataPoints = generateMonthlyDataPoints();
-    // labels 배열은 이제 'fullLabel'이 아닌, 축 콜백 함수에서 사용할 '월' 정보만 담게 됩니다.
-    // 또는, 그냥 월만 포함하거나, 아예 비워두고 콜백에서 context.tick.value를 사용해도 됩니다.
-    // 여기서는 콜백 함수에서 사용할 수 있도록 fullLabel을 넘겨주겠습니다.
+    // monthlyDataPoints의 각 항목에서 fullLabel (예: "2025년 6월")을 추출하여 사용
+    // labels 배열은 Chart.js에 전달될 X축 레이블이다
     const labels = monthlyDataPoints.map(item => item.fullLabel);
 
 
-    // 2. 체중 데이터 하드코딩 (동일)
-    const generateRealisticWeightData = (weightAtOldestMonth, weightAtNewestMonth, count, fluctuationRange = 0.5) => {
-        const dataChronological = []; // 시간 순서대로 데이터를 저장할 임시 배열
+    
 
-        let currentWeight = weightAtOldestMonth; // 가장 오래된 시점의 체중부터 시작
-        dataChronological.push(parseFloat(currentWeight.toFixed(1)));
-
-        const totalChange = weightAtNewestMonth - weightAtOldestMonth; // 총 변화량 (양수면 증가, 음수면 감소)
-        const averageStep = totalChange / (count - 1); // 각 구간(월)당 평균 변화량
-
-        for (let i = 1; i < count; i++) {
-            // 무작위 변동 생성: -fluctuationRange 에서 +fluctuationRange 사이의 값
-            const randomStep = (Math.random() * 2 - 1) * fluctuationRange;
-
-            // 다음 체중 계산: 현재 체중 + 평균 변화량 + 무작위 변동
-            let nextWeight = currentWeight + averageStep + randomStep;
-
-            // 보정 범위 설정: 가장 오래된 체중과 가장 새로운 체중 사이의 실제 범위
-            const actualMinWeight = Math.min(weightAtOldestMonth, weightAtNewestMonth) - fluctuationRange * 1.5;
-            const actualMaxWeight = Math.max(weightAtOldestMonth, weightAtNewestMonth) + fluctuationRange * 1.5;
-
-            nextWeight = Math.max(actualMinWeight, nextWeight); // 실제 최소값보다 낮아지지 않도록
-            nextWeight = Math.min(actualMaxWeight, nextWeight); // 실제 최대값보다 높아지지 않도록
-
-            // 마지막 데이터 포인트는 정확히 weightAtNewestMonth가 되도록 강제
-            if (i === count - 1) {
-                nextWeight = weightAtNewestMonth;
-            }
-
-            currentWeight = nextWeight;
-            dataChronological.push(parseFloat(currentWeight.toFixed(1)));
-        }
-
-        // Chart.js의 x.reverse: true와 labels 순서에 맞추기 위해
-        // 생성된 시간 순서 데이터 (oldest -> newest)를 역순으로 반환
-        // (이렇게 하면 data[0]이 newestMonth 데이터, data[11]이 oldestMonth 데이터가 됨)
-        return dataChronological.reverse();
-    };
-
-    // fluctuationRange 값을 조절하여 변화 폭을 변경해 보세요.
-    // 0.5 ~ 0.8 사이의 값을 추천합니다. (예: 0.5kg 정도의 월별 변동)
-    const weightData = generateRealisticWeightData(77, 71, 12, 0.6); // fluctuationRange를 0.6kg으로 설정
-
-
-    // 3. Chart.js에 전달할 데이터 구조 (동일)
+    // 3. Chart.js에 전달할 데이터 구조
     const data = {
         labels: labels, // labels는 여전히 전체 월 정보를 가지고 있음
         datasets: [
             {
                 label: '체중 (kg)',
-                data: weightData,
+                data: props.weightData,
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.1,
@@ -123,7 +82,7 @@ const BodyChart = () => {
                 max: 80,
                 title: {
                     display: true,
-                    text: '몸무게 (kg)',
+                    text: '',
                     color: '#333',
                     font: {
                         size: 14,
@@ -144,7 +103,7 @@ const BodyChart = () => {
                 reverse: true, // X축 순서를 역순으로 설정
                 title: {
                     display: true,
-                    text: '날짜',
+                    text: '',
                     color: '#333',
                     font: {
                         size: 14,
@@ -156,14 +115,13 @@ const BodyChart = () => {
                     font: {
                         size: 12,
                     },
-                    // --- 이 부분 수정 ---
                     callback: function (value, index, ticks) {
                         // value는 labels 배열의 해당 인덱스 값 (예: "2025년 6월")
                         const currentMonthData = monthlyDataPoints[index]; // 해당 월의 상세 데이터
                         const currentMonth = currentMonthData.month;
                         const currentYear = currentMonthData.year;
 
-                        // 다음 또는 이전 데이터 포인트가 있는 경우 해당 월의 연도를 확인합니다.
+                        // 다음 또는 이전 데이터 포인트가 있는 경우 해당 월의 연도를 확인
                         // 역순이므로, 이전 인덱스(index - 1)는 실제로는 '다음' 월입니다.
                         const nextMonthIndex = index - 1; // 다음 인덱스 = 이전 월
                         const prevMonthIndex = index + 1; // 이전 인덱스 = 다음 월
@@ -189,7 +147,6 @@ const BodyChart = () => {
                             return `${currentMonth}월`;
                         }
                     }
-                    // --- 여기까지 수정 ---
                 },
                 grid: {
                     display: false,

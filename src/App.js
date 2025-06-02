@@ -7,8 +7,10 @@ function App() {
   return (
     
       // <MainPage />
-      
-      <MyPage />  
+      <div className='gowun-batang-bold'>
+        
+        <MyPage />  
+      </div>
   );
 }
 

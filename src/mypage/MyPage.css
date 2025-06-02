@@ -9,15 +9,17 @@
 }
 
 #logo{
-    margin-left: 3rem;
+    margin-left: 2rem;
     margin-top: 2rem;
+    cursor: pointer;
+    
 }
 #logoImg{
     width: 200px;
 }
 #user{
-    margin-right: 3rem;
-    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-top:2rem;
 }
 
 #myPageMain{
@@ -33,46 +35,64 @@
 }
 
 #tabs{
-    margin-top: 50px;
-    width: 20%;
-    background-color: orange;
+    margin-top: 30px;
+    width: 250px;
+    min-width: 250px;
+    background-color: #f28500;
+    border-radius: 0 5px 0 0;
+    
 }
 
 .tablist{
     list-style-type: none;
 }
 
+.tablist > .tab:hover{
+    background-color: white;
+    color: #f28500;
+    cursor: pointer;
+}
+
 .tab{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-left: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    font-size: 1.2rem; 
+    border-bottom: 1px solid orange;
 }
 
 #logoutButton{
-    margin-top: 33rem;
+    margin-top: 23rem;
     margin-left: 1.5rem;
     margin-bottom: 2rem;
-    padding: 15px 30px;
+    padding: 15px 77px;
     border-radius: 5px;
-    background-color: #d14029;
+    background-color: orange;
     color: white;
     border-style: none;
+    cursor: pointer;
 }
 
-.bodyConditionGraphs{
-    padding: 0 50px;
+#logoutButton:hover{
+    background-color: white;
+    color: #f28500;
+}
+
+.bodyConditionCharts{
+    padding-left: 30px;
+    margin-top: 10px;
 }
 #bodyChart{
-    width: 700px;
-    height: 310px;
-    margin-top: 50px;
+    width: 600px;
+    height: 280px;
+    margin-top: 20px;
 }
 
 #conditionChart{
-    width: 700px;
-    height: 310px;
+    width: 600px;
+    height: 280px;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 5rem;
 }
 
 #userBodyInfo{
@@ -87,11 +107,12 @@
 }
 
 .bodyInfo{
-    margin-left: 10rem;
-    margin-top: 10rem;
+    margin-left: 9rem;
+    margin-top: 8rem;
 }
 
 .bodyInfo > p{
     margin-bottom: 3rem;
     
 }
+

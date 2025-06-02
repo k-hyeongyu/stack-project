@@ -84,7 +84,7 @@ const ConditionChart = () => {
                     display: false, // X축 그리드 라인 숨김
                 },
                 ticks: {
-                    color: '#FF991C', // <-- 원하는 색상으로 다시 설정
+                    color: '#28500', 
                     font: { 
                         size: 14, 
                         weight: 'bold' 
