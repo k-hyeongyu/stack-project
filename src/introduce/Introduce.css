@@ -40,11 +40,11 @@
 }
 
 .intro-button {
-    width: 300px;
+    width: 230px;
     height: 90px;
     border-radius: 50px;
     /* background-color: #ffa500; */
-    background-color: #FF9933;
+    background-color: #f28500;
     border-style: none;
     color: white;
     font-size: 2rem;
@@ -65,6 +65,7 @@
 
 }
 
+/* 아이콘 스타일 */
 .intro-header {
     /* color: #ffa500; */
     position: absolute;

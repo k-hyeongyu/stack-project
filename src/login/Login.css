@@ -1,0 +1,108 @@
+* {
+    margin: 0 auto;
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+/* 테두리 박스 */
+.login-container {
+    margin-top: 180px;
+    padding: 25px;
+    width: 400px;
+    height: 400px;
+    border: 3px solid #f28500;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* 박스 안 글씨 */
+.oleo-script-regular {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff8c00;
+    font-size: 45px;
+    margin: 5px;
+}
+
+.oleo-script-bold {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 아이디, 비밀번호 input 요소 */
+.login-textbox {
+    border: 1px solid rgb(153, 153, 153);
+    width: 300px;
+    height: 40px;
+    /* margin: 5px; */
+    /* border-radius: 5px; */
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.login-box {
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 로그인 버튼 */
+.login-button {
+    margin-top: 25px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #f28500;
+    border-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(255, 227, 190);
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.seperator-line {
+    width: 310px;
+    height: 1px;
+    border: 1px solid rgb(177, 177, 177);
+    margin-top: 12px;
+}
+
+/* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+.login-find {
+    margin-top: 10px;
+    color: rgb(90, 90, 90);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#sign-up,
+#find-Id,
+#find-Pw {
+    cursor: pointer;
+}
+
+/* 회원가입 css */
+.signUp-container {
+    margin-top: 150px;
+    padding: 25px;
+    width: 400px;
+    height: 500px;
+    border: 3px solid #f28500;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.signUp-font {
+    color: #ff8c00;
+    font-size: 45px;
+    margin: 5px;
+}

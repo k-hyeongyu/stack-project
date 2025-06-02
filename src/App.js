@@ -1,10 +1,13 @@
 
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 import Introduce from './introduce/Introduce';
 import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 import MyPage from './mypage/MyPage';
-import { Routes, Route } from 'react-router-dom';
-
+import Login from './login/Login';
+import SignUp from './login/SignUp';
+import FindId from './login/FindId';
+import FindPw from './login/FindPw';
 
 function App() {
   // return <MainPage />
@@ -13,6 +16,11 @@ function App() {
       <Route path='/' element={<Introduce />}></Route>
       <Route path="/main" element={<MainPage />} />
       <Route path="/mypage" element={<MyPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/SignUp" element={<SignUp />} />
+      <Route path="/FindId" element={<FindId />} />
+      <Route path="/FindPw" element={<FindPw />} />
+
     </Routes>
   )
 

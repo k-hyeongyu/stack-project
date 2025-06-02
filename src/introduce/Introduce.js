@@ -13,7 +13,7 @@ function Introduce() {
             <div className='intro-header'>
                 <i className="fa-solid fa-cart-shopping"></i>
                 {/* <i className="fa-regular fa-bag-shopping" onClick={() => { navigate("/shopping") }}></i> */}
-                <i className="fa-solid fa-user" onClick={() => { navigate("/mypage") }}></i>
+                <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
 
             </div>
             <video className="intro-vid" src='/bgVideo01.mp4' autoPlay muted loop></video>
@@ -23,7 +23,7 @@ function Introduce() {
                 <br></br>
                 당신의 건강한 변화를 이끌어갑니다.
             </p>
-            <Link to='/main'><button className='intro-button gowun-batang-bold'>식단 추천 바로가기</button></Link>
+            <Link to='/main'><button className='intro-button gowun-batang-bold'>식단 소개</button></Link>
 
         </div>
     )
