@@ -17,6 +17,8 @@ function MyPage(){
     const [userInfo, setUserInfo] = useState({
         name: '가나다',
         email: 'ganada@naver.com',
+        password: '●●●●●●●●●●',
+        passwordcheck: '●●●●●●●●●●',
         tel: '01012345678',
         age: '50',
         height: '170',
