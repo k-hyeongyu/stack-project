@@ -1,148 +1,63 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-}
-
-#root { /* React 앱이 렌더링될 기본 div */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
 .container {
-    width: 90%;
-    max-width: 1200px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    margin: auto;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
 .logo-section {
     display: flex;
+    gap: 20px;
     align-items: center;
 }
 
-.logo-box {
-    background-color: #c0c0c0; /* 이미지의 회색 로고 부분 */
-    color: #fff;
-    padding: 8px 15px;
-    margin-right: 15px;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-.header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #333;
+.logo img {
+    width: 150px; /* 원하는 크기로 조절 */
+    height: auto;
 }
 
 .user-info {
     text-align: right;
-    font-size: 0.9em;
-    color: #666;
-}
-
-.user-info p {
-    margin: 0;
 }
 
 .main-content {
     display: flex;
-    gap: 20px; /* 사이드바와 콘텐츠 그리드 사이 간격 */
+    margin-top: 20px;
 }
 
 .sidebar {
-    flex: 0 0 150px; /* 사이드바 너비 고정 */
-    background-color: #f5f5f5;
     padding: 15px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* 사이드바 아이템 간격 */
+    height: auto;
 }
 
 .sidebar-item {
-    background-color: #e0e0e0; /* 이미지의 사이드바 항목 색상 */
     padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f28500;
+    color: white;
     text-align: center;
-    color: #555;
-    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .content-grid {
-    flex-grow: 1; /* 남은 공간을 모두 차지 */
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3열 그리드 */
-    grid-template-rows: repeat(3, 150px); /* 3행 (높이 조절 가능) */
-    gap: 15px; /* 그리드 아이템 간격 */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    flex-grow: 1;
+    padding: 15px;
 }
 
 .grid-item {
-    background-color: #e0e0e0; /* 그리드 항목 기본 배경색 */
+    background-color: #b50000;
+    width: 200px;
+    height: 100px;
     padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    box-sizing: border-box;
-}
-
-.content-header {
-    background-color: #d0d0d0; /* 콘텐츠 헤더 부분 색상 */
-    font-weight: bold;
-    font-size: 1.2em;
-    grid-column: span 1; /* 1열 차지 */
-}
-
-.content-description {
-    background-color: #d0d0d0; /* 설명 부분 색상 */
-    font-size: 0.9em;
-    color: #555;
-    grid-column: span 2; /* 2열 차지 */
-    align-items: flex-start; /* 텍스트 상단 정렬 */
-    text-align: left; /* 텍스트 왼쪽 정렬 */
-    padding-top: 15px;
-}
-
-/* 나머지 빈 박스들은 기본 grid-item 스타일을 따름 */
-.empty-box {
-    background-color: #e0e0e0;
-}
-
-/* 반응형 디자인 (선택 사항) */
-@media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        flex: none; /* 고정 너비 해제 */
-        width: 100%; /* 전체 너비 차지 */
-        margin-bottom: 20px;
-    }
-
-    .content-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 화면 너비에 따라 열 개수 조절 */
-    }
-
-    .content-description {
-        grid-column: span 1; /* 작은 화면에서는 1열 차지 */
-    }
+    border: 1px solid #000000;
 }
