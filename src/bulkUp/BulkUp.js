@@ -13,8 +13,12 @@ function BulkUp() { // 컴포넌트 이름은 대문자로 시작해야 합니�
                     <h1>벌크업</h1>
                 </div>
                 <div className="user-info">
-                    <p>이름</p>
-                    <p>마이페이지</p>
+                    <div className="shop">
+                        <i className="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div className="name">
+                            <i className="fa-solid fa-user"></i>
+                    </div>
                 </div>
             </header>
 

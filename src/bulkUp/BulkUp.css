@@ -1,5 +1,7 @@
 .container {
-    margin: auto;
+    width: 100%;
+    max-width: 1200px; /* 너비 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
 }
 
 .header {
@@ -16,22 +18,28 @@
 }
 
 .logo img {
-    width: 150px; /* 원하는 크기로 조절 */
+    width: 250px; /* 원하는 크기로 조절 */
     height: auto;
 }
 
-.user-info {
+.user-info { /*우측 상단 아이콘*/
     text-align: right;
+    display: flex;
+    gap: 22px;
+    font-size: 25px;
+    padding: 20px;
 }
 
 .main-content {
     display: flex;
     margin-top: 20px;
+    justify-content: space-between;
 }
 
 .sidebar {
     padding: 15px;
     height: auto;
+    width: 15%; /* 기존보다 넓게 설정 */
 }
 
 .sidebar-item {
@@ -46,18 +54,19 @@
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(3, 1fr); /* 1줄에 3개 */
     gap: 15px;
-    flex-grow: 1;
-    padding: 15px;
+    width: 80%;
+    justify-items: center; /* 각 박스를 중앙 정렬 */
+    max-width: 1000px; /* 전체 화면이 넓어질 경우 정렬 문제 방지 */
 }
-
 .grid-item {
-    background-color: #b50000;
+    background-color: #f28500;
     width: 200px;
-    height: 100px;
+    height: 200px;
     padding: 20px;
     text-align: center;
-    border: 1px solid #000000;
+    border-radius: 25px;
+    margin: auto; /* 개별 박스를 중앙 정렬 */
+    cursor: pointer;
 }
