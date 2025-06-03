@@ -107,3 +107,57 @@
     font-size: 22px;
     margin-bottom: 10px;
 }
+
+/* 아이디, 비밀번호 찾기 css */
+.find-seperator-line {
+    width: 310px;
+    height: 1px;
+    border: 1px solid rgb(177, 177, 177);
+    margin-top: 20px;
+}
+
+.find-button {
+    margin-top: 18px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #f28500;
+    border-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(255, 227, 190);
+}
+
+.find-textbox {
+    border: 1px solid rgb(153, 153, 153);
+    width: 300px;
+    height: 40px;
+    /* margin: 5px; */
+    /* border-radius: 5px; */
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.find-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.find-font {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.foundId-text {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 23px;
+    margin-top: 20px;
+}
