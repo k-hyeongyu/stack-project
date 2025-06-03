@@ -18,7 +18,7 @@ function Introduce() {
             </div>
             <video className="intro-vid" src='/bgVideo01.mp4' autoPlay muted loop></video>
             {/* <h1>"BalancEat"</h1> */}
-            <p className='gowun-batang-bold'>
+            <p className='gowun-batang-bold intro-text'>
                 체형 목표에 맞춘 균형 잡힌 식단으로
                 <br></br>
                 당신의 건강한 변화를 이끌어갑니다.

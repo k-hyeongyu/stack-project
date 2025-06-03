@@ -92,13 +92,13 @@
     font-family: "Gowun Batang", serif;
     font-weight: 700;
     font-style: normal;
-    margin-bottom: 60px;
     font-size: 28px;
 }
 
-p {
+.intro-text {
     margin: 30px;
-    font-size: 25px;
+    margin-bottom: 60px;
+    font-size: 28px;
 }
 
 /* 버튼 효과 */
