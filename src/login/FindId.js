@@ -14,7 +14,7 @@ function FindId() {
         <div>
             <div className='login-container'>
                 <h1 className='oleo-script-regular'>BalancEat</h1>
-                <p className='find-font'> - 아이디 찾기 - </p>
+                {/* <p className='find-font'> - 아이디 찾기 - </p> */}
 
                 <form className='find-box' onSubmit={(event) => {
                     event.preventDefault();
@@ -39,17 +39,23 @@ function FindId() {
                     }
 
                 }}>
-                    <input type='text' value={name} className='find-textbox' placeholder='이름'
-                        onChange={(event) => {
-                            setName(event.target.value)
-                        }}></input>
-                    <input type='text' value={phNumber} className='find-textbox' placeholder='전화번호 ( - 없이 숫자만 입력)'
-                        onChange={(event) => {
-                            setPhNumber(event.target.value)
-                        }}></input>
-                    <div className='find-seperator-line'></div>
+                    <div className='find-box'>
+                        <input type='text' value={name} className='find-textbox' placeholder='이름'
+                            onChange={(event) => {
+                                setName(event.target.value)
+                            }}></input>
+                        <input type='text' value={phNumber} className='find-textbox' placeholder='전화번호 ( - 없이 숫자만 입력)'
+                            onChange={(event) => {
+                                setPhNumber(event.target.value)
+                            }}></input>
+                    </div>
                     <button type='submit' className='find-button'>아이디 찾기</button>
                 </form>
+                <div className='find-seperator-line'></div>
+                <div className='login-find'>
+                    <span id='findId-login' onClick={() => { navigate('/login') }}>로그인하기</span>
+                </div>
+
             </div>
             {
                 foundId && (

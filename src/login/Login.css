@@ -74,7 +74,7 @@
     margin-top: 12px;
 }
 
-/* 회원가입, 아이디 찾기, 비밀번호 찾기 */
+/* 회원가입 | 아이디 찾기 | 비밀번호 찾기 */
 .login-find {
     margin-top: 10px;
     color: rgb(90, 90, 90);
@@ -108,16 +108,44 @@
     margin-bottom: 10px;
 }
 
+.page-font{
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.signUp-id{
+    width: 300px;
+    height: 40px;
+    position: relative;
+    display: flex;
+}
+
+.confirm-button{
+    position: absolute;
+    width: 47px;
+    height: 32px;
+    margin: 4px;
+    right: 1px;
+    border-radius: 5px;
+    /* border: 1px solid #f28500;
+    background-color: #ffffff; */
+    /* color: rgb(90, 90, 90); */
+    border: 1px solid #ffffff;
+    background-color: #ffa02d;
+    color: rgb(255, 237, 212);
+}
+
 /* 아이디, 비밀번호 찾기 css */
 .find-seperator-line {
     width: 310px;
     height: 1px;
     border: 1px solid rgb(177, 177, 177);
-    margin-top: 20px;
+    margin-top: 23px;
 }
 
 .find-button {
-    margin-top: 18px;
+    margin-top: 15px;
     width: 300px;
     height: 40px;
     font-size: 18px;
@@ -126,7 +154,9 @@
     border-radius: 5px;
     color: rgb(255, 227, 190);
 }
-
+.find-box {
+    margin-top: 15px;
+}
 .find-textbox {
     border: 1px solid rgb(153, 153, 153);
     width: 300px;
@@ -160,4 +190,33 @@
     text-align: center;
     font-size: 23px;
     margin-top: 20px;
+}
+
+#findId-login {
+    margin-top: 6px;
+    color: rgb(90, 90, 90);
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#findPw-login {
+    margin-top: 6px;
+    color: rgb(90, 90, 90);
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* 폰트 */
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page-font {
+    font-family: 'SeoulNamsanM';
+
 }

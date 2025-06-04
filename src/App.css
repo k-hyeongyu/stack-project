@@ -48,3 +48,14 @@ body, html, #root {
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page-font {
+    font-family: 'SeoulNamsanM';
+}

@@ -38,7 +38,7 @@ function Login() {
                         setInputPw(event.target.value)
                     }}></input>
                     
-                    <button type='submit' className='login-button'>로그인</button>
+                    <button type='submit' className='login-button '>로그인</button>
                     <div className='seperator-line'></div>
 
                     <div className='login-find'>

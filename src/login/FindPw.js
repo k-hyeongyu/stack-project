@@ -9,12 +9,12 @@ function FindPw() {
     let [foundPw, setFoundPw] = useState('')
 
     let navigate = useNavigate();
-    
+
     return (
         <div>
             <div className='login-container'>
                 <h1 className='oleo-script-regular'>BalancEat</h1>
-                <p className='find-font'> - 비밀번호 찾기 - </p>
+                {/* <p className='page-font'> 비밀번호 찾기 </p> */}
 
                 <form className='find-box' onSubmit={(event) => {
                     event.preventDefault();
@@ -39,17 +39,22 @@ function FindPw() {
                     }
 
                 }}>
-                    <input type='text' value={name} className='find-textbox' placeholder='이름'
-                        onChange={(event) => {
-                            setName(event.target.value)
-                        }}></input>
-                    <input type='text' value={id} className='find-textbox' placeholder='아이디'
-                        onChange={(event) => {
-                            setId(event.target.value)
-                        }}></input>
-                    <div className='find-seperator-line'></div>
+                    <div className='find-box'>
+                        <input type='text' value={name} className='find-textbox' placeholder='이름'
+                            onChange={(event) => {
+                                setName(event.target.value)
+                            }}></input>
+                        <input type='text' value={id} className='find-textbox' placeholder='아이디'
+                            onChange={(event) => {
+                                setId(event.target.value)
+                            }}></input>
+                    </div>
                     <button type='submit' className='find-button'>비밀번호 찾기</button>
                 </form>
+                <div className='find-seperator-line'></div>
+                <div className='login-find'>
+                    <span id='findPw-login' onClick={() => { navigate('/login') }}>로그인하기</span>
+                </div>
             </div>
             {
                 foundPw && (
