@@ -1,7 +1,8 @@
 import './Introduce.css';
 import React from 'react';
 import { Link, useNavigate } from 'react-router';
-import MyPage from '../mypage/MyPage';
+// import MyPage from '../mypage/MyPage';
+// import Shopping from '../shopping/Shopping';
 
 function Introduce() {
 
@@ -11,7 +12,7 @@ function Introduce() {
         <div className="intro-vid-container">
             <img className="intro-logo" src='/BalancEat_logo_white.png'></img>
             <div className='intro-header'>
-                <i className="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
                 {/* <i className="fa-regular fa-bag-shopping" onClick={() => { navigate("/shopping") }}></i> */}
                 <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
 
