@@ -1,0 +1,139 @@
+/* src/components/HealthPage.css (기존 BulkUp.css 내용) */
+
+body {
+    margin: 0;
+    font-family: 'Gowun Batang', serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.bulkup-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-width: 150px;
+    min-width: 100px;
+    display: block; /* 추가: 이미지 하단 여백 제거 */
+}
+
+.bulkup-header h1 {
+    font-size: 2.5em;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .bulkup-header h1 {
+        font-size: 2em;
+    }
+    .logo img {
+        max-width: 120px;
+    }
+}
+@media (max-width: 480px) {
+    .bulkup-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .bulkup-header h1 {
+        font-size: 1.5em;
+    }
+    .logo img {
+        max-width: 100px;
+    }
+}
+
+.bulkup-top-right-icons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 22px;
+    font-size: 25px;
+    color: black;
+    z-index: 10;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    padding: 15px;
+    height: auto;
+    width: 15%;
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+}
+
+.sidebar-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f28500;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    width: 80%;
+    justify-items: center;
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        width: 100%;
+        order: 1;
+    }
+}
+
+.grid-item {
+    background-color: #f28500;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin: auto;
+    cursor: pointer;
+}

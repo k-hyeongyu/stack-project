@@ -1,10 +1,8 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./MainPage.css";
 
 function MainPage() {
-    const handleClick = (type) => {
-        alert(`${type} 버튼이 클릭되었습니다.`);
-    };
 
     return (
         <div className="main-wrapper">
@@ -31,18 +29,27 @@ function MainPage() {
 
                 {/* 카드 버튼 영역 */}
                 <div className="card-container">
-                    <button className="card" onClick={() => handleClick("다이어트")}>
-                        <h2>다이어트</h2>
-                        <p>체지방 감량을 위해 <br></br>식이요법과 운동을 원해요</p>
-                    </button>
-                    <button className="card" onClick={() => handleClick("체형유지")}>
-                        <h2>체형유지</h2>
-                        <p>과함도 부족함도 없는 <br></br>신체 밸런스를 원해요</p>
-                    </button>
-                    <button className="card" onClick={() => handleClick("벌크업")}>
-                        <h2>벌크업</h2>
-                        <p>근육 성장을 위한 <br></br>식단과 운동을 원해요</p>
-                    </button>
+                    {/* 벌크업 카드를 Link 컴포넌트로 감쌉니다 */}
+                    <Link to="/bulkup" className="health-card"> {/* 'to' prop에 이동할 경로 지정 */}
+                        <div className="card-text">
+                            <h2>벌크업</h2>
+                            <p>근육 성장을 위한 <br></br>식단과 운동을 원해요</p>
+                        </div>
+                    </Link>
+
+                    <Link to="/diet" className="health-card">
+                        <div className="card-text">
+                            <h2>체형유지</h2>
+                            <p>과함도 부족함도 없는 <br></br>신체밸런스를 원해요</p>
+                        </div>
+                    </Link>
+
+                    <Link to="/maintain" className="health-card">
+                        <div className="card-text">
+                            <h2>다이어트</h2>
+                            <p>체지방감령을 위한 <br></br>식이요법과 운동을 원해요</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>

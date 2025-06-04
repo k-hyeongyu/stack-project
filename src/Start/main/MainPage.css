@@ -52,9 +52,9 @@ body {
     flex-wrap: wrap;
 }
 
-.card {
+.health-card {
+    text-decoration: none;
     background-color: #f28500;
-    border: none;
     padding: 20px 10px;
     width: 280px;
     height: 450px;
@@ -64,19 +64,24 @@ body {
     border-radius: 80px;
     color: white;
     font-family: 'Gowun Batang', serif;
+    text-align: center;
+    
 }
 
-.card:hover {
+.health-card:hover {
     transform: translateY(-20px);
 }
 
-.card h2 {
-    font-size: 3rem;
+.card-text {
+    font-size: 2rem;
     margin-bottom: 20px;
-    /* font-weight: bold; */
+    text-align: center;
+    text-decoration: none;
 }
 
-.card p {
-    color: white;
-    font-size: large;
+.card-text p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
 }
