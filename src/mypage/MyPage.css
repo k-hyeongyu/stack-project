@@ -3,11 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* 페이지 전체 컨테이너 */
+#myPageContainer{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+/* 헤더부분 */
 #myPageheader{
     display: flex;
     justify-content: space-between;
 }
 
+/* 로고 */
 #logo{
     margin-left: 2rem;
     margin-top: 2rem;
@@ -17,23 +29,20 @@
 #logoImg{
     width: 200px;
 }
+
+/* 유저 이름 아이콘 */
 #user{
     margin-right: 2rem;
     margin-top:2rem;
 }
 
+/* 마이페이지 메인(헤더 밑 전부) */
 #myPageMain{
     display: flex;
     justify-content: space-between;
 }
 
-#myPageContainer{
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    
-}
-
+/* 화면 왼쪽 탭, 로그아웃버튼 감싸는 div */
 #tabs{
     margin-top: 30px;
     width: 250px;
@@ -43,6 +52,7 @@
     
 }
 
+/* 탭 리스트들 */
 .tablist{
     list-style-type: none;
 }
@@ -53,6 +63,7 @@
     cursor: pointer;
 }
 
+/* 개별 탭 */
 .tab{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -61,8 +72,9 @@
     border-bottom: 1px solid orange;
 }
 
+/* 로그아웃 버튼 */
 #logoutButton{
-    margin-top: 23rem;
+    margin-top: 25rem;
     margin-left: 1.5rem;
     margin-bottom: 2rem;
     padding: 15px 77px;
@@ -79,41 +91,7 @@
     color: #f28500;
 }
 
-.bodyConditionCharts{
-    padding-left: 30px;
-    margin-top: 10px;
-}
-#bodyChart{
-    width: 600px;
-    height: 280px;
-    margin-top: 20px;
-}
 
-#conditionChart{
-    width: 600px;
-    height: 280px;
-    border-radius: 5px;
-    margin-top: 5rem;
+.goalsMain{
+    margin-top: 2.6rem;
 }
-
-#userBodyInfo{
-    margin-top: 50px;
-    width: 20%;
-    background-image: url('../../public/images/bodyImg.jpg');
-    background-size: cover;
-}
-
-#bodyImg{
-    width: 300px;
-}
-
-.bodyInfo{
-    margin-left: 9rem;
-    margin-top: 8rem;
-}
-
-.bodyInfo > p{
-    margin-bottom: 3rem;
-    
-}
-

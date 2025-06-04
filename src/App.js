@@ -7,7 +7,7 @@ function App() {
   return (
     
       // <MainPage />
-      <div className='gowun-batang-bold'>
+      <div className='appDiv'>
         
         <MyPage />  
       </div>

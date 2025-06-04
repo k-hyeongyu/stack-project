@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import './UserBodyInfo.css';
 function UserBodyInfo(props) {
     
     const getBmi = ()=>{ return props.userInfo.weight/( (props.userInfo.height/100)*(props.userInfo.height/100) )};

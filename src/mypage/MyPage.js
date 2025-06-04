@@ -3,6 +3,8 @@ import './MyPage.css'
 import Charts from "./dashboard/Charts";
 import UserBodyInfo from "./dashboard/UserBodyInfo";
 import EditProfile from "./editprofile/EditProfile";
+import DietQuotes from "./goals/DietQuotes";
+import GoalChart from "./goals/GoalChart";
 import { Routes, Route, useNavigate, Navigate  } from "react-router-dom";
 
 function MyPage(){
@@ -26,7 +28,7 @@ function MyPage(){
     });
 
     return(
-        <div id="myPageContainer">
+        <div id="myPageContainer" overflow= "hidden">
             <div id="myPageheader">
                 <div id="logo" onClick={()=>{navigate('/main')}}><img src={process.env.PUBLIC_URL+"/images/BalancEat_logo.png"} id="logoImg"></img></div>
                 <div id="user">{userInfo.name}님 <i className="fa-solid fa-user"></i> </div>
@@ -36,8 +38,8 @@ function MyPage(){
                 <div id="tabs"> 
                     <ul className="tablist">
                         <li className="tab" onClick={()=>{navigate('/mypage/dashboard')}}>대시보드</li>
-                        <li className="tab" onClick={()=>{navigate('/mypage/messages')}}>쪽지함</li>
                         <li className="tab" onClick={()=>{navigate('/mypage/goals')}}>목표관리</li>
+                        <li className="tab" onClick={()=>{navigate('/mypage/messages')}}>쪽지함</li>                        
                         <li className="tab" onClick={()=>{navigate('/mypage/editprofile')}}>개인정보 수정</li>
                     </ul>
 
@@ -49,6 +51,15 @@ function MyPage(){
                     <Route path="/mypage/dashboard" element={
                         <>
                             <Charts weightData={weightData} setWeightData={setWeightData}/>
+                            <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo}/>
+                        </>
+                    }></Route>
+                    <Route path="/mypage/goals" element={
+                        <>
+                            <div className="goalsMain">
+                                <GoalChart userInfo={userInfo} />
+                                <DietQuotes />                                
+                            </div>
                             <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo}/>
                         </>
                     }></Route>
