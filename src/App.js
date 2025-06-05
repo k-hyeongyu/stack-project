@@ -4,7 +4,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 import Health from './health/Health';
-import { Routes, Route } from 'react-router-dom';
 import Introduce from './introduce/Introduce';
 import MyPage from './mypage/MyPage';
 import Login from './login/Login';
@@ -57,10 +56,6 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />
         <Route path="/FindPw" element={<FindPw />} />
-<<<<<<< HEAD
-        {/* <Route path="/shopping" element={<Shopping />} /> */}
-
-=======
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/" element={<MainPage />} />
         <Route
@@ -75,7 +70,6 @@ function App() {
           path="/maintain"
           element={<Health {...maintainData} />}
         />
->>>>>>> ft-main
       </Routes>
     </div>
   );
