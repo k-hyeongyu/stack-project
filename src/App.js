@@ -13,6 +13,17 @@ import FindId from './login/FindId';
 import FindPw from './login/FindPw';
 // import Shopping from './shopping/Shopping';
 
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate }
+  from 'react-router-dom';
+import './App.css';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+
+import DietPage from './pages/DietPage';
+import BulkPage from './pages/BulkPage';
+import KeepPage from './pages/KeepPage';
+
 
 function App() {
 
@@ -59,23 +70,32 @@ function App() {
         <Route path="/FindPw" element={<FindPw />} />
         <Route path="/shopping" element={<Shopping />} />
         <Route path="/" element={<MainPage />} />
-        <Route
-          path="/bulkup"
-          element={<Health {...bulkUpData} />}
-        />
-        <Route
-          path="/diet"
-          element={<Health {...dietData} />}
-        />
-        <Route
-          path="/maintain"
-          element={<Health {...maintainData} />}
-        />
+        <Route path="/bulkup" element={<BulkPage />} />
+        <Route path="/diet" element={<DietPage />} />
+        <Route path="/maintain" element={<KeepPage />} />
       </Routes>
     </div>
+    // =======
+    //     <BrowserRouter>
+    //       <div className="app-container">
+    //         <Header />
+    //         <div className="main-layout">
+    //           <Sidebar />
+    //           <main className="app-main-content-area">
+    //             <Routes>
+    //               <Route path="/" element={<Navigate replace to="/diet" />} />
+    //               <Route path="/diet" element={<DietPage />} />
+    //               <Route path="/keep" element={<KeepPage />} />
+    //               <Route path="/bulk" element={<BulkPage />} />
+    //               <Route path="*" element={<div style={{ padding: '40px', textAlign: 'center', fontSize: '1.2em' }}>404 - 페이지를 찾을 수 없습니다.</div>} />
+    //             </Routes>
+    //           </main>
+    //         </div>
+    //       </div>
+    //     </BrowserRouter>
+    // >>>>>>> ft-contentpage
   );
 
 }
-
 
 export default App;
