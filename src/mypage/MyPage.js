@@ -5,6 +5,7 @@ import UserBodyInfo from "./dashboard/UserBodyInfo";
 import EditProfile from "./editprofile/EditProfile";
 import DietQuotes from "./goals/DietQuotes";
 import GoalChart from "./goals/GoalChart";
+import MessageBox from "./messagebox/MessageBox";
 import { Routes, Route, useNavigate, Navigate  } from "react-router-dom";
 
 function MyPage(){
@@ -39,7 +40,7 @@ function MyPage(){
                     <ul className="tablist">
                         <li className="tab" onClick={()=>{navigate('/mypage/dashboard')}}>대시보드</li>
                         <li className="tab" onClick={()=>{navigate('/mypage/goals')}}>목표관리</li>
-                        <li className="tab" onClick={()=>{navigate('/mypage/messages')}}>쪽지함</li>                        
+                        <li className="tab" onClick={()=>{navigate('/mypage/messagebox')}}>쪽지함</li>                        
                         <li className="tab" onClick={()=>{navigate('/mypage/editprofile')}}>개인정보 수정</li>
                     </ul>
 
@@ -63,6 +64,10 @@ function MyPage(){
                             <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo}/>
                         </>
                     }></Route>
+
+                    <Route path="/mypage/messagebox/*" element={<MessageBox />} />                        
+                
+
                     <Route path="/mypage/editprofile" element={
                         <>
                             <EditProfile userInfo={userInfo} setUserInfo={setUserInfo} 
