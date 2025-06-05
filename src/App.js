@@ -5,7 +5,6 @@ import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 import MyPage from './mypage/MyPage';
 import Health from './health/Health';
 import Introduce from './introduce/Introduce';
-import MyPage from './mypage/MyPage';
 import Login from './login/Login';
 import SignUp from './login/SignUp';
 import FindId from './login/FindId';
