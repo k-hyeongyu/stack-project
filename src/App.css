@@ -9,7 +9,22 @@ body, html, #root {
   color: #333; /* 기본 글자 색상 */
   box-sizing: border-box;
   font-weight: 700;;
-  
+}  
+
+
+@font-face {
+  font-family: 'SeoulNamsanM';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.appDiv{  
+  font-family: 'SeoulNamsanM';
+}
+
+.App {
+  text-align: center;
 }
 
 *, *:before, *:after { /* 이 규칙은 아래의 *, *::before, *::after 와 동일하므로 하나만 남겨도 됩니다. */
@@ -36,12 +51,6 @@ body, html, #root {
   padding: 0; /* 페이지 내부에서 자체적으로 패딩 관리 */
 }
 
-@font-face {
-    font-family: 'SeoulNamsanM';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 .page-font {
     font-family: 'SeoulNamsanM';
