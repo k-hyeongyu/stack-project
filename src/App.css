@@ -5,7 +5,7 @@ body, html, #root {
   height: 100%;
   /* font-family: 'Noto Sans KR', sans-serif; */ /* 이전 Noto Sans KR 주석 처리 또는 삭제 */
   font-family: 'Gowun Batang', serif; /* Gowun Batang 폰트로 변경 */
-  background-color: #f4f6f8; /* 전체 페이지 배경색 */
+
   color: #333; /* 기본 글자 색상 */
   box-sizing: border-box;
   font-weight: 700;;

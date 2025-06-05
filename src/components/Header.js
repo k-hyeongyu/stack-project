@@ -6,16 +6,18 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
   return (
     <header className="app-header">
+
       <div className="header-left">
-        <NavLink to='/main'><img src={logoImage} alt="사이트 로고" className="logo-img" />
+        <NavLink to='/'><img src={logoImage} alt="사이트 로고" className="logo-img" />
         </NavLink>
         {/* <h1 className="header-title"></h1> 변경 가능 */}
       </div>
-        <div className="header-right">
+
+      <div className="header-right">
         <i className="fas fa-shopping-cart icon-fa"></i> {/* 쇼핑 카트 아이콘 */}
         <i className="fas fa-user icon-fa"></i>         {/* 사용자 아이콘 */}
-        </div>
-        
+      </div>
+
     </header>
   );
 };

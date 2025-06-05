@@ -5,28 +5,15 @@ import './Sidebar.css';
 const Sidebar = () => {
   return (
     <aside className="app-sidebar">
-      <NavLink
-        to="/diet"
-        className={({ isActive }) => "sidebar-item" + (isActive ? " active" : "")}
-      >
-        다이어트
-      </NavLink>
-      <NavLink
-        to="/keep"
-        className={({ isActive }) => "sidebar-item" + (isActive ? " active" : "")}
-      >
-        체형유지
-      </NavLink>
-      <NavLink
-        to="/bulk"
-        className={({ isActive }) => "sidebar-item" + (isActive ? " active" : "")}
-      >
-        체중증가
-      </NavLink>
+      <div className="sidebar-content-wrapper">
+        <nav className="sidebar-main-nav">
+          <NavLink to="/diet" className="sidebar-item">다이어트</NavLink>
+          <NavLink to="/keep" className="sidebar-item">체형유지</NavLink>
+          <NavLink to="/bulk" className="sidebar-item">체중증가</NavLink>
+        </nav>
+      </div>
       <div className="sidebar-logout-section">
-        <NavLink to="/logout" className="logout-button">
-        Logout
-        </NavLink>
+        <NavLink to="/logout" className="logout-button">Logout</NavLink>
       </div>
     </aside>
   );
