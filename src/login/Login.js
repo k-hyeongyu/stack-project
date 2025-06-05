@@ -10,7 +10,7 @@ function Login() {
     let navigate = useNavigate();
 
     return (
-        <div>
+        <div className='login-page-container'>
             <div className='login-container'>
                 <h1 className='oleo-script-regular'>BalancEat</h1>
                 <br></br>

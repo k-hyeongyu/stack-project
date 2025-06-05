@@ -11,7 +11,7 @@ function FindId() {
     let navigate = useNavigate();
 
     return (
-        <div>
+        <div className='login-page-container'>
             <div className='login-container'>
                 <h1 className='oleo-script-regular'>BalancEat</h1>
                 {/* <p className='find-font'> - 아이디 찾기 - </p> */}

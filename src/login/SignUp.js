@@ -14,7 +14,7 @@ function SignUp() {
     let navigate = useNavigate();
 
     return (
-        <div>
+        <div className='login-page-container'>
             <div className='signUp-container'>
                 <h1 className='oleo-script-regular'>BalancEat</h1>
                 <p className='page-font'> 회원가입 </p>
