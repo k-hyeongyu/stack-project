@@ -1,0 +1,16 @@
+.page-content {
+  padding: 25px; /* 페이지 내부 전체 여백 */
+
+  box-sizing: border-box;
+  display: flex;
+  /* overflow-y: auto; App.css의 app-main-content-area 에서 이미 처리 */
+}
+
+.page-main-title {
+  font-size: 26px; /* 페이지 제목 크기 */
+  font-weight: 600;
+  color: #08080800; /* 제목 색상 */
+  padding-bottom: 12px;
+  margin-top: 0; /* 위쪽 기본 마진 제거 */
+  margin-bottom: 30px; /* 제목과 비디오 그리드 사이 간격 */
+}
