@@ -1,14 +1,14 @@
 /* 전체 화면 배경과 정렬 */
-body {
+/* body {
     margin: 0;
     font-family: 'Gowun Batang', serif;
     font-weight: 400;
-}
+} */
 .main-wrapper {
     position: relative;
     width: 100%;
     height: 100vh; /* 화면 전체 높이 */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .background-video {

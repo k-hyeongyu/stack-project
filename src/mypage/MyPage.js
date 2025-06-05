@@ -48,14 +48,14 @@ function MyPage(){
                 </div>
 
                 <Routes>
-                    <Route path="/mypage" element={<Navigate to="/mypage/dashboard" replace />}></Route>
-                    <Route path="/mypage/dashboard" element={
+                    <Route path="/" element={<Navigate to="/dashboard" replace />}></Route>
+                    <Route path="/dashboard" element={
                         <>
                             <Charts weightData={weightData} setWeightData={setWeightData}/>
                             <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo}/>
                         </>
                     }></Route>
-                    <Route path="/mypage/goals" element={
+                    <Route path="/goals" element={
                         <>
                             <div className="goalsMain">
                                 <GoalChart userInfo={userInfo} />
@@ -65,10 +65,10 @@ function MyPage(){
                         </>
                     }></Route>
 
-                    <Route path="/mypage/messagebox/*" element={<MessageBox />} />                        
+                    <Route path="/messagebox/*" element={<MessageBox />} />                        
                 
 
-                    <Route path="/mypage/editprofile" element={
+                    <Route path="/editprofile" element={
                         <>
                             <EditProfile userInfo={userInfo} setUserInfo={setUserInfo} 
                                         weightData={weightData} setWeightData={setWeightData}/>

@@ -18,7 +18,7 @@ function Login() {
                     event.preventDefault();
 
                     if(inputId === 'stack123' && inputPw === 'stack1234') {
-                        navigate('/mypage');
+                        navigate('/mypage/dashboard');
                         setInputId('')
                         setInputPw('')
                     } else {

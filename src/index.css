@@ -1,15 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   /* 이전: font-family: 'Noto Sans KR', sans-serif; */
   font-family: 'Gowun Batang', serif; /* Gowun Batang 폰트로 변경, serif는 fallback */ 
   color: #333;
   box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
