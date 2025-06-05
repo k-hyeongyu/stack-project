@@ -1,0 +1,169 @@
+/* BulkUp.css */
+
+body {
+    margin: 0;
+    /* body 마진 초기화 */
+    font-family: 'Gowun Batang', serif;
+    /* 메인 페이지와 폰트 통일 */
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    /* 컨테이너 너비를 100%로 설정 */
+    max-width: 1200px;
+    /* 최대 너비 제한 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+    position: relative;
+    /* 자식 absolute 요소의 기준점 (bulkup-top-right-icons를 위해 필수) */
+    min-height: 100vh;
+    /* 페이지 내용이 적어도 화면 전체 높이를 차지하도록 */
+    /* align-items: center; 는 이 컨텍스트에서 효과가 없습니다. 제거 */
+    /* z-index: 1; 이나 padding: 20px; 도 제거 가능 또는 재조정 */
+    padding: 0;
+    /* 컨테이너 자체 패딩 제거, 내부 요소에서 패딩 관리 */
+}
+
+/* 기존 .header 대신 bulkup-header로 변경 */
+.bulkup-header {
+    display: flex;
+    justify-content: flex-start;
+    /* 로고와 제목을 왼쪽으로 정렬 */
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    /* 헤더가 컨테이너의 전체 너비를 차지하도록 */
+    box-sizing: border-box;
+    /* 패딩이 너비에 포함되도록 */
+    /* 로고가 사이드바와 함께 사이즈 조정된다는 것은
+       헤더가 메인 콘텐츠 영역과 동일하게 반응형으로 동작한다는 의미로 해석 */
+    /* 따라서 헤더 자체의 너비를 유동적으로 가져가는 것이 중요합니다. */
+    /* position: relative; (선택 사항: 내부 요소에 absolute 필요 시) */
+    /* z-index: 1; (선택 사항: 아이콘보다 아래에 깔리도록) */
+}
+
+.logo-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo img {
+    /* 로고 이미지 자체를 반응형으로 만듭니다 */
+    max-width: 100%;
+    /* 부모(.logo)의 너비를 넘지 않도록 */
+    height: auto;
+    /* 가로세로 비율 유지 */
+    display: block;
+    /* 이미지 하단 여백 제거 */
+    /* 로고의 "고정" 너비였던 150px를 max-width로 대체하거나
+        아니면 최소 크기/최대 크기를 지정하여 유연하게 만듭니다. */
+    width: auto;
+    /* width를 auto로 두어 max-width에 따라 유연하게 조절 */
+    max-width: 150px;
+    /* 로고가 너무 커지는 것을 방지하는 최대 너비.
+                           원래 고정 너비였다면 이 값으로 시작 */
+    min-width: 100px;
+    /* 로고가 너무 작아지는 것을 방지하는 최소 너비 */
+}
+.bulkup-header h1 {
+    font-size: 3em; /* 기본 폰트 크기 */
+    white-space: nowrap; /* 텍스트가 한 줄에 유지되도록 (필요시) */
+}
+@media (max-width: 768px) {
+    .bulkup-header h1 {
+        font-size: 2em; /* 태블릿 크기에서 폰트 줄이기 */
+    }
+    .logo img {
+        max-width: 120px; /* 태블릿 크기에서 로고 최대 너비 줄이기 */
+    }
+}
+@media (max-width: 480px) {
+    .bulkup-header {
+        flex-direction: column; /* 모바일에서 로고와 제목을 세로로 쌓기 */
+        text-align: center; /* 세로 쌓일 때 가운데 정렬 */
+    }
+    .logo-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .bulkup-header h1 {
+        font-size: 1.5em; /* 모바일 크기에서 폰트 더 줄이기 */
+    }
+    .logo img {
+        max-width: 100px; /* 모바일 크기에서 로고 최대 너비 더 줄이기 */
+    }
+}
+
+/* 새로 추가된 아이콘 컨테이너 스타일 */
+.bulkup-top-right-icons {
+    position: absolute;
+    /* .container를 기준으로 절대 위치 */
+    top: 20px;
+    /* 상단에서 20px 떨어지게 */
+    right: 20px;
+    /* 오른쪽에서 20px 떨어지게 */
+    display: flex;
+    /* 아이콘들을 가로로 나란히 */
+    gap: 22px;
+    /* 아이콘 사이 간격 */
+    font-size: 25px;
+    /* 아이콘 크기 */
+    color: black;
+    /* 배경에 따라 색상 조정. 흰색 배경이면 검정색이 좋음 */
+    z-index: 10;
+    /* 다른 콘텐츠 위에 오도록 */
+}
+
+.shop,
+.name {
+    /* shop과 name div 자체는 특별한 스타일이 필요없으므로 제거하거나 그대로 둡니다 */
+    /* padding: 20px; 이전 user-info에서 상속받던 패딩이 여기에 필요하다면 추가 */
+}
+
+/* 나머지 CSS는 동일하게 유지 */
+.main-content {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%; /* main-content가 컨테이너 너비에 맞도록 */
+    box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+}
+
+.sidebar {
+    padding: 15px;
+    height: auto;
+    width: 15%; /* 메인 콘텐츠 내에서 사이드바가 차지하는 비율 */
+    min-width: 100px; /* 사이드바 최소 너비 설정 (너무 좁아지지 않게) */
+}
+
+.sidebar-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f28500;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    width: 80%;
+    justify-items: center;
+}
+
+.grid-item {
+    background-color: #f28500;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin: auto;
+    cursor: pointer;
+}
