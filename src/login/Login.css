@@ -13,6 +13,9 @@
     border: 3px solid #f28500;
     text-align: center;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 박스 안 글씨 */
