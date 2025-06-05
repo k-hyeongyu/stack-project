@@ -8,7 +8,7 @@ import Login from './login/Login';
 import SignUp from './login/SignUp';
 import FindId from './login/FindId';
 import FindPw from './login/FindPw';
-import Shopping from './shopping/Shopping';
+// import Shopping from './shopping/Shopping';
 
 function App() {
   // return <MainPage />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />
         <Route path="/FindPw" element={<FindPw />} />
-        <Route path="/shopping" element={<Shopping />} />
+        {/* <Route path="/shopping" element={<Shopping />} /> */}
 
       </Routes>
     </div>
