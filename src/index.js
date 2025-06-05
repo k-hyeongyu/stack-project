@@ -20,7 +20,6 @@ import {
   Legend,
   ArcElement, // 필요하다면 추가 (예: 파이 차트)
 } from 'chart.js';
-import { BrowserRouter } from 'react-router';
 
 ChartJS.register(
   CategoryScale,
