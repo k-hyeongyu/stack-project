@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Navigate from 'react-router-dom';
 import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 import MyPage from './mypage/MyPage';
-import Health from './health/Health';
 import Introduce from './introduce/Introduce';
 import Login from './login/Login';
 import SignUp from './login/SignUp';
@@ -26,11 +25,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Introduce />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/mypage" element={
-          <div className='appDiv'>
-            <MyPage />
-          </div>
-        } />
+        <Route path="/mypage" element={<MyPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />

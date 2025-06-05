@@ -8,7 +8,7 @@ body, html, #root {
 
   color: #333; /* 기본 글자 색상 */
   box-sizing: border-box;
-  font-weight: 700;;
+  font-weight: 700;
 }  
 
 
@@ -19,54 +19,14 @@ body, html, #root {
   font-style: normal;
 }
 
-.appDiv{  
+/* .appDiv{  
   font-family: 'SeoulNamsanM';
 }
-
-.App {
-  text-align: center;
-}
-
-*, *:before, *:after { /* 이 규칙은 아래의 *, *::before, *::after 와 동일하므로 하나만 남겨도 됩니다. */
-  box-sizing: inherit; /* 또는 box-sizing: border-box; 로 통일 */
-}
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* 뷰포트 전체 높이 */
-  background-color: #ffffff; /* 앱 컨테이너 기본 배경 */
-}
-
-.main-layout {
-  display: flex;
-  flex-grow: 1; /* Header를 제외한 나머지 수직 공간을 모두 차지 */
-  overflow: hidden; /* 내부 스크롤은 각 영역에서 처리 */
-}
-
-.app-main-content-area {
-  flex-grow: 1; /* Sidebar를 제외한 나머지 수평 공간을 모두 차지 */
-  background-color: #ffffff; /* 메인 콘텐츠 영역 배경 */
-  overflow-y: auto; /* 콘텐츠가 넘칠 경우 수직 스크롤바 자동 생성 */
-  padding: 0; /* 페이지 내부에서 자체적으로 패딩 관리 */
-}
-
+ */
 
 .page-font {
     font-family: 'SeoulNamsanM';
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
-/* Box-sizing border-box를 전역으로 적용 (위의 *, *:before, *:after와 중복될 수 있으니 확인 후 하나로 통일) */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
-a {
-  text-decoration: none;
-  color: inherit; /* 링크 기본 색상 상속 */
-}

@@ -7,8 +7,7 @@ function MainPage() {
     return (
         <div className="main-wrapper">
             <video autoPlay loop muted className="background-video">
-                <source src="bgVideo01.mp4" type="video/mp4" />
-                브라우저가 video 태그를 지원하지 않습니다.
+                <source src="/bgVideo01.mp4" type="video/mp4" />                
             </video>
 
             <div className="health-container">

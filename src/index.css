@@ -3,8 +3,7 @@ body {
   padding: 0;
   height: 100%;
   /* 이전: font-family: 'Noto Sans KR', sans-serif; */
-  font-family: 'Gowun Batang', serif; /* Gowun Batang 폰트로 변경, serif는 fallback */
-  background-color: #f4f6f8;
+  font-family: 'Gowun Batang', serif; /* Gowun Batang 폰트로 변경, serif는 fallback */ 
   color: #333;
   box-sizing: border-box;
 }
@@ -14,12 +13,3 @@ code {
     monospace;
 }
 
-/* Box-sizing border-box를 전역으로 적용 */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit; /* 링크 기본 색상 상속 */
-}
