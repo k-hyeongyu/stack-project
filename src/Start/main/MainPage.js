@@ -37,14 +37,14 @@ function MainPage() {
                         </div>
                     </Link>
 
-                    <Link to="/diet" className="health-card">
+                    <Link to="/maintain" className="health-card">
                         <div className="card-text">
                             <h2>체형유지</h2>
                             <p>과함도 부족함도 없는 <br></br>신체밸런스를 원해요</p>
                         </div>
                     </Link>
 
-                    <Link to="/maintain" className="health-card">
+                    <Link to="/diet" className="health-card">
                         <div className="card-text">
                             <h2>다이어트</h2>
                             <p>체지방감령을 위한 <br></br>식이요법과 운동을 원해요</p>
