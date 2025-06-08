@@ -1,6 +1,7 @@
 
 .login-page-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -158,9 +159,7 @@
     border-radius: 5px;
     color: rgb(255, 227, 190);
 }
-.find-box {
-    margin-top: 15px;
-}
+
 .find-textbox {
     border: 1px solid rgb(153, 153, 153);
     width: 300px;
@@ -177,6 +176,7 @@
     flex-direction: column;
     gap: 12px;
     align-items: center;
+    margin-top: 15px;
 }
 
 .find-font {
