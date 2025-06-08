@@ -35,7 +35,6 @@ const DietPage = () => {
       <Header /> {/* 사이드바 렌더링 */}
       <div className="page-content">
         <Sidebar /> {/* 사이드바 렌더링 */}
-        <h2 className="page-main-title">다이어트</h2>
         <VideoGrid videos={dietVideos} onVideoSelect={handleVideoSelect} />
         <Modal
           isOpen={isModalOpen}

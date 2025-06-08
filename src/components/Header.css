@@ -7,7 +7,7 @@
 
 .header-left {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .logo-img {
@@ -15,15 +15,19 @@
   height: 150px; /* 로고 크기에 맞게 조절 */
   object-fit: contain; /* 이미지 비율 유지 */
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .header-right {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: -20px;
 }
 
 .icon-fa { /* Font Awesome 아이콘을 위한 새 클래스 */
-  font-size: 22px; /* 아이콘 크기 조절 */
+  font-size: 30px; /* 아이콘 크기 조절 */
   margin-left: 20px; /* 아이콘 간 간격 */
   cursor: pointer;
   color: black; /* 아이콘 색상 */

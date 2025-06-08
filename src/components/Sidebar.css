@@ -4,7 +4,7 @@
   background-color: #f28500;
   display: flex;
   flex-direction: column; /* 자식 요소들을 수직으로 쌓음 */
-  height: 100%; /* 전체 높이 차지 */
+  height: 100vh; /* 전체 높이 차지 */
   box-sizing: border-box;
   border-radius: 5px
   
@@ -15,7 +15,7 @@
   flex-grow: 1; /* 로그아웃 섹션을 제외한 모든 수직 공간 차지 */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 자식 요소(.sidebar-main-nav)를 이 공간 내에서 수직 중앙에 정렬 */
+  justify-content: flex-start; /* 자식 요소(.sidebar-main-nav)를 이 공간 내에서 수직 중앙에 정렬 */
 
 }
 
@@ -49,30 +49,3 @@
   color: white;
 }
 
-/* 2. 로그아웃 버튼을 포함하는 섹션 (사이드바 하단에 위치) */
-.sidebar-logout-section {
-  /* .sidebar-content-wrapper가 flex-grow: 1이므로 이 섹션은 자연스럽게 하단에 위치 */
-   /* 위:0, 좌우:20px, 아래:20px (하단에서 20px 떨어뜨림) */
-  padding: 0px 20px 20px 20px;
-  padding-top: 340px;
-}
-
-/* 3. 로그아웃 버튼 자체 스타일 (텍스트 가로 중앙 정렬 포함) */
-.logout-button {
-  display: block; /* 버튼 너비를 100%로 설정 가능하게 함 */
-  width: 100%;    /* 부모(.sidebar-logout-section) 너비에 맞춤 (패딩 제외) */
-  padding: 15px;  /* 버튼 내부 패딩 */
-  background-color: #f29000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center; /* 버튼 내부 텍스트를 가로 중앙 정렬 */
-  font-size: 1em;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.logout-button:hover {
-  background-color: #f08205;
-}

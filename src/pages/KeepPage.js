@@ -39,7 +39,6 @@ const KeepPage = () => {
       <Header />
       <div className="page-content">
         <Sidebar />
-        <h2 className="page-main-title">체형유지</h2>
         <VideoGrid videos={keepVideos} onVideoSelect={handleVideoSelect} />
         <Modal
           isOpen={isModalOpen}

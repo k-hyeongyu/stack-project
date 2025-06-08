@@ -12,9 +12,7 @@ const Sidebar = () => {
           <NavLink to="/bulk" className="sidebar-item">체중증가</NavLink>
         </nav>
       </div>
-      <div className="sidebar-logout-section">
-        <NavLink to="/logout" className="logout-button">Logout</NavLink>
-      </div>
+
     </aside>
   );
 };

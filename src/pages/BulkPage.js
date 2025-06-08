@@ -36,7 +36,6 @@ const BulkPage = () => {
       <Header /> 
       <div className="page-content">
         <Sidebar /> 
-        <h2 className="page-main-title">체중증가 관련 동영상</h2>
         <VideoGrid videos={bulkVideos} onVideoSelect={handleVideoSelect} />
         <Modal
           isOpen={isModalOpen}
