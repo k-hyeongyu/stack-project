@@ -8,7 +8,7 @@ import Login from './login/Login';
 import SignUp from './login/SignUp';
 import FindId from './login/FindId';
 import FindPw from './login/FindPw';
-// import Shopping from './shopping/Shopping';
+import Shopping from './shopping/Shopping';
 import React from 'react';
 
 
@@ -32,7 +32,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />
         <Route path="/FindPw" element={<FindPw />} />
-        {/* <Route path="/shopping" element={<Shopping />} /> */}
+        <Route path="/shopping" element={<Shopping />} />
         <Route path="/bulk" element={<BulkPage />} />
         <Route path="/diet" element={<DietPage />} />
         <Route path="/keep" element={<KeepPage />} />
