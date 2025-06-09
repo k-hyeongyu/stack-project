@@ -46,6 +46,14 @@
     gap: 22px;
 }
 
+.shop:hover {
+    cursor: pointer;
+}
+
+.name:hover {
+    cursor: pointer;
+}
+
 /* 카드 버튼들 */
 .card-container {
     padding-top: 90px;

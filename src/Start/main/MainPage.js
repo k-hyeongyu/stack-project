@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./MainPage.css";
 
 function MainPage() {
+
+    let navigate = useNavigate();
 
     return (
         <div className="main-wrapper">
@@ -19,9 +21,9 @@ function MainPage() {
                             <i className="fa-solid fa-cart-shopping"></i>
                         </div>
 
-                        {/* 이름 아이콘 */}
+                        {/* 로그인 아이콘 */}
                         <div className="name">
-                            <i className="fa-solid fa-user"></i>
+                            <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
                         </div>
                     </div>
                 </header>
