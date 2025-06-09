@@ -1,3 +1,4 @@
+
 .page-content {
   padding: 25px; /* 페이지 내부 전체 여백 */
   height: 100%; /* app-main-content-area 높이를 채우도록 */
@@ -13,3 +14,4 @@
   margin-top: 0; /* 위쪽 기본 마진 제거 */
   margin-bottom: 30px; /* 제목과 비디오 그리드 사이 간격 */
 }
+

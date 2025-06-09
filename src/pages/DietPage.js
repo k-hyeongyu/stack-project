@@ -7,6 +7,7 @@ import Modal from '../components/Modal';
 const DietPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
+  
 
   const dietVideos = [
     { id: 'v-1YO1RgDwM', title: '탄단지 식단 밸런스의 중요성' },

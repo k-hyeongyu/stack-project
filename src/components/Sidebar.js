@@ -24,9 +24,7 @@ const Sidebar = () => {
         체중증가
       </NavLink>
       <div className="sidebar-logout-section">
-        <NavLink to="/logout" className="logout-button">
-        Logout
-        </NavLink>
+
       </div>
     </aside>
   );
