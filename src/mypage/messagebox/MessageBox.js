@@ -1,6 +1,6 @@
 import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
 import './MessageBox.css'
-import messageData from './messageData';
+import {InboxMessages, SentMessages} from './MessageData';
 
 function MessageBox() {
 
@@ -9,40 +9,18 @@ function MessageBox() {
     return (
         <div className="messageBox">
             <ul className='messageBoxTabs'>
-                <li className='boxTab' onClick={() => { navigate('/mypage/messagebox/inbox') }}>받은쪽지함</li>
-                <li className='boxTab' onClick={() => { navigate('/mypage/messagebox/sent') }}>보낸쪽지함</li>
-                <li className='boxTab' onClick={() => { navigate('/mypage/messagebox/saved') }}>쪽지보관함</li>
+                <li className='boxTab tab1' onClick={() => { navigate('/mypage/messagebox/inbox') }}>받은쪽지함</li>
+                <li className='boxTab tab2' onClick={() => { navigate('/mypage/messagebox/sent') }}>보낸쪽지함</li>                
             </ul>
 
             <Routes>
                  <Route index element={<Navigate to="inbox" replace />} /> 
 
                 <Route path='inbox' element={
-                    <>
-                        {
-                            messageData.map((item, index) => {
-                                return (
-                                    <div className='messages'>
-                                        <div className='messageCotent'>
-                                            <h3>{item.name}</h3>
-                                            <p>{item.content}</p>
-                                        </div>
-                                        {item.date}
-                                    </div>
-                                );
-                            })
-                        }
-                    </>
+                    <InboxMessages />
                 }></Route>
-                <Route path='sent' element={
-                    <>
-
-                    </>
-                }></Route>
-                <Route path='saved' element={
-                    <>
-
-                    </>
+                <Route path='sent' element={                    
+                    <SentMessages />
                 }></Route>
             </Routes>
         </div>
