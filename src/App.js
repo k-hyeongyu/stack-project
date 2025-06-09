@@ -15,6 +15,7 @@ import React from 'react';
 import DietPage from './pages/DietPage';
 import BulkPage from './pages/BulkPage';
 import KeepPage from './pages/KeepPage';
+import DetailExplain from './shopping/details/DetailExplain';
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />
         <Route path="/FindPw" element={<FindPw />} />
-        <Route path="/shopping" element={<Shopping />} />
+        <Route path="/shopping/*" element={<Shopping />} />
         <Route path="/bulk" element={<BulkPage />} />
         <Route path="/diet" element={<DietPage />} />
         <Route path="/keep" element={<KeepPage />} />

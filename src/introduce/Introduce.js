@@ -10,7 +10,7 @@ function Introduce() {
         <div className="intro-vid-container">
             <img className="intro-logo" src='/BalancEat_logo_white.png'></img>
             <div className='intro-header'>
-                <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
+                <i className="fa-solid fa-store" onClick={() => { navigate("/shopping") }}></i>
                 <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
 
             </div>

@@ -3,10 +3,10 @@
     margin: 20px;
 }
 
-#logo-img {
+.logo-image {
     width: 200px;
     cursor: pointer;
-    
+
 }
 
 .shopping-header-right {
@@ -26,38 +26,56 @@
 .shopping-seperator-line {
     width: 100%;
     height: 1px;
-    border: 1px solid rgba(177, 177, 177, 0.185);
+    border-bottom: 1px solid rgba(143, 143, 143, 0.76);
     margin-top: 23px;
 }
+
 /* Shopping css */
 
 /* ShoppingHome css */
 .shopping-category {
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 60px;
     display: flex;
     flex-direction: column;
 }
 
-.shopping-category > h1 {
-    margin-bottom: 10px;
-    margin-left: 20px;
+.shopping-category>h1 {
+    margin-bottom: 5px;
+    margin-left: 25px;
+    font-family: 'SeoulNamsanM';
 }
 
 .shopping-itemList {
     display: flex;
+    margin: 5px;
+    padding: 10px;
 }
 
 /* ItemCard css */
-/* .shopping-itemCard {
-    
-} */
-
 .shopping-items {
     margin: 10px;
-    cursor: pointer;
+    padding: 5px;
+    font-family: 'SeoulNamsanM';
 }
 
-.item-img{
-    width: 100%;
-    height: 100%;
+.shopping-items:hover {
+    transform: scale(1.05);
+}
+
+.item-img {
+    width: 280px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.item-title {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.item-price {
+    margin-top: 10px;
+    font-size: 19px;
 }

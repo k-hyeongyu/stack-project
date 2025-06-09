@@ -1,8 +1,9 @@
-import { useNavigate } from 'react-router';
+import { Routes, useNavigate, Route } from 'react-router';
 import './Shopping.css';
 import { useState } from 'react';
 import { itemsData1, itemsData2, itemsData3 } from './itemsData';
 import ShoppingHome from './ShoppingHome';
+import DetailExplain from './details/DetailExplain';
 
 
 function Shopping() {
@@ -16,7 +17,7 @@ function Shopping() {
     return (
         <div>
             <div className='shopping-header'>
-                <img src='/BalancEat_logo.png' id='logo-img' onClick={()=>{navigate('/')}}></img>
+                <img src='/BalancEat_logo.png' className='logo-image' onClick={()=>{navigate('/')}}></img>
                 <div className='shopping-header-right'>
                     <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
                     <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
@@ -24,9 +25,18 @@ function Shopping() {
                 <div className='shopping-seperator-line'></div>
             </div>
 
-            <div className='shopping-container'>
+            {/* <div className='shopping-container'>
                 <ShoppingHome items1={items1} items2={items2} items3={items3}/>
             </div>
+
+            <Routes>
+                <Route path="/details/:id" element={<DetailExplain items1={items1} items2={items2} items3={items3}/>}></Route>
+            </Routes> */}
+
+            <Routes>
+                <Route path='/' element={<ShoppingHome items1={items1} items2={items2} items3={items3}/>}></Route>
+                <Route path="/details/:id" element={<DetailExplain items1={items1} items2={items2} items3={items3}/>}></Route>
+            </Routes>
         </div>
     )
 }

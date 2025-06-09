@@ -1,0 +1,38 @@
+.detail-container{
+    margin: 50px 80px 0 80px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.detail-img {
+    width: 500px;
+}
+
+.detail-info {
+    margin: 10px 5px 5px 5px;
+    padding: 10px;
+    font-family: 'SeoulNamsanM';
+    font-size: 23px;
+}
+
+.detail-info > p{
+    margin-top: 18px;
+}
+
+.detail-seperator-line{
+    width: 500px;
+    height: 1px;
+    border: 1px solid rgba(207, 207, 207, 0.76);
+    margin: 18px 0;
+}
+
+.detail-priceInfo {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.detail-price {
+    font-size: 28px;
+    color: rgba(255, 0, 0, 0.801);
+}
