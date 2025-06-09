@@ -4,6 +4,7 @@ import './PageContent.css';
 import Modal from '../components/Modal';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import Theme from '../components/Theme';
 
 const BulkPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,12 +33,20 @@ const BulkPage = () => {
   };
 
   return (
-    <div className="wrap">
-      <Header /> 
+    <div className="wrap page-font">
+      <Header />
       <div className="page-content">
-        <Sidebar /> 
-        <h2 className="page-main-title">체중증가 관련 동영상</h2>
-        <VideoGrid videos={bulkVideos} onVideoSelect={handleVideoSelect} />
+        <Sidebar />
+        <div className='bulk-content'>
+          <Theme
+            title="벌크업"
+            description={`근육을 키우고 싶은가요?
+벌크업은 식단과 운동을 병행해 체격을 키우는 핵심 전략입니다.
+이곳에서 당신의 벌크업 여정을 시작해보세요!
+`}
+          />
+          <VideoGrid videos={bulkVideos} onVideoSelect={handleVideoSelect} />
+        </div>
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}

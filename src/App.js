@@ -61,9 +61,9 @@ function App() {
         <Route path="/FindId" element={<FindId />} />
         <Route path="/FindPw" element={<FindPw />} />
         {/* <Route path="/shopping" element={<Shopping />} /> */}
-        <Route path="/bulkup" element={<BulkPage/>}/>
+        <Route path="/bulk" element={<BulkPage/>}/>
         <Route path="/diet" element={<DietPage/>}/>
-        <Route path="/maintain" element={<KeepPage/>}/>
+        <Route path="/keep" element={<KeepPage/>}/>
       </Routes>
     </div>
 

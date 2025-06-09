@@ -4,6 +4,7 @@ import './PageContent.css';
 import Modal from '../components/Modal';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
+import Theme from '../components/Theme';
 
 const KeepPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,12 +36,18 @@ const KeepPage = () => {
   };
 
   return (
-    <div className="wrap">
+    <div className="wrap page-font">
       <Header />
       <div className="page-content">
         <Sidebar />
-        <h2 className="page-main-title">체형유지</h2>
+        <div className='keep-content'>
+        <Theme
+            title="체형 유지"
+            description={`누구나 지칠 때가 있지만 멈추지 않는 사람이 결국 건강을 지킵니다.
+쉬운 실천과 꾸준한 루틴으로 당신의 건강한 삶을 응원합니다.`}
+          />
         <VideoGrid videos={keepVideos} onVideoSelect={handleVideoSelect} />
+        </div>
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}
