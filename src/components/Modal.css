@@ -18,7 +18,7 @@
 .modal-content {
   position: relative;
   background-color: #000;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   max-width: 90vw;
   max-height: 90vh;
@@ -36,8 +36,8 @@
   height: 40px;
   border: none;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
+  background-color: transparent;
+  color: #ffffff;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
@@ -50,7 +50,6 @@
 }
 
 .modal-close-button:hover {
-  background-color: #fff;
   transform: scale(1.1);
 }
 

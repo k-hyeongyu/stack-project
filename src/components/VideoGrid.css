@@ -1,10 +1,10 @@
 .video-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 40px;
   padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  width: auto;
+  margin: 0 10px;
 }
 
 .video-item-wrapper {
@@ -20,17 +20,15 @@
 }
 
 .video-item-wrapper.clickable:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .video-thumbnail-container {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
