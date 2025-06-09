@@ -2,10 +2,6 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Navigate from'react-router-dom';
 import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
-<<<<<<< HEAD
-import Health from './health/Health';
-=======
->>>>>>> ft-main
 import Introduce from './introduce/Introduce';
 import MyPage from './mypage/MyPage';
 import Login from './login/Login';
