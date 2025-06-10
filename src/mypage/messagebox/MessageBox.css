@@ -1,0 +1,45 @@
+.messageBox {
+    width: 800px;
+    height: 700px;
+    margin-top: 2rem;
+    margin-right: 6.5rem;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.messageBoxTabs {
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    list-style: none;
+}
+
+.messageBoxTabs>.boxTab {
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 5rem;
+    font-size: 1.5rem;
+    width: 33.3%;
+    justify-content: center;
+}
+
+.messageBoxTabs>.boxTab:hover {
+    color: white;
+    background-color: orange;
+    cursor: pointer;
+}
+
+.messages {
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+}
+
+.messageCotent > h3{
+    
+    margin-bottom: 5px;
+}

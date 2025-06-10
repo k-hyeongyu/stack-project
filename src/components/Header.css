@@ -15,6 +15,7 @@
   width: 200px; /* 로고 크기에 맞게 조절 */
   cursor: pointer;
   margin-left: 50px;
+  margin-left: 10px;
 }
 
 .header-right {

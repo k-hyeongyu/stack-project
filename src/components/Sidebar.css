@@ -3,6 +3,7 @@
   width: auto;
   margin-left: 50px;
   flex-direction: column; /* 자식 요소들을 수직으로 쌓음 */
+  height: 100vh; /* 전체 높이 차지 */
   box-sizing: border-box;
 }
 

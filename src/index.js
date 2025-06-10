@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import { BrowserRouter } from 'react-router-dom';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 // Chart.js 관련 필수 임포트 및 등록
@@ -18,7 +20,6 @@ import {
   Legend,
   ArcElement, // 필요하다면 추가 (예: 파이 차트)
 } from 'chart.js';
-import { BrowserRouter } from 'react-router';
 
 ChartJS.register(
   CategoryScale,

@@ -1,0 +1,30 @@
+.gowun-batang-regular {
+  font-family: "Gowun Batang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gowun-batang-bold {
+  font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quotesBox{
+    width: 600px;
+    font-size: 1.75rem;
+    margin-top: 20px;
+    padding-top: 6rem;
+    white-space : pre-wrap;
+}
+
+.quotesBox .speaker{
+    margin-top: 1.5rem;
+    text-align: right;
+    font-weight: 450;
+    font-size: 1.6rem;
+}
+
+.quotesBox .quotes{
+    text-align: center;
+}
