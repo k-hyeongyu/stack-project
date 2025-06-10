@@ -10,7 +10,7 @@ function Login() {
     let navigate = useNavigate();
 
     return (
-        <div>
+        <div className='login-page-container page-font'>
             <div className='login-container'>
                 <h1 className='oleo-script-regular'>BalancEat</h1>
                 <br></br>
@@ -18,7 +18,7 @@ function Login() {
                     event.preventDefault();
 
                     if(inputId === 'stack123' && inputPw === 'stack1234') {
-                        navigate('/mypage');
+                        navigate('/mypage/dashboard');
                         setInputId('')
                         setInputPw('')
                     } else {
@@ -38,7 +38,7 @@ function Login() {
                         setInputPw(event.target.value)
                     }}></input>
                     
-                    <button type='submit' className='login-button '>로그인</button>
+                    <button type='submit' className='login-button'>로그인</button>
                     <div className='seperator-line'></div>
 
                     <div className='login-find'>
