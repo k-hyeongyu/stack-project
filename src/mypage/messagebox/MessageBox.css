@@ -1,5 +1,5 @@
 .messageBoxContainer{
-    position: absolute;
+    position: flex;
 }
 
 
@@ -42,6 +42,7 @@
 .messages {
     border-bottom: 1px solid lightgray;    
     height: 100px;
+    min-height: 100px;
     width: 795px;
     display: flex;
     justify-content: space-between;
@@ -63,9 +64,9 @@
 
 
 .msgBoxDelBtn{    
-    position: relative;
-    top: 22rem;
-    left: 2rem;
+    position: absolute;
+    top: 48rem;
+    left: 24rem;
     padding: 15px 30px;
     border-radius: 9px;
     background-color: orange;
@@ -82,9 +83,9 @@
 }
 
 .msgBoxWrtBtn{
-    position: relative;
-    top: 22rem;
-    left: 3rem;
+    position: absolute;
+    top: 48rem;
+    left: 32rem;
     padding: 15px 30px;
     border-radius: 9px;
     background-color: orange;
