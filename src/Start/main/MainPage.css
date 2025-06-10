@@ -37,14 +37,21 @@
     margin-bottom: 40px;
 }
 .profile {
-    position: absolute;
-    top: 20px;
-    right: 30px;     /* 새로 추가 */
+    /* position: absolute;
+    gap: 30px;
+    top: 50px;
+    right: 50px;   
     padding: 20px;
     display: flex;
     font-size: 25px;
-    color: white;
-    gap: 22px;
+    color: white; */
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    top: 50px;
+    right: 50px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
 }
 
 /* 카드 버튼들 */

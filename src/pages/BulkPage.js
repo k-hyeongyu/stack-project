@@ -40,10 +40,11 @@ const BulkPage = () => {
         <div className='bulk-content'>
           <Theme
             title="벌크업"
-            description={`근육을 키우고 싶은가요?
-벌크업은 식단과 운동을 병행해 체격을 키우는 핵심 전략입니다.
-이곳에서 당신의 벌크업 여정을 시작해보세요!
-`}
+            description={<>근육을 키우고 싶은가요?<br/>
+            벌크업은 식단과 운동을 병행해 체격을 키우는 핵심 전략입니다.<br/>
+            이곳에서 당신의 벌크업 여정을 시작해보세요!
+            </>}
+            
           />
           <VideoGrid videos={bulkVideos} onVideoSelect={handleVideoSelect} />
         </div>

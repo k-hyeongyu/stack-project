@@ -39,8 +39,8 @@ const DietPage = () => {
         <div className='diet-content'>
         <Theme
             title="다이어트"
-            description={`다이어트는 몸을 억지로 바꾸는 일이 아니라 나를 아끼는 과정입니다.
-꾸준히 당신의 건강한 선택을 응원합니다.`}
+            description={<>다이어트는 몸을 억지로 바꾸는 일이 아니라 나를 아끼는 과정입니다.<br />
+              꾸준히 당신의 건강한 선택을 응원합니다.</>}
           />
         <VideoGrid videos={dietVideos} onVideoSelect={handleVideoSelect} />
         </div>

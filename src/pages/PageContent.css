@@ -1,5 +1,5 @@
 .page-content {
-  padding: 0px; /* 페이지 내부 전체 여백 */
+  padding: 25px; /* 페이지 내부 전체 여백 */
   box-sizing: border-box;
   display: flex;
   /* overflow-y: auto; App.css의 app-main-content-area 에서 이미 처리 */
