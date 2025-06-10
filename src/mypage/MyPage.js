@@ -29,10 +29,13 @@ function MyPage(){
     });
 
     return(
-        <div id="myPageContainer" overflow= "hidden">
-            <div id="myPageheader">
-                <div id="logo" onClick={()=>{navigate('/main')}}><img src={process.env.PUBLIC_URL+"/images/BalancEat_logo.png"} id="logoImg"></img></div>
-                <div id="user">{userInfo.name}님 <i className="fa-solid fa-user"></i> </div>
+        <div id="myPageContainer" overflow= "hidden">            
+            <div className='mypage-header'>
+                <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
+                <div className='mypage-header-right'>
+                    <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
+                    <i className="fa-solid fa-user" onClick={() => { navigate("/mypage/dashboard") }}></i>
+                </div>
             </div>
 
             <div id="myPageMain">
