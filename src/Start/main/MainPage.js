@@ -22,7 +22,7 @@ function MainPage() {
 
                         {/* 이름 아이콘 */}
                         <div className="name">
-                            <i className="fa-solid fa-user"></i>
+                            <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                         </div>
                     </div>
                 </header>

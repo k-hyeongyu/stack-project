@@ -12,8 +12,8 @@
 }
 
 .logo-img {
-  width: 200px; /* 로고 크기에 맞게 조절 */
-  /* cursor: pointer;
+  width: 200px; /* 로고 크기에 맞게 조절 
+  cursor: pointer;
   margin-left: 50px;
 }
 
@@ -25,13 +25,13 @@
   margin-top: -20px;
 }
 
-.icon-fa { /* Font Awesome 아이콘을 위한 새 클래스 */
-  /* font-size: 30px;
-  margin-left: 20px; 
+.icon-fa { /* Font Awesome 아이콘을 위한 새 클래스 
+  font-size: 30px; /* 아이콘 크기 조절 
+  margin-left: 20px; /* 아이콘 간 간격 
   cursor: pointer;
-  color: black;
+  color: black; /* 아이콘 색상 
 } */
-/* 쇼핑 헤더 css */
+
 .shopping-header {
     margin: 20px;
 }
