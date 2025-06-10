@@ -8,11 +8,11 @@
     display: flex;
     flex-direction: column;    
     margin-left: 25rem;
-    bottom: 20rem;
+    bottom: 8.5rem;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    position: fixed;
+    position: relative;
 }
 
 
