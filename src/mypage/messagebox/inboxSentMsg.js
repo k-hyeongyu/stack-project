@@ -5,7 +5,7 @@ function InboxMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, 
     chooseInboxMsgIndex, setChooseInboxMsgIndex, sentMessageData, setSentMessageData }) {
 
     return (
-        <>
+        <div className="messageBoxContainer">
             {
                 inboxMessageData.map((item, index) => {
                     return (
@@ -47,7 +47,7 @@ function InboxMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, 
                 showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
                 sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
             />}
-        </>
+        </div>
     );
 }
 
@@ -55,7 +55,7 @@ function SentMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, s
     sentMessageData, setSentMessageData, chooseSentMsgIndex, setChooseSentMsgIndex }) {
 
     return (
-        <>
+        <div className="messageBoxContainer">
             {
                 sentMessageData.map((item, index) => {
                     return (
@@ -80,9 +80,9 @@ function SentMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, s
                     );
                 })
             }
-
-            <button className='msgBoxDelBtn' onClick={() => {
-                //현재배열요소 무시 : _    체크되지 않은 요소들만 모아서 배열로 반환
+            
+            <button className='msgBoxDelBtn msgBtn' onClick={() => {
+                                                        //현재배열요소 무시 : _    체크되지 않은 요소들만 모아서 배열로 반환
                 const newSentMessageData = sentMessageData.filter((_, index) => !chooseSentMsgIndex[index]);
 
                 // 새로운 메시지 데이터로 상태 업데이트
@@ -95,11 +95,12 @@ function SentMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, s
             <button className='msgBoxWrtBtn msgBtn' onClick={() => {
                 setShowMsgWrtModal(!showMsgWrtModal);
             }}>쪽지쓰기</button>
+            
             {showMsgWrtModal && <MsgWrtModal inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
                 showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
                 sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
             />}
-        </>
+        </div>
     );
 
 }

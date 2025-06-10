@@ -13,28 +13,29 @@
 }
 
 /* 헤더부분 */
-#myPageheader {
+#myPageheader{
     display: flex;
     justify-content: space-between;
 }
 
 /* 로고 */
-#logo {
+#logo{
     margin-left: 2rem;
     margin-top: 2rem;
     cursor: pointer;
-
+    
 }
-
-#logoImg {
+#logoImg{
     width: 200px;
 }
 
 /* 유저 이름 아이콘 */
-#user {
+#user{
     margin-right: 2rem;
-    margin-top: 2rem;
+    margin-top:2rem;
 }
+
+
 
 /* 마이페이지 메인(헤더 밑 전부) */
 #myPageMain {
@@ -94,3 +95,15 @@
 .goalsMain {
     margin-top: 2.6rem;
 }
+
+@font-face {
+  font-family: 'SeoulNamsanM';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mypageDiv{  
+  font-family: 'SeoulNamsanM';
+}
+

@@ -29,54 +29,60 @@ function MyPage() {
     });
 
     return (
-        <div id="myPageContainer" overflow="hidden">
-            <div id="myPageheader">
-                <div id="logo" onClick={() => { navigate('/main') }}><img src={process.env.PUBLIC_URL + "/images/BalancEat_logo.png"} id="logoImg"></img></div>
-                <div id="user">{userInfo.name}님 <i className="fa-solid fa-user"></i> </div>
-            </div>
-
-            <div id="myPageMain">
-                <div id="tabs">
-                    <ul className="tablist">
-                        <li className="tab" onClick={() => { navigate('/mypage/dashboard') }}>대시보드</li>
-                        <li className="tab" onClick={() => { navigate('/mypage/goals') }}>목표관리</li>
-                        <li className="tab" onClick={() => { navigate('/mypage/messagebox') }}>쪽지함</li>
-                        <li className="tab" onClick={() => { navigate('/mypage/editprofile') }}>개인정보 수정</li>
-                    </ul>
-
-                    <button id="logoutButton" onClick={() => { navigate('/main') }}>Logout</button>
+        <div className='mypageDiv'>
+            <div id="myPageContainer" overflow="hidden">
+                <div className='mypage-header'>
+                    <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
+                    <div className='mypage-header-right'>
+                        <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
+                        <i className="fa-solid fa-user" onClick={() => { navigate("/mypage/dashboard") }}></i>
+                    </div>
                 </div>
 
-                <Routes>
-                    <Route path="/" element={<Navigate to="/dashboard" replace />}></Route>
-                    <Route path="/dashboard" element={
-                        <>
-                            <Charts weightData={weightData} setWeightData={setWeightData} />
-                            <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
-                        </>
-                    }></Route>
-                    <Route path="/goals" element={
-                        <>
-                            <div className="goalsMain">
-                                <GoalChart userInfo={userInfo} />
-                                <DietQuotes />
-                            </div>
-                            <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
-                        </>
-                    }></Route>
+                <div id="myPageMain">
+                    <div id="tabs">
+                        <ul className="tablist">
+                            <li className="tab" onClick={() => { navigate('/mypage/dashboard') }}>대시보드</li>
+                            <li className="tab" onClick={() => { navigate('/mypage/goals') }}>목표관리</li>
+                            <li className="tab" onClick={() => { navigate('/mypage/messagebox') }}>쪽지함</li>
+                            <li className="tab" onClick={() => { navigate('/mypage/editprofile') }}>개인정보 수정</li>
+                        </ul>
 
-                    <Route path="/messagebox/*" element={<MessageBox />} />
+                        <button id="logoutButton" onClick={() => { navigate('/main') }}>Logout</button>
+                    </div>
 
-                    <Route path="/editprofile" element={
-                        <>
-                            <EditProfile userInfo={userInfo} setUserInfo={setUserInfo}
-                                weightData={weightData} setWeightData={setWeightData} />
-                            <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
-                        </>
-                    }></Route>
-                </Routes>
+                    <Routes>
+                        <Route path="/" element={<Navigate to="/dashboard" replace />}></Route>
+                        <Route path="/dashboard" element={
+                            <>
+                                <Charts weightData={weightData} setWeightData={setWeightData} />
+                                <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
+                            </>
+                        }></Route>
+                        <Route path="/goals" element={
+                            <>
+                                <div className="goalsMain">
+                                    <GoalChart userInfo={userInfo} />
+                                    <DietQuotes />
+                                </div>
+                                <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
+                            </>
+                        }></Route>
+
+                        <Route path="/messagebox/*" element={<MessageBox />} />
 
 
+                        <Route path="/editprofile" element={
+                            <>
+                                <EditProfile userInfo={userInfo} setUserInfo={setUserInfo}
+                                    weightData={weightData} setWeightData={setWeightData} />
+                                <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
+                            </>
+                        }></Route>
+                    </Routes>
+
+
+                </div>
             </div>
         </div>
     );
