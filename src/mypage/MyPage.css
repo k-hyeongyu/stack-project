@@ -1,80 +1,85 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* 페이지 전체 컨테이너 */
-#myPageContainer {
+#myPageContainer{
     margin: 0 auto;
     width: 100%;
     height: 100%;
-
-}
-
-/* 헤더부분 */
-#myPageheader{
-    display: flex;
-    justify-content: space-between;
-}
-
-/* 로고 */
-#logo{
-    margin-left: 2rem;
-    margin-top: 2rem;
-    cursor: pointer;
     
 }
-#logoImg{
-    width: 200px;
+
+
+/* 헤더부분 */
+
+.cart-header {
+    margin: 20px;
 }
 
-/* 유저 이름 아이콘 */
-#user{
-    margin-right: 2rem;
-    margin-top:2rem;
+.logo-image {
+    width: 200px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+.mypage-header-right {
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    top: 50px;
+    right: 50px;
+    font-size: 30px;
+    color: rgb(143, 143, 143);
+}
+
+.mypage-header-right .fa-solid:hover {
+    cursor: pointer;
 }
 
 
 
 /* 마이페이지 메인(헤더 밑 전부) */
-#myPageMain {
+#myPageMain{
     display: flex;
     justify-content: space-between;
 }
 
 /* 화면 왼쪽 탭, 로그아웃버튼 감싸는 div */
-#tabs {
+#tabs{
     margin-top: 30px;
     width: 250px;
     min-width: 250px;
     background-color: #f28500;
     border-radius: 0 5px 0 0;
-
+    
 }
 
 /* 탭 리스트들 */
-.tablist {
+.tablist{
     list-style-type: none;
 }
 
-.tablist>.tab:hover {
+.tablist > .tab:hover{
     background-color: white;
     color: #f28500;
     cursor: pointer;
 }
 
 /* 개별 탭 */
-.tab {
+.tab{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.2rem; 
     border-bottom: 1px solid orange;
 }
 
 /* 로그아웃 버튼 */
-#logoutButton {
+#logoutButton{
     margin-top: 25rem;
     margin-left: 1.5rem;
     margin-bottom: 2rem;
@@ -87,12 +92,13 @@
     font-size: 1rem;
 }
 
-#logoutButton:hover {
+#logoutButton:hover{
     background-color: white;
     color: #f28500;
 }
 
-.goalsMain {
+
+.goalsMain{
     margin-top: 2.6rem;
 }
 
