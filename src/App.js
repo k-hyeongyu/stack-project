@@ -1,15 +1,15 @@
 
 import './App.css';
-import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 import MyPage from './mypage/MyPage';
+import Cart from './cart/Cart';
 
 function App() {
   return (
     
-      // <MainPage />
+      
       <div className='appDiv'>
         
-        <MyPage />  
+        <Cart />  
       </div>
   );
 }
