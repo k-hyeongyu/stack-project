@@ -1,9 +1,9 @@
 
 import MsgWrtModal from "./MsgWrtModal";
 
-function InboxMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, setInboxMessageData, 
-                        chooseInboxMsgIndex, setChooseInboxMsgIndex, sentMessageData, setSentMessageData} ) {
-    
+function InboxMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, setInboxMessageData,
+    chooseInboxMsgIndex, setChooseInboxMsgIndex, sentMessageData, setSentMessageData }) {
+
     return (
         <>
             {
@@ -40,20 +40,20 @@ function InboxMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, 
                 // 메시지 데이터가 변경되었으므로, 체크박스 상태 배열도 새로운 길이에 맞추기
                 setChooseInboxMsgIndex(new Array(newInboxMessageData.length).fill(false));
             }}>선택삭제</button>
-            <button className='msgBoxWrtBtn msgBtn' onClick={()=>{
-                setShowMsgWrtModal(!showMsgWrtModal);                
+            <button className='msgBoxWrtBtn msgBtn' onClick={() => {
+                setShowMsgWrtModal(!showMsgWrtModal);
             }}>쪽지쓰기</button>
             {showMsgWrtModal && <MsgWrtModal inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
-                                                showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
-                                                sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
+                showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
+                sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
             />}
         </>
     );
 }
 
-function SentMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, setInboxMessageData,
-                        sentMessageData, setSentMessageData, chooseSentMsgIndex, setChooseSentMsgIndex}) {
-    
+function SentMessages({ showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, setInboxMessageData,
+    sentMessageData, setSentMessageData, chooseSentMsgIndex, setChooseSentMsgIndex }) {
+
     return (
         <>
             {
@@ -82,7 +82,7 @@ function SentMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, s
             }
 
             <button className='msgBoxDelBtn' onClick={() => {
-                                                        //현재배열요소 무시 : _    체크되지 않은 요소들만 모아서 배열로 반환
+                //현재배열요소 무시 : _    체크되지 않은 요소들만 모아서 배열로 반환
                 const newSentMessageData = sentMessageData.filter((_, index) => !chooseSentMsgIndex[index]);
 
                 // 새로운 메시지 데이터로 상태 업데이트
@@ -92,12 +92,12 @@ function SentMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, s
                 setChooseSentMsgIndex(new Array(newSentMessageData.length).fill(false));
 
             }}>선택삭제</button>
-            <button className='msgBoxWrtBtn msgBtn' onClick={()=>{
-                setShowMsgWrtModal(!showMsgWrtModal);                
+            <button className='msgBoxWrtBtn msgBtn' onClick={() => {
+                setShowMsgWrtModal(!showMsgWrtModal);
             }}>쪽지쓰기</button>
             {showMsgWrtModal && <MsgWrtModal inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
-                                                showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
-                                                sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
+                showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
+                sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
             />}
         </>
     );

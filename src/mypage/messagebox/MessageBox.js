@@ -1,7 +1,7 @@
 import { Route, Routes, useNavigate, Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import './MessageBox.css'
-import {InboxMessages, SentMessages} from './inboxSentMsg';
+import { InboxMessages, SentMessages } from './inboxSentMsg';
 
 function MessageBox() {
 
@@ -24,10 +24,10 @@ function MessageBox() {
     ]);
 
     // 받은쪽지함에서 선택삭제를 위해 선택된 요소들 boolean변수로 배열에 담기
-                                                        // 정보를 담고있는 inboxMessageData 배열 길이와 같은 boolean배열 생성
+    // 정보를 담고있는 inboxMessageData 배열 길이와 같은 boolean배열 생성
     const [chooseInboxMsgIndex, setChooseInboxMsgIndex] = useState(new Array(inboxMessageData.length).fill(false));
 
-    
+
     // 보낸쪽지함 정보
     const [sentMessageData, setSentMessageData] = useState([
         {
@@ -51,7 +51,7 @@ function MessageBox() {
     ])
 
     // 보낸쪽지함에서 선택삭제를 위해 선택된 요소들 boolean변수로 배열에 담기
-                                                            // 정보를 담고있는 SentMessages 배열 길이와 같은 boolean배열 생성
+    // 정보를 담고있는 SentMessages 배열 길이와 같은 boolean배열 생성
     const [chooseSentMsgIndex, setChooseSentMsgIndex] = useState(new Array(sentMessageData.length).fill(false));
 
 
@@ -62,24 +62,24 @@ function MessageBox() {
         <div className="messageBox">
             <ul className='messageBoxTabs'>
                 <li className='boxTab tab1' onClick={() => { navigate('/mypage/messagebox/inbox') }}>받은쪽지함</li>
-                <li className='boxTab tab2' onClick={() => { navigate('/mypage/messagebox/sent') }}>보낸쪽지함</li>                
+                <li className='boxTab tab2' onClick={() => { navigate('/mypage/messagebox/sent') }}>보낸쪽지함</li>
             </ul>
 
             <Routes>
-                 <Route index element={<Navigate to="inbox" replace />} /> 
+                <Route index element={<Navigate to="inbox" replace />} />
 
                 <Route path='inbox' element={
-                    <InboxMessages showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal} 
-                                    inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
-                                    sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
-                                    chooseInboxMsgIndex={chooseInboxMsgIndex} setChooseInboxMsgIndex={setChooseInboxMsgIndex}
+                    <InboxMessages showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
+                        inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
+                        sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
+                        chooseInboxMsgIndex={chooseInboxMsgIndex} setChooseInboxMsgIndex={setChooseInboxMsgIndex}
                     />
                 }></Route>
-                <Route path='sent' element={                    
+                <Route path='sent' element={
                     <SentMessages showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
-                                    inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData} 
-                                  sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
-                                  chooseSentMsgIndex={chooseSentMsgIndex} setChooseSentMsgIndex={setChooseSentMsgIndex}  
+                        inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
+                        sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
+                        chooseSentMsgIndex={chooseSentMsgIndex} setChooseSentMsgIndex={setChooseSentMsgIndex}
                     />
                 }></Route>
             </Routes>

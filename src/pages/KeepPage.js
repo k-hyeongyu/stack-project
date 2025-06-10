@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import VideoGrid from '../components/VideoGrid';
 import './PageContent.css';
 import Modal from '../components/Modal';
@@ -43,10 +43,8 @@ const KeepPage = () => {
         <div className='keep-content'>
           <Theme
             title="체형 유지"
-//             description={`누구나 지칠 때가 있지만 멈추지 않는 사람이 결국 건강을 지킵니다.
-// 쉬운 실천과 꾸준한 루틴으로 당신의 건강한 삶을 응원합니다.`}
             description={<>누구나 지칠 때가 있지만 멈추지 않는 사람이 결국 건강을 지킵니다.<br />
-            쉬운 실천과 꾸준한 루틴으로 당신의 건강한 삶을 응원합니다.</>}
+              쉬운 실천과 꾸준한 루틴으로 당신의 건강한 삶을 응원합니다.</>}
           />
           <VideoGrid videos={keepVideos} onVideoSelect={handleVideoSelect} />
         </div>

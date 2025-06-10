@@ -25,14 +25,6 @@ function Shopping() {
                 <div className='shopping-seperator-line'></div>
             </div>
 
-            {/* <div className='shopping-container'>
-                <ShoppingHome items1={items1} items2={items2} items3={items3}/>
-            </div>
-
-            <Routes>
-                <Route path="/details/:id" element={<DetailExplain items1={items1} items2={items2} items3={items3}/>}></Route>
-            </Routes> */}
-
             <Routes>
                 <Route path='/' element={<ShoppingHome items1={items1} items2={items2} items3={items3}/>}></Route>
                 <Route path="/details/:id" element={<DetailExplain items1={items1} items2={items2} items3={items3}/>}></Route>

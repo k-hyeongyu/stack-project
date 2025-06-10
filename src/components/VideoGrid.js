@@ -1,4 +1,3 @@
-import React from 'react';
 import './VideoGrid.css';
 
 const VideoGrid = ({ videos, onVideoSelect }) => {
@@ -36,7 +35,7 @@ const VideoGrid = ({ videos, onVideoSelect }) => {
             <div className="play-icon-overlay">
               <div className="play-button">
                 <svg width="68" height="48" viewBox="0 0 68 48">
-                  <path d="M19 15l27 9-27 9V15z" fill="#fff"/>
+                  <path d="M19 15l27 9-27 9V15z" fill="#fff" />
                 </svg>
               </div>
             </div>

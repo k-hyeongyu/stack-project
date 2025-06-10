@@ -61,18 +61,18 @@ function DetailExplain({ items1, items2, items3 }) {
 
                 <div className='detail-post'>
                     <p className='detail-priceInfo'>수량선택 : </p>
-                        <div className="detail-itemCount">
-                            <button className='detail-countButton' onClick={() => {
-                                if (itemCount > 1) {
-                                    setItemCount(itemCount - 1)
-                                }
-                            }}>-</button>
-                            <input type="text" className="detail-input" value={itemCount}></input>
-                            <button className='detail-countButton' onClick={() => {
-                                setItemCount(itemCount + 1)
-                            }}>+</button>
-                        </div>
+                    <div className="detail-itemCount">
+                        <button className='detail-countButton' onClick={() => {
+                            if (itemCount > 1) {
+                                setItemCount(itemCount - 1)
+                            }
+                        }}>-</button>
+                        <input type="text" className="detail-input" value={itemCount}></input>
+                        <button className='detail-countButton' onClick={() => {
+                            setItemCount(itemCount + 1)
+                        }}>+</button>
                     </div>
+                </div>
                 <div className='detail-seperator-line'></div>
 
                 <div className='detail-totalPrice'>

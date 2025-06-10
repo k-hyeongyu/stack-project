@@ -1,4 +1,3 @@
-import React from 'react';
 import './Modal.css';
 
 const Modal = ({ isOpen, onClose, videoId }) => {

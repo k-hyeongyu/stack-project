@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import VideoGrid from '../components/VideoGrid';
 import './PageContent.css';
 import Modal from '../components/Modal';
@@ -37,12 +37,12 @@ const DietPage = () => {
       <div className="page-content">
         <Sidebar /> {/* 사이드바 렌더링 */}
         <div className='diet-content'>
-        <Theme
+          <Theme
             title="다이어트"
             description={<>다이어트는 몸을 억지로 바꾸는 일이 아니라 나를 아끼는 과정입니다.<br />
               꾸준히 당신의 건강한 선택을 응원합니다.</>}
           />
-        <VideoGrid videos={dietVideos} onVideoSelect={handleVideoSelect} />
+          <VideoGrid videos={dietVideos} onVideoSelect={handleVideoSelect} />
         </div>
         <Modal
           isOpen={isModalOpen}

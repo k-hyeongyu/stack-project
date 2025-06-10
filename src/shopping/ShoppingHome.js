@@ -1,7 +1,6 @@
 import ItemCard from "./ItemCard";
 import './Shopping.css';
 
-
 function ShoppingHome({ items1, items2, items3 }) {
     return (
         <div>

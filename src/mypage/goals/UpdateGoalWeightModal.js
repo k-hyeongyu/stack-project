@@ -1,14 +1,14 @@
 import './UpdateGoalWeightModal.css'
 
-function UpdateGoalWeightModal(props){
+function UpdateGoalWeightModal(props) {
     let inputKg;
 
-    return(
+    return (
         <div className="modal">
-            <input type='number' placeholder='목표 체중(kg)' onChange={(event)=>{
-               inputKg = event.target.value;  
+            <input type='number' placeholder='목표 체중(kg)' onChange={(event) => {
+                inputKg = event.target.value;
             }}></input>
-            <button onClick={()=>{
+            <button onClick={() => {
                 props.setTargetWeight(inputKg);
             }}>수정</button>
         </div>

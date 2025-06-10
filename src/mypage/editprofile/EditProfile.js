@@ -53,7 +53,7 @@ function EditProfile(props) {
                     );
 
                 }}></input>
-            </div>           
+            </div>
 
             <hr></hr>
             <div className='profileInfo'>
@@ -108,7 +108,7 @@ function EditProfile(props) {
             </div>
             <hr></hr>
             <button onClick={() => {
-                if(props.userInfo.password != props.userInfo.passwordcheck){
+                if (props.userInfo.password != props.userInfo.passwordcheck) {
                     alert('비밀번호가 다릅니다')
                     return;
                 }

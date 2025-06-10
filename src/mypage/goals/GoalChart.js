@@ -93,7 +93,7 @@ function GoalChart(props) {
             <Doughnut data={data} options={options} />
             <button className='setGoalWeightButton' onClick={() => {
                 setShowModal(!showModal)
-            }} style={{fontFamily: 'SeoulNamsanM'}}>목표체중 설정</button>
+            }} style={{ fontFamily: 'SeoulNamsanM' }}>목표체중 설정</button>
             {showModal && <UpdateGoalWeightModal setTargetWeight={setTargetWeight} />}
         </div>
     );

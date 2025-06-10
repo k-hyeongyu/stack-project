@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from './Header'; // Header 컴포넌트 import
 import Sidebar from './Sidebar'; // Sidebar 컴포넌트 import
 import VideoGrid from './VideoGrid'; // VideoGrid 컴포넌트 import
