@@ -2,14 +2,14 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import Navigate from 'react-router-dom';
 import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
+import MyPage from './mypage/MyPage';
 import Introduce from './introduce/Introduce';
 import Login from './login/Login';
 import SignUp from './login/SignUp';
 import FindId from './login/FindId';
 import FindPw from './login/FindPw';
-// import Shopping from './shopping/Shopping';
+import Shopping from './shopping/Shopping';
 import React from 'react';
-
 
 import DietPage from './pages/DietPage';
 import BulkPage from './pages/BulkPage';
@@ -31,10 +31,10 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />
         <Route path="/FindPw" element={<FindPw />} />
-        {/* <Route path="/shopping" element={<Shopping />} /> */}
-        <Route path="/bulkup" element={<BulkPage/>}/>
-        <Route path="/diet" element={<DietPage/>}/>
-        <Route path="/maintain" element={<KeepPage/>}/>
+        <Route path="/shopping/*" element={<Shopping />} />
+        <Route path="/bulk" element={<BulkPage />} />
+        <Route path="/diet" element={<DietPage />} />
+        <Route path="/keep" element={<KeepPage />} />
       </Routes>
     </div>
   

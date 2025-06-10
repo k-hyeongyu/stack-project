@@ -52,7 +52,7 @@ function FindId() {
                     <button type='submit' className='find-button'>아이디 찾기</button>
                 </form>
                 <div className='find-seperator-line'></div>
-                <div className='login-find'>
+                <div className='login-find page-font'>
                     <span id='findId-login' onClick={() => { navigate('/login') }}>로그인하기</span>
                 </div>
 
