@@ -13,7 +13,9 @@ const Header = () => {
       </div>
         <div className="header-right">
         <i className="fas fa-shopping-cart icon-fa"></i> {/* 쇼핑 카트 아이콘 */}
+        <NavLink>
         <i className="fas fa-user icon-fa"></i>         {/* 사용자 아이콘 */}
+        </NavLink>
         </div>
         
     </header>
