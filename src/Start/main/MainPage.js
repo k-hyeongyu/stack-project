@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./MainPage.css";
 
 function MainPage() {
 
+    let navigate = useNavigate();
     return (
         <div className="main-wrapper">
             <video autoPlay loop muted className="background-video">
@@ -16,12 +17,11 @@ function MainPage() {
                     <div className="profile">
                         {/* 쇼핑 아이콘을 클릭하면 /shop 으로 이동 */}
                         <div className="shop">
-                            <i className="fa-solid fa-cart-shopping"></i>
+                            <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
                         </div>
-
                         {/* 이름 아이콘 */}
                         <div className="name">
-                            <Link to="/login"><i className="fa-solid fa-user"></i></Link>
+                            <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
                         </div>
                     </div>
                 </header>
