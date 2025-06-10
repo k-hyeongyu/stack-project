@@ -101,3 +101,15 @@
 .goalsMain{
     margin-top: 2.6rem;
 }
+
+@font-face {
+  font-family: 'SeoulNamsanM';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.mypageDiv{  
+  font-family: 'SeoulNamsanM';
+}
+

@@ -26,7 +26,7 @@ function App() {
         
         <Route path='/' element={<Introduce />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/mypage/*" element={<div className='appDiv'><MyPage /></div>} />
+        <Route path="/mypage/*" element={<MyPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/FindId" element={<FindId />} />
