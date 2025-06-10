@@ -89,7 +89,7 @@ function GoalChart(props) {
 
 
     return (
-        <div style={{ width: '600px', height: '400px', paddingLeft: '4rem', marginTop: '1.1rem' }}>
+        <div style={{ width: '600px', height: '400px', paddingLeft: '4rem', marginTop: '1.1rem' }} className='dnCrt'>
             <Doughnut data={data} options={options} />
             <button className='setGoalWeightButton' onClick={() => {
                 setShowModal(!showModal)
