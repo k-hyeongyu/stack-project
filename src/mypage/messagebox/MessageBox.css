@@ -63,8 +63,8 @@
 
 
 .msgBoxDelBtn{    
-    position: relative;
-    top: 22rem;
+    position: absolute;
+    top: 34rem;
     left: 2rem;
     padding: 15px 30px;
     border-radius: 9px;
@@ -82,9 +82,9 @@
 }
 
 .msgBoxWrtBtn{
-    position: relative;
-    top: 22rem;
-    left: 3rem;
+    position: absolute;
+    top: 34rem;
+    left: 10rem;
     padding: 15px 30px;
     border-radius: 9px;
     background-color: orange;
