@@ -5,16 +5,27 @@
     align-content: center;
     color: rgb(0, 0, 0);
     text-align: center;
-    /* 전체 박스 안 텍스트 중앙 정렬 */
+    animation: slideUp 0.6s ease-out;
 }
 
 .theme-title {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
-
-
 .theme-description {
     font-size: 30px;
     line-height: 1.6;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

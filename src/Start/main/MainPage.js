@@ -21,7 +21,7 @@ function MainPage() {
 
                         {/* 이름 아이콘 */}
                         <div className="name">
-                            <i className="fa-solid fa-user"></i>
+                            <Link to="/login"><i className="fa-solid fa-user"></i></Link>
                         </div>
                     </div>
                 </header>
@@ -29,10 +29,10 @@ function MainPage() {
                 {/* 카드 버튼 영역 */}
                 <div className="card-container">
                     {/* 벌크업 카드를 Link 컴포넌트로 감쌉니다 */}
-                    <Link to="/bulk" className="health-card"> {/* 'to' prop에 이동할 경로 지정 */}
+                    <Link to="/diet" className="health-card">
                         <div className="card-text">
-                            <h2>벌크업</h2>
-                            <p>근육 성장을 위한 <br></br>식단과 운동을 원해요</p>
+                            <h2>다이어트</h2>
+                            <p>체지방 감량을 위한 <br></br>식이요법과 운동을 원해요</p>
                         </div>
                     </Link>
 
@@ -43,10 +43,10 @@ function MainPage() {
                         </div>
                     </Link>
 
-                    <Link to="/diet" className="health-card">
+                    <Link to="/bulk" className="health-card"> {/* 'to' prop에 이동할 경로 지정 */}
                         <div className="card-text">
-                            <h2>다이어트</h2>
-                            <p>체지방 감량을 위한 <br></br>식이요법과 운동을 원해요</p>
+                            <h2>벌크업</h2>
+                            <p>근육 성장을 위한 <br></br>식단과 운동을 원해요</p>
                         </div>
                     </Link>
                 </div>
