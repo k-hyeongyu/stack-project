@@ -1,25 +1,9 @@
-import { useState } from "react";
+
 import MsgWrtModal from "./MsgWrtModal";
 
-function InboxMessages() {
-    const [inboxMessageData, setInboxMessageData] = useState([
-        {
-            id: '001',
-            name: '운영자',
-            date: '25.06.01',
-            content: '안녕하세요. 저희 사이트에 가입해주셔서 감사합니다.'
-        },
-        {
-            id: '002',
-            name: '푸름',
-            date: '25.06.05',
-            content: '안녕하세요. 잘부탁드립니다.'
-        }
-    ]);
-                                                        // 정보를 담고있는 inboxMessageData 배열 길이와 같은 boolean배열 생성
-    const [chooseInboxMsgIndex, setChooseInboxMsgIndex] = useState(new Array(inboxMessageData.length).fill(false));
-
-    const [showMsgWrtModal, setShowMsgWrtModal] = useState(false);
+function InboxMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, setInboxMessageData, 
+                        chooseInboxMsgIndex, setChooseInboxMsgIndex, sentMessageData, setSentMessageData} ) {
+    
     return (
         <>
             {
@@ -59,35 +43,17 @@ function InboxMessages() {
             <button className='msgBoxWrtBtn msgBtn' onClick={()=>{
                 setShowMsgWrtModal(!showMsgWrtModal);                
             }}>쪽지쓰기</button>
-            {showMsgWrtModal && <MsgWrtModal showMsgWrtModal={showMsgWrtModal} 
-                                            setShowMsgWrtModal={setShowMsgWrtModal} />}
+            {showMsgWrtModal && <MsgWrtModal inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
+                                                showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
+                                                sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
+            />}
         </>
     );
 }
 
-function SentMessages() {
-    const [sentMessageData, setSentMessageData] = useState([
-        {
-            id: '101',
-            name: '푸름',
-            date: '25.06.04',
-            content: '안녕하세요. 처음 가입했습니다. 잘부탁드려요~'
-        },
-        {
-            id: '102',
-            name: '초록나무',
-            date: '25.06.04',
-            content: '안녕하세요. 처음 가입했어요. 잘부탁드립니다~'
-        },
-        {
-            id: '103',
-            name: '가렌',
-            date: '25.06.05',
-            content: '안녕하세요 푸름님께서 소개해주셨어요 잘부탁드립니다!!'
-        }
-    ])
-                                                            // 정보를 담고있는 SentMessages 배열 길이와 같은 boolean배열 생성
-    const [chooseSentMsgIndex, setChooseSentMsgIndex] = useState(new Array(SentMessages.length).fill(false));
+function SentMessages( {showMsgWrtModal, setShowMsgWrtModal, inboxMessageData, setInboxMessageData,
+                        sentMessageData, setSentMessageData, chooseSentMsgIndex, setChooseSentMsgIndex}) {
+    
     return (
         <>
             {
@@ -126,7 +92,13 @@ function SentMessages() {
                 setChooseSentMsgIndex(new Array(newSentMessageData.length).fill(false));
 
             }}>선택삭제</button>
-            <button className='msgBoxWrtBtn msgBtn'>쪽지쓰기</button>
+            <button className='msgBoxWrtBtn msgBtn' onClick={()=>{
+                setShowMsgWrtModal(!showMsgWrtModal);                
+            }}>쪽지쓰기</button>
+            {showMsgWrtModal && <MsgWrtModal inboxMessageData={inboxMessageData} setInboxMessageData={setInboxMessageData}
+                                                showMsgWrtModal={showMsgWrtModal} setShowMsgWrtModal={setShowMsgWrtModal}
+                                                sentMessageData={sentMessageData} setSentMessageData={setSentMessageData}
+            />}
         </>
     );
 
