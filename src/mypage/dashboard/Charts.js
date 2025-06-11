@@ -7,7 +7,7 @@ function Charts(props) {
     return (
         <div className="bodyConditionCharts">
             <div id="bodyChart">
-                <BodyChart weightData={props.weightData} />
+                <BodyChart weightData={props.weightData} skeletalMuscleMassData={props.skeletalMuscleMassData} />
             </div>
             <div id="conditionChart">
                 <ConditionChart />

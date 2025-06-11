@@ -16,6 +16,7 @@ function MyPage() {
     const [weightData, setWeightData] = useState(['77', '76.8', '76.5', '75.7', '76.1', '75.2',
         '75.3', '74.1', '73.7', '73.5', '73.1', '72.7'
     ].reverse());
+    const skeletalMuscleMassData = [30, 30.2, 30.5, 30.8, 31, 31.2, 31.5, 31.7, 32, 32.1, 32.3, 32.2].reverse();
 
     const [userInfo, setUserInfo] = useState({
         name: '가나다',
@@ -61,7 +62,7 @@ function MyPage() {
                     <Route path="/mypage" element={<Navigate to="/mypage/dashboard" replace />}></Route>
                     <Route path="/mypage/dashboard" element={
                         <>
-                            <Charts weightData={weightData} setWeightData={setWeightData} />
+                            <Charts weightData={weightData} setWeightData={setWeightData} skeletalMuscleMassData={skeletalMuscleMassData} />
                             <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
                         </>
                     }></Route>
@@ -75,7 +76,7 @@ function MyPage() {
                         </>
                     }></Route>
 
-                    <Route path="/mypage/messagebox/*" element={<MessageBox />} />
+                    <Route path="/mypage/messagebox/*" element={<MessageBox />} />  
 
 
                     <Route path="/mypage/editprofile" element={

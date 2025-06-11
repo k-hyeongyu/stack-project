@@ -26,13 +26,14 @@ ChartJS.register(
 const ConditionChart = () => {
     // 1. 일주일치 컨디션 데이터 하드코딩
     const conditionData = [
+        { date: '토', condition: '상' },
+        { date: '일', condition: '중' },
         { date: '월', condition: '상' },
         { date: '화', condition: '중' },
         { date: '수', condition: '하' },
         { date: '목', condition: '상' },
         { date: '금', condition: '하' },
-        { date: '토', condition: '상' },
-        { date: '일', condition: '중' }
+        
     ];
 
     // 2. 컨디션에 따른 값 매핑 (높이 조절용) 및 이모티콘, 색상 정의
@@ -135,7 +136,7 @@ const ConditionChart = () => {
 
     return (
         <div style={{ width: '100%', maxWidth: '700px', height: '350px', margin: '0 auto', padding: '40px', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-            <h2>일간 컨디션 그래프</h2>
+            <h2>최근 일주일간 컨디션 그래프</h2>
             <Bar data={data} options={options} />
         </div>
     );
