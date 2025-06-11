@@ -1,10 +1,32 @@
 import { Navigate, useNavigate } from "react-router-dom";
 import './Cart.css'
+import CartItems from "./CartItems";
+import { useState } from "react";
 
 function Cart() {
     const navigate = useNavigate();
+
+    const [itemData, setItemData] = useState([
+        {   
+            id: 1,
+            title: '닭가슴살',
+            price: 19900,
+            imgPath: '/images/bodyImg.jpg',
+            qty: 1,
+            isChecked: false
+        },
+        {   
+            id: 2,
+            title: '떡볶이',
+            price: 10900,
+            imgPath: '/images/bodyImg.jpg',
+            qty: 1,
+            isChecked: false
+        }
+    ]);
+
     return (
-        <>
+        <div className="cart-page-container">
             <div className='cart-header'>
                 <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
                 <div className='cart-header-right'>
@@ -15,37 +37,21 @@ function Cart() {
             </div>
             <div className="cart-content-container">
                 <div className="cart-content">
-                    <h2>장바구니</h2>
-                    <div className="cart-option">
-                        <div className="chooseAllChkBox">
-                            <input type="checkbox" />
-                            <span>전체선택</span>
-                        </div>
-                        <button>선택삭제</button>
-                    </div>
-                    <div className="cart-items">
-                        <div className="imgAndInfo">
-                            <input type="checkbox" />
-                            <img src="/logo192.png" alt="상품이미지"></img>
-                            <div>
-                                <h4>닭가슴살</h4>
-                                <span>19,900원</span>
-                            </div>
-                        </div>
-                        <div className="qty-group">
-                            <div className="qty-btns">
-                                <button>-</button>
-                                <input type="text" className="input-qty"></input>
-                                <button>+</button>
-                            </div>
-                            <h4>19,000원</h4>
-                            <button className="del-btn">X</button>
-                        </div>
-                    </div>
+                    
 
+                    <CartItems itemData={itemData} setItemData={setItemData} />
+
+                    
+                    <div className="cartBtns">
+                        <button className="continueBtn" onClick={()=>{navigate('/shopping')}}>쇼핑계속하기</button>
+                        <button className="orderBtn" onClick={()=>{navigate('/main')}}>주문하기</button>
+                    </div>
                 </div>
+
             </div>
-        </>
+
+
+        </div>
     );
 }
 

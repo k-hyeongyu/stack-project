@@ -1,3 +1,8 @@
+.cart-page-container{
+    justify-content: center;
+}
+
+
 /* 쇼핑 헤더 css */
 .cart-header {
     margin: 20px;
@@ -6,7 +11,7 @@
 .logo-image {
     width: 200px;
     cursor: pointer;
-
+    margin-left: 20px;
 }
 
 .cart-header-right {
@@ -39,7 +44,7 @@
     justify-content: center;
 }
 
-/* 카드 본문 부분 */
+/* 카트 본문 부분 */
 .cart-content{
     width: 80%;
     margin-top: 20px;
@@ -55,81 +60,89 @@
     margin-bottom: 5px;
 }
 
+.cart-option > button{
+    cursor: pointer;
+}
+
 .chooseAllChkBox{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.chooseAllChkBox {
-
+.chooseAllChkBox > span{
+    margin-left: 8px;
 }
+
 .cart-option > button{
     padding: 5px 10px;
     background-color: white;
     border: 1px solid lightgray;
 }
 
-.cart-items{
+
+
+.totalPriceBox{
+    display: flex;
     width: 100%;
-    height: 200px;
+    height: 130px;
     border: 1px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-
+    margin-top: 30px;
 }
 
-.cart-items img{
-    width: 100px;
-    height: 100px;
-}
-
-.imgAndInfo{
+.totalPriceBox > div{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #cccccc7e;
     display: flex;
-    align-items: center;
-}
-
-.qty-group{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
-.qty-group > h4{
-    padding-right: 100px;
+.totalPriceBox > div > span{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-.qty-group > .del-btn{
+.itemPrice > img{
+    position: absolute;
+    margin-left: 16rem;
+}
+
+.discountPrice > img{
+    position: absolute;
+    margin-left: 16rem;
+}
+
+.shippingPrice > img{
+    position: absolute;
+    margin-left: 16rem;
+}
+
+.cartBtns{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.cartBtns > button{
+    width: 400px;
+    height: 60px;
+    margin: 0 30px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cartBtns > .orderBtn{
+    background-color: orange;
+    color: white;
     border-style: none;
 }
 
-
-.qty-btns{
-    padding-right: 100px;
-}
-
-.qty-btns > .input-qty{
-    width: 60px;
-    height: 35px;
-    text-align: center;
-    border: 1px solid rgb(190, 190, 190);
-    border-radius: 3px;
-}
-
-.qty-btns > button{
-    width: 30px;
-    height: 35px;
-    border: 1px solid #F28500;
-    border-radius: 3px;
-    cursor: pointer;
+.cartBtns > .continueBtn{
     background-color: white;
 }
-
-.qty-btns > button:active{
-    color: white;
-    background-color: #F28500;
-}
-
