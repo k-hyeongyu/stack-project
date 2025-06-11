@@ -91,3 +91,7 @@
 input[type='checkbox']{
     transform: scale(1.3);
 }
+
+.cart-totalPrice h2{
+    color: #ff7b00;
+}

@@ -8,7 +8,7 @@ function CartItems({ itemData, setItemData }) {
         const updatedItemData = itemData.map(item => {
             if (item.id === itemId) {
                 const newQty = item.qty + chg;
-                if (newQty < 0) return { ...item, qty: 0 };
+                if (newQty == 0) return { ...item, qty: 1 };
                 if (newQty > 99) return { ...item, qty: 99 };
                 return { ...item, qty: newQty };
             }
@@ -97,7 +97,7 @@ function CartItems({ itemData, setItemData }) {
                     <h2>무료</h2>
                     <img src="/images/cart-icons/eqaul_icon.png"></img>
                 </div>
-                <div>
+                <div className="cart-totalPrice">
                     <span>총 결제금액</span>
                     <h2>{
                         itemData.reduce((acc, item) => acc + (item.price * item.qty), 0).toLocaleString()

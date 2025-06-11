@@ -1,4 +1,4 @@
-.cart-page-container{
+.cart-page-container {
     justify-content: center;
 }
 
@@ -17,26 +17,24 @@
 .cart-header-right {
     position: absolute;
     display: flex;
-    gap: 30px;
+    gap: 17px;
     top: 50px;
     right: 50px;
-    font-size: 30px;
-    color: rgb(143, 143, 143);
+    color: #f28500ee;
 }
 
-.cart-header-right .fa-solid:hover {
+.cart-header-right>span {
     cursor: pointer;
 }
 
 .cart-seperator-line {
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid rgba(143, 143, 143, 0.76);
+    border-bottom: 2px solid rgba(226, 226, 226, 0.76);
     margin-top: 23px;
 }
 
-
-.cart-content-container{
+.cart-content-container {
     /* border: 1px solid black; */
     width: 1280px;
     min-height: 700px;
@@ -45,36 +43,37 @@
 }
 
 /* 카트 본문 부분 */
-.cart-content{
+.cart-content {
     width: 80%;
     margin-top: 20px;
 }
 
-.cart-content > h2{
+.cart-content>h2 {
     margin-bottom: 40px;
 }
-.cart-option{
+
+.cart-option {
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
     margin-bottom: 5px;
 }
 
-.cart-option > button{
+.cart-option>button {
     cursor: pointer;
 }
 
-.chooseAllChkBox{
+.chooseAllChkBox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.chooseAllChkBox > span{
+.chooseAllChkBox>span {
     margin-left: 8px;
 }
 
-.cart-option > button{
+.cart-option>button {
     padding: 5px 10px;
     background-color: white;
     border: 1px solid lightgray;
@@ -82,15 +81,15 @@
 
 
 
-.totalPriceBox{
+.totalPriceBox {
     display: flex;
     width: 100%;
     height: 130px;
-    border: 1px solid black;
+    border: 2px solid #F28500;
     margin-top: 30px;
 }
 
-.totalPriceBox > div{
+.totalPriceBox>div {
     width: 25%;
     height: 100%;
     border-right: 1px solid #cccccc7e;
@@ -100,27 +99,30 @@
     align-items: center;
 }
 
-.totalPriceBox > div > span{
+.totalPriceBox>div>span {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.itemPrice > img{
+.itemPrice>img {
     position: absolute;
     margin-left: 16rem;
+    background-color: white;
 }
 
-.discountPrice > img{
+.discountPrice>img {
     position: absolute;
     margin-left: 16rem;
+    background-color: white;
 }
 
-.shippingPrice > img{
+.shippingPrice>img {
     position: absolute;
     margin-left: 16rem;
+    background-color: white;
 }
 
-.cartBtns{
+.cartBtns {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -128,7 +130,7 @@
     margin-top: 3rem;
 }
 
-.cartBtns > button{
+.cartBtns>button {
     width: 400px;
     height: 60px;
     margin: 0 30px;
@@ -137,12 +139,16 @@
     cursor: pointer;
 }
 
-.cartBtns > .orderBtn{
+.cartBtns>.orderBtn {
     background-color: orange;
     color: white;
     border-style: none;
 }
 
-.cartBtns > .continueBtn{
+.cartBtns>.continueBtn {
     background-color: white;
+}
+
+.material-symbols-outlined {
+    font-size: 40px;
 }
