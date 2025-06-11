@@ -5,6 +5,7 @@ import Modal from '../health-pages/Modal';
 import Header from '../health-pages/Header';
 import Sidebar from '../health-pages/Sidebar';
 import Theme from '../health-pages/Theme';
+import AddView from '../health-pages/AddView'; 
 import Footer from '../health-pages/Footer';
 
 const KeepPage = () => {
