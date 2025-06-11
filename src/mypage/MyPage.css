@@ -29,18 +29,16 @@
 .mypage-header-right {
     position: absolute;
     display: flex;
-    gap: 30px;
+    gap: 17px;
     top: 50px;
     right: 50px;
-    font-size: 30px;
-    color: rgb(143, 143, 143);
+    color: #f28500ee;
 }
 
-.mypage-header-right .fa-solid:hover {
+.material-symbols-outlined{
+    font-size: 40px;
     cursor: pointer;
 }
-
-
 
 /* 마이페이지 메인(헤더 밑 전부) */
 #myPageMain{

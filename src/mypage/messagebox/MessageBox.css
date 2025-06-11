@@ -1,4 +1,4 @@
-.messageBoxContainer{
+.messageBoxContainer {
     position: flex;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .messageBoxTabs {
-    width: 100%;    
+    width: 100%;
     display: flex;
     list-style: none;
 }
@@ -30,8 +30,15 @@
     text-align: center;
 }
 
-.messageBoxTabs>.tab1 {border-radius: 27px 0 0 0;}
-.messageBoxTabs>.tab2 {border-radius: 0 27px 0 0;}
+.messageBoxTabs>.tab1 {
+    border-radius: 27px 0 0 0;
+}
+
+.messageBoxTabs>.tab2 {
+    border-radius: 0 27px 0 0;
+}
+
+
 
 .messageBoxTabs>.boxTab:hover {
     color: white;
@@ -39,8 +46,14 @@
     cursor: pointer;
 }
 
+.tab1.active{
+    color: white;
+    background-color: orange;
+}
+
+
 .messages {
-    border-bottom: 1px solid lightgray;    
+    border-bottom: 1px solid lightgray;
     height: 100px;
     min-height: 100px;
     width: 795px;
@@ -49,21 +62,21 @@
     padding: 1.8rem 2rem;
 }
 
-.messageCotent{
+.messageCotent {
     display: flex;
 }
 
-.messageCotent > input[type=checkbox]{
+.messageCotent>input[type=checkbox] {
     margin-right: 15px;
 }
 
-.messageCotent  h3{    
+.messageCotent h3 {
     margin-bottom: 10px;
 }
 
 
 
-.msgBoxDelBtn{    
+.msgBoxDelBtn {
     position: absolute;
     top: 48rem;
     left: 24rem;
@@ -73,16 +86,16 @@
     color: white;
     border-style: none;
     cursor: pointer;
-    
+
 }
 
 
-.msgBoxDelBtn:hover{
+.msgBoxDelBtn:hover {
     background-color: black;
     color: #f28500;
 }
 
-.msgBoxWrtBtn{
+.msgBoxWrtBtn {
     position: absolute;
     top: 48rem;
     left: 32rem;
@@ -94,7 +107,7 @@
     cursor: pointer;
 }
 
-.msgBoxWrtBtn:hover{
+.msgBoxWrtBtn:hover {
     background-color: black;
     color: #f28500;
 }
