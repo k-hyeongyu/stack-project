@@ -13,9 +13,9 @@ function FindId() {
     return (
         <div className='login-page-container'>
             <div className='login-container'>
-                <h1 className='oleo-script-regular'>BalancEat</h1>
-                {/* <p className='find-font'> - 아이디 찾기 - </p> */}
-
+                <h1 className='oleo-script-regular login-cursor' onClick={() => {
+                    navigate('/main')
+                }}>BalancEat</h1>
                 <form className='find-box' onSubmit={(event) => {
                     event.preventDefault();
 
@@ -29,8 +29,8 @@ function FindId() {
                         return;
                     }
 
-                    if (name === '김스택' && phNumber === '01012345678') {
-                        setFoundId('stack123')
+                    if (name === '김도택' && phNumber === '01012345678') {
+                        setFoundId('st****23')
                     } else {
                         alert('가입정보가 없습니다.')
                         setFoundId('')
@@ -51,12 +51,14 @@ function FindId() {
                     </div>
                     <button type='submit' className='find-button'>아이디 찾기</button>
                 </form>
+
                 <div className='find-seperator-line'></div>
                 <div className='login-find page-font'>
                     <span id='findId-login' onClick={() => { navigate('/login') }}>로그인하기</span>
                 </div>
 
             </div>
+
             {
                 foundId && (
                     <div className='foundId-text'>

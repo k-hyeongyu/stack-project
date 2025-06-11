@@ -4,59 +4,58 @@ import { useNavigate } from 'react-router';
 
 function FindPw() {
 
-    let [name, setName] = useState('')
     let [id, setId] = useState('')
-    let [foundPw, setFoundPw] = useState('')
+    let [email, setEmail] = useState('')
 
     let navigate = useNavigate();
 
     return (
         <div className='login-page-container'>
             <div className='login-container'>
-                <h1 className='oleo-script-regular'>BalancEat</h1>
-                {/* <p className='page-font'> 비밀번호 찾기 </p> */}
+                <h1 className='oleo-script-regular login-cursor' onClick={() => {
+                    navigate('/main')
+                }}>BalancEat</h1>
 
-                <form className='find-box' onSubmit={(event) => {
-                    event.preventDefault();
-
-                    if (name.trim() === '') {
-                        alert('이름을 입력해주세요.')
-                        return;
-                    }
-
-                    if (id.trim() === '') {
-                        alert('아이디를 입력해주세요.')
-                        return;
-                    }
-
-                    if (name === '김스택' && id === 'stack123') {
-                        setFoundPw('stack1234')
-                    } else {
-                        alert('가입정보가 없습니다.')
-                        setFoundPw('')
-                        setName('')
-                        setId('')
-                    }
-
-                }}>
+                <form className='find-box'>
                     <div className='find-box'>
-                        <input type='text' value={name} className='find-textbox' placeholder='이름'
-                            onChange={(event) => {
-                                setName(event.target.value)
-                            }}></input>
                         <input type='text' value={id} className='find-textbox' placeholder='아이디'
                             onChange={(event) => {
                                 setId(event.target.value)
                             }}></input>
+                        <input type='text' value={email} className='find-textbox' placeholder='이메일'
+                            onChange={(event) => {
+                                setEmail(event.target.value)
+                            }}></input>
                     </div>
-                    <button type='submit' className='find-button'>비밀번호 찾기</button>
+
+                    <button type='submit' className='find-button' onClick={(event) => {
+                        event.preventDefault();
+                        if (id.trim() === '') {
+                            alert('아이디를 입력해주세요.')
+                            return;
+                        }
+
+                        if (email.trim() === '') {
+                            alert('이메일을 입력해주세요.')
+                            return;
+                        }
+
+                        if (!(id === 'stack123' && email === 'stack123@naver.com')) {
+                            alert('가입정보가 없습니다.')
+                            setEmail('')
+                            setId('')
+                        } else {
+                            alert('이메일로 비밀번호가 발송되었습니다.');
+                            navigate('/login');
+                        }
+                        
+                    }}>이메일 인증</button>
                 </form>
                 <div className='find-seperator-line'></div>
                 <div className='login-find page-font'>
                     <span id='findPw-login' onClick={() => { navigate('/login') }}>로그인하기</span>
                 </div>
             </div>
-
             {
                 foundPw && (
                     <div className='foundId-text'>

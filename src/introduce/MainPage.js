@@ -5,6 +5,7 @@ import "./MainPage.css";
 function MainPage() {
 
     let navigate = useNavigate();
+
     return (
         <div className="main-wrapper">
             <video autoPlay loop muted className="background-video">
@@ -22,6 +23,8 @@ function MainPage() {
                             <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/cart") }}></i>
                         </div>
                         {/* 이름 아이콘 */}
+
+                        {/* 로그인 아이콘 */}
                         <div className="name">
                             <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
                         </div>

@@ -19,19 +19,19 @@ function App() {
   return (
 
     <div>
-      <Routes>
-        <Route path='/' element={<Introduce />} />
-        <Route path="/main" element={<MainPage />} />
-        <Route path="/mypage/*" element={<MyPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/FindId" element={<FindId />} />
-        <Route path="/FindPw" element={<FindPw />} />
-        <Route path="/shopping/*" element={<Shopping />} />
-        <Route path="/bulk" element={<BulkPage />} />
-        <Route path="/diet" element={<DietPage />} />
-        <Route path="/keep" element={<KeepPage />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Introduce />} />
+          <Route path="/main" element={<MainPage />} />
+          <Route path="/mypage/*" element={<MyPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/FindId" element={<FindId />} />
+          <Route path="/FindPw" element={<FindPw />} />
+          <Route path="/shopping/*" element={<Shopping />} />
+          <Route path="/bulk" element={<BulkPage />} />
+          <Route path="/diet" element={<DietPage />} />
+          <Route path="/keep" element={<KeepPage />} />
+        </Routes>
     </div>
 
   );
