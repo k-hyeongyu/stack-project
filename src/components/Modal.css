@@ -18,7 +18,7 @@
 .modal-content {
   position: relative;
   background-color: #000;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   max-width: 90vw;
   max-height: 90vh;
@@ -36,7 +36,7 @@
   height: 40px;
   border: none;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.9);
   color: #333;
   font-size: 24px;
   font-weight: bold;
@@ -50,7 +50,7 @@
 }
 
 .modal-close-button:hover {
-  background-color: transparent;
+  background-color: #fff;
   transform: scale(1.1);
 }
 
@@ -73,63 +73,6 @@
   border-radius: 12px;
 }
 
-/* 데스크톱 최적화 */
-@media (min-width: 1200px) {
-  .modal-content {
-    max-width: 1000px;
-    width: 1000px;
-  }
-}
-
-/* 태블릿 */
-@media (max-width: 768px) {
-  .modal-overlay {
-    padding: 15px;
-  }
-  
-  .modal-content {
-    max-width: 95vw;
-    max-height: 85vh;
-  }
-  
-  .modal-close-button {
-    top: -8px;
-    right: -8px;
-    width: 36px;
-    height: 36px;
-    font-size: 20px;
-  }
-}
-
-/* 모바일 */
-@media (max-width: 480px) {
-  .modal-overlay {
-    padding: 10px;
-  }
-  
-  .modal-content {
-    max-width: 98vw;
-    max-height: 80vh;
-    border-radius: 8px;
-  }
-  
-  .video-responsive-container {
-    border-radius: 8px;
-  }
-  
-  .video-responsive-container iframe {
-    border-radius: 8px;
-  }
-  
-  .modal-close-button {
-    top: -6px;
-    right: -6px;
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
-  }
-}
-
 /* 키보드 포커스 스타일 */
 .modal-close-button:focus {
   outline: 2px solid #007bff;
@@ -149,6 +92,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -159,6 +103,7 @@
     opacity: 0;
     transform: scale(0.9) translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);

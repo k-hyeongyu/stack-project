@@ -1,0 +1,10 @@
+.setGoalWeightButton{   /* 목표체중 설정 */
+    margin-left: 25rem;
+    padding: 8px 12px;
+    background-color: orange;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}

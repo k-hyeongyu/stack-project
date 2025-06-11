@@ -1,9 +1,9 @@
 .video-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 40px;
   padding: 20px;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -20,17 +20,15 @@
 }
 
 .video-item-wrapper.clickable:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .video-thumbnail-container {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,7 +94,8 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  line-clamp: 2; /* 표준 속성 */
+  line-clamp: 2;
+  /* 표준 속성 */
   -webkit-box-orient: vertical;
 }
 
@@ -113,21 +112,4 @@
   color: #666;
   font-size: 16px;
   padding: 40px 20px;
-}
-
-/* 반응형 디자인 */
-@media (max-width: 768px) {
-  .video-grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .video-grid-container {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 12px;
-  }
 }

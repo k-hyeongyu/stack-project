@@ -1,67 +1,22 @@
 import React from 'react';
 import './Header.css';
-import logoImage from '../images/logo.png'; // 로고 이미지 경로
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="app-header">
-      <div className="header-left">
-        <NavLink to='/main'><img src={logoImage} alt="사이트 로고" className="logo-img" />
-        </NavLink>
-        {/* <h1 className="header-title"></h1> 변경 가능 */}
-      </div>
-        <div className="header-right">
-        <i className="fas fa-shopping-cart icon-fa"></i> {/* 쇼핑 카트 아이콘 */}
-        <NavLink>
-        <i className="fas fa-user icon-fa"></i>         {/* 사용자 아이콘 */}
-        </NavLink>
+
+      <div className='shopping-header'>
+        <img src='/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
+        <div className='shopping-header-right'>
+          <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
+          <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
         </div>
-        
+        <div className='shopping-seperator-line'></div>
+      </div>
+
     </header>
   );
-};
-
+}
 export default Header;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* <Link to="/"> { 로고 클릭 시 이동할 경로를 to 속성에 지정합니다. }
-          <img src={logoImage} alt="사이트 로고" className="logo-img" />
-        </Link> left*/
-
-//    <Link to="/shopping" className="icon-link" aria-label="장바구니 페이지로 이동">
-//           <i className="fas fa-shopping-cart icon-fa"></i>
-//         </Link>

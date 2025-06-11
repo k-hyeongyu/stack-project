@@ -1,35 +1,41 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate }
-from 'react-router-dom';
 import './App.css';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-
+import { Routes, Route } from 'react-router-dom';
+import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
+import MyPage from './mypage/MyPage';
+import Introduce from './introduce/Introduce';
+import Login from './login/Login';
+import SignUp from './login/SignUp';
+import FindId from './login/FindId';
+import FindPw from './login/FindPw';
+import Shopping from './shopping/Shopping';
+import React from 'react';
 import DietPage from './pages/DietPage';
 import BulkPage from './pages/BulkPage';
 import KeepPage from './pages/KeepPage';
 
 
 function App() {
+
   return (
-    <BrowserRouter>
-      <div className="app-container">
-        <Header />
-        <div className="main-layout">
-          <Sidebar />
-          <main className="app-main-content-area">
-            <Routes>
-              <Route path="/" element={<Navigate replace to="/diet" />} />
-              <Route path="/diet" element={<DietPage />} />
-              <Route path="/keep" element={<KeepPage />} />
-              <Route path="/bulk" element={<BulkPage />} />
-              <Route path="*" element={<div style={{ padding: '40px', textAlign: 'center', fontSize: '1.2em' }}>404 - 페이지를 찾을 수 없습니다.</div>} />
-            </Routes>
-          </main>
-        </div>
-      </div>
-    </BrowserRouter>
+
+    <div>
+      <Routes>
+        <Route path='/' element={<Introduce />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="/mypage/*" element={<MyPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/FindId" element={<FindId />} />
+        <Route path="/FindPw" element={<FindPw />} />
+        <Route path="/shopping/*" element={<Shopping />} />
+        <Route path="/bulk" element={<BulkPage />} />
+        <Route path="/diet" element={<DietPage />} />
+        <Route path="/keep" element={<KeepPage />} />
+      </Routes>
+    </div>
+
   );
+
 }
 
 export default App;

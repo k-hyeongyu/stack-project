@@ -1,0 +1,15 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    /* 헤더가 위에, 그 아래 main-content-area가 오도록 */
+    min-height: 100vh;
+    /* 페이지 전체 높이를 최소로 유지 */
+}
+
+.sideBar-videoGrid {
+    display: flex;
+    /* 사이드바와 비디오 그리드를 가로로 배치 */
+    flex-grow: 1;
+    /* 남은 공간을 모두 차지하도록 */
+    gap: 30px;
+}
