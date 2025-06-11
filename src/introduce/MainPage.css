@@ -35,13 +35,15 @@
 .profile {
     position: absolute;
     display: flex;
-    gap: 30px;
-    top: 50px;
-    right: 50px;
+    gap: 17px;
+    top: 35px;
+    right: 35px;
     font-size: 30px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 }
-
+.material-symbols-outlined{
+    font-size: 40px;
+}
 .profile :hover {
     cursor: pointer;
 }

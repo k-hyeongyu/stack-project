@@ -17,7 +17,7 @@ function Shopping() {
     return (
         <div>
             <div className='shopping-header'>
-                <img src='/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
+                <img src='./images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
                 <div className='shopping-header-right'>
                     <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
                         storefront
@@ -25,7 +25,7 @@ function Shopping() {
                     <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
                         local_mall
                     </span>
-                    <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+                    <span class="material-symbols-outlined" onClick={() => { navigate("/mypage/dashboard") }}>
                         person
                     </span>
                 </div>

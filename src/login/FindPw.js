@@ -56,13 +56,7 @@ function FindPw() {
                     <span id='findPw-login' onClick={() => { navigate('/login') }}>로그인하기</span>
                 </div>
             </div>
-            {
-                foundPw && (
-                    <div className='foundId-text'>
-                        <p>{name}님의 비밀번호는 <strong>{foundPw}</strong>입니다.</p>
-                    </div>
-                )
-            }
+            
         </div>
     )
 }

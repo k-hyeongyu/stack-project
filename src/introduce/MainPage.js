@@ -15,19 +15,15 @@ function MainPage() {
                 {/* 상단 네비 */}
                 <header className="top-nav">
                     <div className="profile">
-                        <div className="shop">
-                            <i className="fa-solid fa-store" onClick={() => { navigate("/shopping") }}></i>
-                        </div>
-                        {/* 쇼핑 아이콘을 클릭하면 /shop 으로 이동 */}
-                        <div className="shop">
-                            <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/cart") }}></i>
-                        </div>
-                        {/* 이름 아이콘 */}
-
-                        {/* 로그인 아이콘 */}
-                        <div className="name">
-                            <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
-                        </div>
+                        <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
+                            storefront
+                        </span>
+                        <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
+                            local_mall
+                        </span>
+                        <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+                            person
+                        </span>
                     </div>
                 </header>
 
