@@ -1,5 +1,4 @@
 import './Introduce.css';
-import React from 'react';
 import { Link, useNavigate } from 'react-router';
 
 function Introduce() {
@@ -16,7 +15,7 @@ function Introduce() {
                 <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
                     local_mall
                 </span>
-                <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+                <span class="material-symbols-outlined" onClick={() => { navigate("/login") }}>
                     person
                 </span>
             </div>
