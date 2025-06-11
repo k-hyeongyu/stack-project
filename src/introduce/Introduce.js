@@ -8,11 +8,17 @@ function Introduce() {
 
     return (
         <div className="intro-vid-container">
-            <img className="intro-logo" src='/BalancEat_logo_white.png'></img>
+            <img className="intro-logo" src='/BalancEat_logo_white.png' alt='인트로 로고 이미지'></img>
             <div className='intro-header'>
-                <i className="fa-solid fa-store" onClick={() => { navigate("/shopping") }}></i>
-                <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
-
+                <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
+                    storefront
+                </span>
+                <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
+                    local_mall
+                </span>
+                <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+                    person
+                </span>
             </div>
             <video className="intro-vid" src='/bgVideo01.mp4' autoPlay muted loop></video>
             <p className='gowun-batang-bold intro-text'>

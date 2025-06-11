@@ -55,15 +55,15 @@
 .intro-header {
     position: absolute;
     display: flex;
-    gap: 20px;
-    top: 20px;
-    right: 30px;
-    z-index: 10;
-    font-size: 25px;
+    gap: 17px;
+    top: 35px;
+    right: 35px;
+    font-size: 30px;
 }
 
-.intro-header .fa-solid:hover {
+.intro-header .material-symbols-outlined {
     cursor: pointer;
+    font-size: 40px;
 }
 
 .gowun-batang-regular {
