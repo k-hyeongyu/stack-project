@@ -37,7 +37,7 @@
   border: none;
   border-radius: 50%;
   background-color: transparent;
-  color: #ffffff;
+  color: #333;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
@@ -50,6 +50,7 @@
 }
 
 .modal-close-button:hover {
+  background-color: transparent;
   transform: scale(1.1);
 }
 
