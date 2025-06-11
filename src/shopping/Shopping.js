@@ -17,18 +17,24 @@ function Shopping() {
     return (
         <div>
             <div className='shopping-header'>
-                <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={()=>{navigate('/main')}}></img>
+                <img src='/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
                 <div className='shopping-header-right'>
-                    <i className="fa-solid fa-store" onClick={() => { navigate("/shopping") }}></i>
-                    <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/cart") }}></i>
-                    <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
+                    <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
+                        storefront
+                    </span>
+                    <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
+                        local_mall
+                    </span>
+                    <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+                        person
+                    </span>
                 </div>
                 <div className='shopping-seperator-line'></div>
             </div>
 
             <Routes>
-                <Route path='/' element={<ShoppingHome items1={items1} items2={items2} items3={items3}/>}></Route>
-                <Route path="/details/:id" element={<DetailExplain items1={items1} items2={items2} items3={items3}/>}></Route>
+                <Route path='/' element={<ShoppingHome items1={items1} items2={items2} items3={items3} />}></Route>
+                <Route path="/details/:id" element={<DetailExplain items1={items1} items2={items2} items3={items3} />}></Route>
             </Routes>
         </div>
     )

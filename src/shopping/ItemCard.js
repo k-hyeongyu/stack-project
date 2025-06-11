@@ -7,10 +7,10 @@ function ItemCard({ item }) {
 
     return (
         <div>
-            <div className="shopping-items" onClick={() => { navigate('/shopping/details/' + item.id) }}>
-                <img src={process.env.PUBLIC_URL + item.imgUrl} className="item-img" />
+            <div className="shopping-items" onClick={()=>{navigate('/shopping/details/' + item.id)}}>
+                <img src={process.env.PUBLIC_URL + item.imgUrl} alt="상품 이미지" className="item-img"/>
                 <h3 className="item-title">{item.title}</h3>
-                <p className="item-price">{item.price}</p>
+                <p className="item-price">{item.price}원</p>
             </div>
         </div>
     )

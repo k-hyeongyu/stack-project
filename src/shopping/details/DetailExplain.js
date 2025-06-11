@@ -1,11 +1,13 @@
 import { useNavigate, useParams } from 'react-router';
 import './DetailExplain.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import DetailModal from './DetailModal';
 
 function DetailExplain({ items1, items2, items3 }) {
 
     let navigate = useNavigate();
     let [itemCount, setItemCount] = useState(1)
+    let [detailShowModal, setDetailShowModal] = useState(false)
 
     let { id } = useParams();
 
@@ -13,6 +15,20 @@ function DetailExplain({ items1, items2, items3 }) {
     let foundItem = allItems.find((item) => {
         return item.id === id
     })
+
+    useEffect(() => {
+        let timer;
+
+        if (detailShowModal) {
+            timer = setTimeout(() => {
+                setDetailShowModal(false)
+            }, 1000);
+        }
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [detailShowModal])
 
     if (foundItem === undefined) {
         return (
@@ -81,9 +97,13 @@ function DetailExplain({ items1, items2, items3 }) {
 
                 </div>
 
-                <button className='detail-putShoppingCart'>카트에 담기</button>
-
+                <button className='detail-putShoppingCart' onClick={() => {
+                    setDetailShowModal(!detailShowModal)
+                }}>카트에 담기</button>
             </div>
+
+            <DetailModal detailShowModal={detailShowModal}/>
+            
         </div>
     )
 }
