@@ -12,8 +12,6 @@ import React from 'react';
 import DietPage from './health-pages/DietPage';
 import BulkPage from './health-pages/BulkPage';
 import KeepPage from './health-pages/KeepPage';
-
-import MyPage from './mypage/MyPage';
 import Cart from './cart/Cart';
 
 function App() {
