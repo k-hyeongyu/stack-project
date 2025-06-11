@@ -32,9 +32,10 @@ function MyPage() {
         <div className='mypageDiv'>
             <div id="myPageContainer" overflow="hidden">
                 <div className='mypage-header'>
-                    <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
+                    <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/main') }}></img>
                     <div className='mypage-header-right'>
-                        <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
+                        <i className="fa-solid fa-store" onClick={() => { navigate("/shopping") }}></i>
+                        <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/cart") }}></i>
                         <i className="fa-solid fa-user" onClick={() => { navigate("/mypage/dashboard") }}></i>
                     </div>
                 </div>
@@ -48,7 +49,7 @@ function MyPage() {
                             <li className="tab" onClick={() => { navigate('/mypage/editprofile') }}>개인정보 수정</li>
                         </ul>
 
-                        <button id="logoutButton" onClick={() => { navigate('/main') }}>Logout</button>
+                        <button id="logoutButton" onClick={() => { navigate('/') }}>Logout</button>
                     </div>
 
                     <Routes>
@@ -70,7 +71,6 @@ function MyPage() {
                         }></Route>
 
                         <Route path="/messagebox/*" element={<MessageBox />} />
-
 
                         <Route path="/editprofile" element={
                             <>

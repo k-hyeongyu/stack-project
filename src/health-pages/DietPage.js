@@ -5,7 +5,7 @@ import Modal from '../health-pages/Modal';
 import Header from '../health-pages/Header';
 import Sidebar from '../health-pages/Sidebar';
 import Theme from '../health-pages/Theme';
-
+import Footer from '../health-pages/Footer';
 
 const DietPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,6 +44,7 @@ const DietPage = () => {
               꾸준히 당신의 건강한 선택을 응원합니다.</>}
           />
           <VideoGrid videos={dietVideos} onVideoSelect={handleVideoSelect} />
+          <Footer />
         </div>
         <Modal
           isOpen={isModalOpen}

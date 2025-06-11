@@ -9,13 +9,13 @@
 }
 
 .theme-title {
-    font-size: 70px;
+    font-size: 45px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .theme-description {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1.6;
 }
 

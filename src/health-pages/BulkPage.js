@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './PageContent.css';
 import VideoGrid from '../health-pages/VideoGrid';
 import Modal from '../health-pages/Modal';
 import Header from '../health-pages/Header';
 import Sidebar from '../health-pages/Sidebar';
 import Theme from '../health-pages/Theme';
+import Footer from '../health-pages/Footer';
 
 const BulkPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,6 +21,7 @@ const BulkPage = () => {
     { id: 't6DzxVLQUPw', title: '벌크업 전용루틴' },
     { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
     { id: 'NRkroeUrpaQ', title: '클린 벌크업의 조건' },
+    
   ];
 
   const handleVideoSelect = (videoId) => {
@@ -44,9 +46,9 @@ const BulkPage = () => {
               벌크업은 식단과 운동을 병행해 체격을 키우는 핵심 전략입니다.<br />
               이곳에서 당신의 벌크업 여정을 시작해보세요!
             </>}
-
           />
           <VideoGrid videos={bulkVideos} onVideoSelect={handleVideoSelect} />
+          <Footer />
         </div>
         <Modal
           isOpen={isModalOpen}

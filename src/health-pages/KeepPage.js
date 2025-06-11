@@ -5,6 +5,7 @@ import Modal from '../health-pages/Modal';
 import Header from '../health-pages/Header';
 import Sidebar from '../health-pages/Sidebar';
 import Theme from '../health-pages/Theme';
+import Footer from '../health-pages/Footer';
 
 const KeepPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,12 +48,14 @@ const KeepPage = () => {
               쉬운 실천과 꾸준한 루틴으로 당신의 건강한 삶을 응원합니다.</>}
           />
           <VideoGrid videos={keepVideos} onVideoSelect={handleVideoSelect} />
+          <Footer />
         </div>
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}
           videoId={selectedVideoId}
         />
+        
       </div>
     </div>
   );

@@ -7,15 +7,24 @@ const Header = () => {
   return (
     <header className="app-header">
 
-      <div className='shopping-header'>
-        <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
-        <div className='shopping-header-right'>
-          <i className="fa-solid fa-cart-shopping" onClick={() => { navigate("/shopping") }}></i>
-          <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
-        </div>
-        <div className='shopping-seperator-line'></div>
-      </div>
+      <div className='health-header'>
 
+        <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/main') }}></img>
+        <div className='health-header-right'>
+          <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
+            storefront
+          </span>
+          <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
+            local_mall
+          </span>
+
+          <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+            person
+          </span>
+        </div>
+
+      </div>
+      <div className='shopping-seperator-line'></div>
     </header>
   );
 }
