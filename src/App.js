@@ -1,6 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-import Navigate from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
 import MyPage from './mypage/MyPage';
 import Introduce from './introduce/Introduce';
@@ -9,14 +8,9 @@ import SignUp from './login/SignUp';
 import FindId from './login/FindId';
 import FindPw from './login/FindPw';
 import Shopping from './shopping/Shopping';
-import React from 'react';
-
-
 import DietPage from './pages/DietPage';
 import BulkPage from './pages/BulkPage';
 import KeepPage from './pages/KeepPage';
-import DetailExplain from './shopping/details/DetailExplain';
-
 
 function App() {
   

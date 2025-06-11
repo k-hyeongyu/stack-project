@@ -6,31 +6,28 @@
 .logo-image {
     width: 200px;
     cursor: pointer;
-
 }
 
 .shopping-header-right {
     position: absolute;
     display: flex;
-    gap: 30px;
+    gap: 17px;
     top: 50px;
     right: 50px;
-    font-size: 30px;
-    color: rgb(143, 143, 143);
+    color: #f28500ee;
 }
 
-.shopping-header-right .fa-solid:hover {
+.shopping-header-right .material-symbols-outlined {
     cursor: pointer;
+    font-size: 40px;
 }
 
 .shopping-seperator-line {
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid rgba(143, 143, 143, 0.76);
+    border-bottom: 2px solid rgba(226, 226, 226, 0.76);
     margin-top: 23px;
 }
-
-/* Shopping css */
 
 /* ShoppingHome css */
 .shopping-category {
