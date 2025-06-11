@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function SignUp() {
 
-    let [values, setValues] = useState({ name: '', id: '', pw: '', confirmPw: '', phoneNumber: '' })
+    let [values, setValues] = useState({ name: '', id: '', pw: '', confirmPw: '', phoneNumber: '', email: '' })
 
     let handleChange = (event) => {
         let { name, value } = event.target;
@@ -16,9 +16,10 @@ function SignUp() {
     return (
         <div className='login-page-container'>
             <div className='signUp-container'>
-                <h1 className='oleo-script-regular'>BalancEat</h1>
-                <p className='page-font'> 회원가입 </p>
-                <form className='login-box' onSubmit={(event) => {
+                <h1 className='oleo-script-regular login-cursor' onClick={() => {
+                    navigate('/main')
+                }}>BalancEat</h1>
+                <form className='signUp-box' onSubmit={(event) => {
                     event.preventDefault();
 
                     if (values.name.trim() === '') {
@@ -65,9 +66,10 @@ function SignUp() {
 
                     <input type='password' name='pw' value={values.pw} onChange={handleChange} placeholder='비밀번호' className='login-textbox'></input>
                     <input type='password' name='confirmPw' value={values.confirmPw} onChange={handleChange} placeholder='비밀번호 확인' className='login-textbox'></input>
+                    <input type='text' name='email' value={values.email} onChange={handleChange} placeholder='이메일 (선택)' className='login-textbox'></input>
                     <input type='text' name='phoneNumber' value={values.phoneNumber} onChange={handleChange} placeholder='전화번호 ( - 없이 숫자만 입력)' className='login-textbox'></input>
 
-                    <button type='submit' className='login-button'>가입 완료</button>
+                    <button type='submit' className='signUp-button'>가입 완료</button>
                 </form>
             </div>
         </div>
