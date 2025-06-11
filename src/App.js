@@ -13,6 +13,8 @@ import DietPage from './health-pages/DietPage';
 import BulkPage from './health-pages/BulkPage';
 import KeepPage from './health-pages/KeepPage';
 
+import MyPage from './mypage/MyPage';
+import Cart from './cart/Cart';
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
           <Route path="/FindId" element={<FindId />} />
           <Route path="/FindPw" element={<FindPw />} />
           <Route path="/shopping/*" element={<Shopping />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/bulk" element={<BulkPage />} />
           <Route path="/diet" element={<DietPage />} />
           <Route path="/keep" element={<KeepPage />} />
