@@ -5,10 +5,13 @@ import Modal from '../components/Modal';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Theme from '../components/Theme';
+import AddView from '../components/AddView'; 
+
 
 const BulkPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(9);//처음 보여줄 비디오 개수
 
   const bulkVideos = [
     { id: '7KexdWwHIig', title: '벌크업 운동순서' },
@@ -19,8 +22,22 @@ const BulkPage = () => {
     { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
     { id: 't6DzxVLQUPw', title: '벌크업 전용루틴' },
     { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
+    { id: 'NRkroeUrpaQ', title: '클린 벌크업의 조건' },//
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
     { id: 'NRkroeUrpaQ', title: '클린 벌크업의 조건' },
+    { id: 'DIt14OO0QgY', title: '운동' },
+    { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
+    { id: 'DIt14OO0QgY', title: '운동' },
+    { id: 'DIt14OO0QgY', title: '벌크업 전용루틴' },
+    { id: 'DIt14OO0QgY', title: '프로선수의 벌크업 꿀팁' },
+    { id: 'DIt14OO0QgY', title: '클린 벌크업의 조건' },
+    { id: 'DIt14OO0QgY', title: '운동' },
+    { id: 'wXekeS7yoOw', title: '식단' },
+
   ];
+//DIt14OO0QgY 운동 - wXekeS7yoOw 식단영상
 
   const handleVideoSelect = (videoId) => {
     setSelectedVideoId(videoId);
@@ -31,6 +48,12 @@ const BulkPage = () => {
     setIsModalOpen(false);
     setSelectedVideoId(null);
   };
+  
+  const handleLoadMore = () => {
+    setVisibleCount(prevCount => prevCount + 6);//-- +n 더보기 누르시 영상추가개수
+  };
+
+    const videosToShow = bulkVideos.slice(0, visibleCount);
 
   return (
     <div className="wrap page-font">
@@ -44,9 +67,15 @@ const BulkPage = () => {
               벌크업은 식단과 운동을 병행해 체격을 키우는 핵심 전략입니다.<br />
               이곳에서 당신의 벌크업 여정을 시작해보세요!
             </>}
-
           />
-          <VideoGrid videos={bulkVideos} onVideoSelect={handleVideoSelect} />
+          <VideoGrid videos={videosToShow} onVideoSelect={handleVideoSelect} />
+          {visibleCount < bulkVideos.length && (
+            <div className="load-more-container">
+                <AddView onClick={handleLoadMore} className="add-view" />
+                    
+                
+            </div>
+            )}
         </div>
         <Modal
           isOpen={isModalOpen}

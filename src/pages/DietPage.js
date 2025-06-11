@@ -5,10 +5,12 @@ import Modal from '../components/Modal';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Theme from '../components/Theme';
+import AddView from '../components/AddView'; 
 
 const DietPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(9);//처음 보여줄 비디오 개수
   
 
   const dietVideos = [
@@ -21,7 +23,18 @@ const DietPage = () => {
     { id: 'RwCO4MvV-EM', title: '현실적인 다이어트 식단' },
     { id: 'lFknqR3vOtI', title: '30kg 다이어트 비법' },
     { id: 'ub6cRhp2jnM', title: '초급용 식단짜기' },
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id:'DIt14OO0QgY', title:'운동'},
+    { id:'DIt14OO0QgY', title:'운동'},
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id:'DIt14OO0QgY', title:'운동'},
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id: 'wXekeS7yoOw', title: '식단' },
+    { id:'DIt14OO0QgY', title:'운동'},
+
   ];
+  ///DIt14OO0QgY 운동 - wXekeS7yoOw 식단영상
   const handleVideoSelect = (videoId) => {
     setSelectedVideoId(videoId);
     setIsModalOpen(true);
@@ -31,6 +44,13 @@ const DietPage = () => {
     setIsModalOpen(false);
     setSelectedVideoId(null);
   };
+
+    const handleLoadMore = () => {
+    setVisibleCount(prevCount => prevCount + 6);//-- +n 더보기 누르시 영상추가개수
+  };
+
+    const videosToShow = dietVideos.slice(0, visibleCount);
+
 
   return (
     <div className="wrap page-font">
@@ -43,7 +63,14 @@ const DietPage = () => {
             description={<>다이어트는 몸을 억지로 바꾸는 일이 아니라 나를 아끼는 과정입니다.<br />
               꾸준히 당신의 건강한 선택을 응원합니다.</>}
           />
-          <VideoGrid videos={dietVideos} onVideoSelect={handleVideoSelect} />
+          <VideoGrid videos={videosToShow} onVideoSelect={handleVideoSelect} />
+            {visibleCount < dietVideos.length && (
+            <div className="load-more-container">
+                <AddView onClick={handleLoadMore} className="add-view" />
+                    
+                
+            </div>
+            )}
         </div>
         <Modal
           isOpen={isModalOpen}

@@ -1,7 +1,8 @@
 .app-sidebar {
-  width: 230px;
-  background-color: #f28500;
-  display: flex;
+  position: fixed;
+  left: 0;
+  width: auto;
+  margin-left: 20px;
   flex-direction: column; /* 자식 요소들을 수직으로 쌓음 */
   height: 100vh; /* 전체 높이 차지 */
   box-sizing: border-box;
@@ -40,7 +41,8 @@
 }
 
 .sidebar-item:hover {
-  background-color: #995706;
+  background-color: #ffc278;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .sidebar-item.active {
@@ -48,30 +50,19 @@
   color: white;
 }
 
-/* 2. 로그아웃 버튼을 포함하는 섹션 (사이드바 하단에 위치) */
-.sidebar-logout-section {
-  /* .sidebar-content-wrapper가 flex-grow: 1이므로 이 섹션은 자연스럽게 하단에 위치 */
-   /* 위:0, 좌우:20px, 아래:20px (하단에서 20px 떨어뜨림) */
-  padding: 0px 20px 20px 20px;
-  padding-top: 340px;
-}
 
-/* 3. 로그아웃 버튼 자체 스타일 (텍스트 가로 중앙 정렬 포함) */
-.logout-button {
-  display: block; /* 버튼 너비를 100%로 설정 가능하게 함 */
-  width: 100%;    /* 부모(.sidebar-logout-section) 너비에 맞춤 (패딩 제외) */
-  padding: 15px;  /* 버튼 내부 패딩 */
-  background-color: #f29000;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center; /* 버튼 내부 텍스트를 가로 중앙 정렬 */
-  font-size: 1em;
-  cursor: pointer;
-  font-weight: bold;
-  text-decoration: none;
-}
 
-.logout-button:hover {
-  background-color: #f08205;
-}
+
+
+
+
+/* .app-sidebar {
+  position: fixed;
+  left: 0;         
+  width: auto;   
+  height: calc(100vh - 190px); 
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto; 
+  margin-left: 10px;
+} */

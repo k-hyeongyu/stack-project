@@ -3,8 +3,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  width: auto;
+  margin-left: 100px;
 }
 
 .video-item-wrapper {
