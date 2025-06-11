@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import VideoGrid from './VideoGrid';
 import './PageContent.css';
-import Modal from './Modal';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Theme from './Theme';
+import VideoGrid from '../health-pages/VideoGrid';
+import Modal from '../health-pages/Modal';
+import Header from '../health-pages/Header';
+import Sidebar from '../health-pages/Sidebar';
+import Theme from '../health-pages/Theme';
+
 
 const DietPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

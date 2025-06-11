@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import VideoGrid from '../components/VideoGrid';
 import './PageContent.css';
-import Modal from '../components/Modal';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import Theme from '../components/Theme';
+import VideoGrid from '../health-pages/VideoGrid';
+import Modal from '../health-pages/Modal';
+import Header from '../health-pages/Header';
+import Sidebar from '../health-pages/Sidebar';
+import Theme from '../health-pages/Theme';
 
 const KeepPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

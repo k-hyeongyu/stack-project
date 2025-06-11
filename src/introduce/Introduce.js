@@ -8,13 +8,13 @@ function Introduce() {
 
     return (
         <div className="intro-vid-container">
-            <img className="intro-logo" src='/BalancEat_logo_white.png'></img>
+            <img className="intro-logo" src='/images/BalancEat_logo_white.png'></img>
             <div className='intro-header'>
                 <i className="fa-solid fa-store" onClick={() => { navigate("/shopping") }}></i>
                 <i className="fa-solid fa-user" onClick={() => { navigate("/login") }}></i>
 
             </div>
-            <video className="intro-vid" src='/bgVideo01.mp4' autoPlay muted loop></video>
+            <video className="intro-vid" src='/videos/bgVideo01.mp4' autoPlay muted loop></video>
             <p className='gowun-batang-bold intro-text'>
                 체형 목표에 맞춘 균형 잡힌 식단으로
                 <br></br>

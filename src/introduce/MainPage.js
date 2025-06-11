@@ -8,7 +8,7 @@ function MainPage() {
     return (
         <div className="main-wrapper">
             <video autoPlay loop muted className="background-video">
-                <source src="/bgVideo01.mp4" type="video/mp4" />
+                <source src="/videos/bgVideo01.mp4" type="video/mp4" />
             </video>
             <div className="health-container">
                 {/* 상단 네비 */}

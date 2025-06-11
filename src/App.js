@@ -1,6 +1,6 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import MainPage from './Start/main/MainPage'; // MainPage 컴포넌트 import
+import MainPage from './introduce/MainPage';
 import MyPage from './mypage/MyPage';
 import Introduce from './introduce/Introduce';
 import Login from './login/Login';
@@ -9,9 +9,9 @@ import FindId from './login/FindId';
 import FindPw from './login/FindPw';
 import Shopping from './shopping/Shopping';
 import React from 'react';
-import DietPage from './pages/DietPage';
-import BulkPage from './pages/BulkPage';
-import KeepPage from './pages/KeepPage';
+import DietPage from './health-pages/DietPage';
+import BulkPage from './health-pages/BulkPage';
+import KeepPage from './health-pages/KeepPage';
 
 
 function App() {
