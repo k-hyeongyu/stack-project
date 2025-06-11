@@ -18,23 +18,21 @@ const KeepPage = () => {
     { id: 'yEQDR_QAZWw', title: '유지어터의 정석' },
     { id: 'OA7awLb2hjk', title: '요요없는 유지' },
     { id: '4kMvAgHbZ-8', title: '일상생활유지' },
+    { id: 'bdLJOQfD8UE', title: '먹어도 되는 일반식' },
     { id: 'Kz0igobFLOM', title: '몸무게 유지하는 방법' },
+    { id: 'XKzs-yRPJfA', title: '다이소 다이어트 밀프랩' },
+    { id: 'vK_HVnW-fHc', title: '현실적인 일반식' },
+    { id: 'rYaySqdbch8', title: '다이어트 포케' },
+    { id: 'CYcLODSeC-c', title: '층간소음없는 홈트' },
+    { id: 'XKzs-yRPJfA', title: '다이소 밀프랩루틴' },
+{ id: 'khiCIQBxbkQ', title: '포케 실전레시피' },
     { id: 'DQrsQiqphkg', title: '체중별 다이어트 방법' },
     { id: 's9lg8Y4wMSU', title: '장기간 몸무게 유지 식습관'},
     { id: 'Jpo4qDGpwVU', title: '유지어터 Q&A ' },
     { id: 'ETG3XfDNz9M', title: '일반식으로 몸무게 유지하는 방법' },
     { id: 'ub6cRhp2jnM', title: '먹어도 되는 일반식' },
-    { id:'DIt14OO0QgY', title:'운동'},
-    { id: 'wXekeS7yoOw', title: '식단' },
-    { id:'DIt14OO0QgY', title:'운동'},
-    { id: 'wXekeS7yoOw', title: '식단' },
-    { id:'DIt14OO0QgY', title:'운동'},
-    { id: 'wXekeS7yoOw', title: '식단' },
-    { id:'DIt14OO0QgY', title:'운동'},
-    { id: 'wXekeS7yoOw', title: '식단' },
-    { id:'DIt14OO0QgY', title:'운동'},
-
-    
+    { id: 'bdLJOQfD8UE', title: '불없는 식단' },
+    { id: 'E_WBjEFXzKU', title: '홈트 간단하게 2km' },
 
   ];
   //DIt14OO0QgY 운동 - wXekeS7yoOw 식단영상
