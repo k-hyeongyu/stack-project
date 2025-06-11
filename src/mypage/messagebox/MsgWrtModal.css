@@ -1,5 +1,4 @@
-
-.wrtModal{
+.wrtModal {
     position: fixed;
     top: 136px;
     width: 600px;
@@ -14,39 +13,39 @@
     margin-top: 10px;
 }
 
-.msgDestination{
+.msgDestination {
     display: flex;
     width: 80%;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.msgDestination input[type='text']{
+.msgDestination input[type='text'] {
     width: 80%;
     height: 2rem;
     padding-left: 10px;
     font-size: 1rem;
 }
 
-.msgDestination > h3{
+.msgDestination>h3 {
     margin-right: 10px;
     margin-top: 6px;
 }
 
-.msgContent{
+.msgContent {
     display: flex;
     width: 80%;
     margin-top: 20px;
 }
 
 @font-face {
-  font-family: 'SeoulNamsanM';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.msgText{
+.msgText {
     width: 80%;
     height: 400px;
     padding: 5px 10px;
@@ -56,33 +55,33 @@
     font-size: 1.5rem;
 }
 
-.modalButtons{
+.modalButtons {
     margin-top: 45px;
     width: 90%;
     display: flex;
     justify-content: space-between;
 }
 
-.modalButtons > .quitBtn{
+.modalButtons>.quitBtn {
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid lightgray;
     cursor: pointer;
 }
 
-.modalButtons > .sendBtn{
+.modalButtons>.sendBtn {
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid lightgray;
     cursor: pointer;
 }
 
-.modalButtons > .quitBtn:hover{
+.modalButtons>.quitBtn:hover {
     background-color: orange;
     color: white;
 }
 
-.modalButtons > .sendBtn:hover{
+.modalButtons>.sendBtn:hover {
     background-color: orange;
     color: white;
 }

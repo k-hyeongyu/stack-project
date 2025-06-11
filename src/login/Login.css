@@ -1,0 +1,250 @@
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 테두리 박스 */
+.login-container {
+    margin-top: 180px;
+    padding: 25px;
+    width: 400px;
+    height: 400px;
+    border: 3px solid #f28500;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 박스 안 글씨 */
+.oleo-script-regular {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff8c00;
+    font-size: 45px;
+    margin: 5px;
+}
+
+.oleo-script-bold {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 아이디, 비밀번호 input 요소 */
+.login-textbox {
+    border: 1px solid rgb(153, 153, 153);
+    width: 300px;
+    height: 40px;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+/* 로그인 버튼 */
+.login-button {
+    margin-top: 25px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #f28500;
+    border-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(255, 227, 190);
+}
+
+.login-button:hover {
+    cursor: pointer;
+}
+
+.seperator-line {
+    width: 310px;
+    height: 1px;
+    border: 1px solid rgb(177, 177, 177);
+    margin-top: 12px;
+}
+
+/* 회원가입 | 아이디 찾기 | 비밀번호 찾기 */
+.login-find {
+    margin-top: 10px;
+    color: rgb(90, 90, 90);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-cursor {
+    cursor: pointer;
+}
+
+/* 회원가입 css */
+.signUp-container {
+    margin-top: 150px;
+    padding: 25px;
+    width: 400px;
+    height: 500px;
+    border: 3px solid #f28500;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.signUp-font {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.page-font {
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.signUp-id {
+    width: 300px;
+    height: 40px;
+    position: relative;
+    display: flex;
+}
+
+.confirm-button {
+    position: absolute;
+    width: 47px;
+    height: 32px;
+    margin: 4px;
+    right: 1px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #ffa02d;
+    color: rgb(255, 237, 212);
+}
+
+.signUp-box {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.signUp-button {
+    margin-top: 18px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #f28500;
+    border-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(255, 227, 190);
+}
+
+/* 아이디, 비밀번호 찾기 css */
+.find-seperator-line {
+    width: 310px;
+    height: 1px;
+    border: 1px solid rgb(177, 177, 177);
+    margin-top: 23px;
+}
+
+.find-button {
+    margin-top: 25px;
+    width: 300px;
+    height: 40px;
+    font-size: 18px;
+    background-color: #f28500;
+    border-color: #ffffff;
+    border-radius: 5px;
+    color: rgb(255, 227, 190);
+}
+
+.find-textbox {
+    border: 1px solid rgb(153, 153, 153);
+    width: 300px;
+    height: 40px;
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.find-box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.find-font {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(90, 90, 90);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.foundId-text {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+#findId-login {
+    margin-top: 10px;
+    color: rgb(90, 90, 90);
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+#findPw-login {
+    margin-top: 10px;
+    color: rgb(90, 90, 90);
+    font-size: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.certify-button {
+    position: absolute;
+    width: 47px;
+    height: 32px;
+    margin: 3px;
+    right: 1px;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #ffa02d;
+    color: rgb(255, 237, 212);
+    margin-top: 56px;
+}
+
+/* 폰트 */
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page-font {
+    font-family: 'SeoulNamsanM';
+}

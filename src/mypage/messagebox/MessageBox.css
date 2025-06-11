@@ -2,8 +2,6 @@
     position: flex;
 }
 
-
-
 .messageBox {
     width: 800px;
     height: 700px;
@@ -30,15 +28,8 @@
     text-align: center;
 }
 
-.messageBoxTabs>.tab1 {
-    border-radius: 27px 0 0 0;
-}
-
-.messageBoxTabs>.tab2 {
-    border-radius: 0 27px 0 0;
-}
-
-
+.messageBoxTabs>.tab1 {border-radius: 27px 0 0 0;}
+.messageBoxTabs>.tab2 {border-radius: 0 27px 0 0;}
 
 .messageBoxTabs>.boxTab:hover {
     color: white;
@@ -76,7 +67,7 @@
 
 
 
-.msgBoxDelBtn {
+.msgBoxDelBtn{    
     position: absolute;
     top: 48rem;
     left: 24rem;
@@ -90,7 +81,7 @@
 }
 
 
-.msgBoxDelBtn:hover {
+.msgBoxDelBtn:hover{
     background-color: black;
     color: #f28500;
 }

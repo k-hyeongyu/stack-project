@@ -21,8 +21,6 @@ ChartJS.register(
     ChartDataLabels // DataLabels 플러그인 등록
 );
 
-
-
 const ConditionChart = () => {
     // 1. 일주일치 컨디션 데이터 하드코딩
     const conditionData = [
@@ -80,19 +78,19 @@ const ConditionChart = () => {
                 },
             },
             x: {
-                
+
                 grid: {
                     display: false, // X축 그리드 라인 숨김
                 },
                 ticks: {
-                    color: '#28500', 
-                    font: { 
-                        size: 14, 
-                        weight: 'bold' 
+                    color: '#28500',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
                     },
                     drawOnChartArea: false
                 }
-                
+
             },
         },
         plugins: {

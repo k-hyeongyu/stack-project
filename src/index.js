@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 
 // Chart.js 관련 필수 임포트 및 등록
 import {
@@ -30,6 +32,8 @@ ChartJS.register(
   Legend,
   ArcElement // 필요하다면 등록
 );
+// 전역 CSS나 폰트 임포트가 필요하면 여기에 추가
+// 예: import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -39,8 +43,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -10,21 +10,21 @@
   font-style: normal;
 }
 
-.quotesBox{
-    width: 600px;
-    font-size: 1.75rem;
-    margin-top: 20px;
-    padding-top: 6rem;
-    white-space : pre-wrap;
+.quotesBox {
+  width: 600px;
+  font-size: 1.75rem;
+  margin-top: 20px;
+  padding-top: 6rem;
+  white-space: pre-wrap;
 }
 
-.quotesBox .speaker{
-    margin-top: 1.5rem;
-    text-align: right;
-    font-weight: 450;
-    font-size: 1.6rem;
+.quotesBox .speaker {
+  margin-top: 1.5rem;
+  text-align: right;
+  font-weight: 450;
+  font-size: 1.6rem;
 }
 
-.quotesBox .quotes{
-    text-align: center;
+.quotesBox .quotes {
+  text-align: center;
 }

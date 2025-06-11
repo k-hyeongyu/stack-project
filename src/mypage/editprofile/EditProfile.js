@@ -57,7 +57,7 @@ function EditProfile(props) {
                     );
 
                 }}></input>
-            </div>           
+            </div>
 
             <hr></hr>                                               
             <div className='profileInfo'>
