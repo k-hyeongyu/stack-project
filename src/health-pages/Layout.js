@@ -1,6 +1,6 @@
 import Header from './Header'; // Header 컴포넌트 import
-import Sidebar from './Sidebar'; // Sidebar 컴포넌트 import
-import VideoGrid from './VideoGrid'; // VideoGrid 컴포넌트 import
+import Sidebar from '../components/Sidebar'; // Sidebar 컴포넌트 import
+import VideoGrid from '../components/VideoGrid'; // VideoGrid 컴포넌트 import
 import './Layout.css'; // 새로 만들거나 기존 CSS에 추가
 // Modal은 보통 버튼 클릭 등으로 동적으로 나타나므로, 여기서는 포함하지 않을 수 있습니다.
 // 필요하다면 Modal도 여기에 import하여 상태에 따라 렌더링할 수 있습니다.
