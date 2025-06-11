@@ -85,7 +85,6 @@
 
 #detail-itemTotalPrice {
     font-size: 35px;
-    /* color: rgba(255, 20, 20, 0.801); */
     color: #f25800;
 }
 
@@ -135,4 +134,27 @@
 
 .detail-itemCount{
     display: flex;
+}
+
+/* 모달창 css */
+.detail-modal-container {
+    position: fixed;
+    border-style: none;
+    width: 400px;
+    height: 70px;
+    top: 50%;
+    background-color: #f28500f5;
+    color: white;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.detail-modal-container.show {
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }

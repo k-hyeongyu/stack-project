@@ -1,11 +1,13 @@
 import { useNavigate, useParams } from 'react-router';
 import './DetailExplain.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import DetailModal from './DetailModal';
 
 function DetailExplain({ items1, items2, items3 }) {
 
     let navigate = useNavigate();
     let [itemCount, setItemCount] = useState(1)
+    let [detailShowModal, setDetailShowModal] = useState(false)
 
     let { id } = useParams();
 
@@ -13,6 +15,20 @@ function DetailExplain({ items1, items2, items3 }) {
     let foundItem = allItems.find((item) => {
         return item.id === id
     })
+
+    useEffect(() => {
+        let timer;
+
+        if (detailShowModal) {
+            timer = setTimeout(() => {
+                setDetailShowModal(false)
+            }, 1000);
+        }
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [detailShowModal])
 
     if (foundItem === undefined) {
         return (
@@ -61,18 +77,18 @@ function DetailExplain({ items1, items2, items3 }) {
 
                 <div className='detail-post'>
                     <p className='detail-priceInfo'>수량선택 : </p>
-                        <div className="detail-itemCount">
-                            <button className='detail-countButton' onClick={() => {
-                                if (itemCount > 1) {
-                                    setItemCount(itemCount - 1)
-                                }
-                            }}>-</button>
-                            <input type="text" className="detail-input" value={itemCount}></input>
-                            <button className='detail-countButton' onClick={() => {
-                                setItemCount(itemCount + 1)
-                            }}>+</button>
-                        </div>
+                    <div className="detail-itemCount">
+                        <button className='detail-countButton' onClick={() => {
+                            if (itemCount > 1) {
+                                setItemCount(itemCount - 1)
+                            }
+                        }}>-</button>
+                        <input type="text" className="detail-input" value={itemCount}></input>
+                        <button className='detail-countButton' onClick={() => {
+                            setItemCount(itemCount + 1)
+                        }}>+</button>
                     </div>
+                </div>
                 <div className='detail-seperator-line'></div>
 
                 <div className='detail-totalPrice'>
@@ -81,9 +97,13 @@ function DetailExplain({ items1, items2, items3 }) {
 
                 </div>
 
-                <button className='detail-putShoppingCart'>카트에 담기</button>
-
+                <button className='detail-putShoppingCart' onClick={() => {
+                    setDetailShowModal(!detailShowModal)
+                }}>카트에 담기</button>
             </div>
+
+            <DetailModal detailShowModal={detailShowModal}/>
+            
         </div>
     )
 }
