@@ -1,0 +1,78 @@
+/* 쇼핑 헤더 css */
+.shopping-header {
+    margin: 20px;
+}
+
+.logo-image {
+    width: 200px;
+    cursor: pointer;
+}
+
+.shopping-header-right {
+    position: absolute;
+    display: flex;
+    gap: 17px;
+    top: 50px;
+    right: 50px;
+    color: #f28500ee;
+}
+
+.shopping-header-right .material-symbols-outlined {
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.shopping-seperator-line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid rgba(226, 226, 226, 0.76);
+    margin-top: 23px;
+}
+
+/* ShoppingHome css */
+.shopping-category {
+    margin-top: 35px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-category>h1 {
+    margin-bottom: 5px;
+    margin-left: 25px;
+    font-family: 'SeoulNamsanM';
+}
+
+.shopping-itemList {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+}
+
+/* ItemCard css */
+.shopping-items {
+    margin: 10px;
+    padding: 5px;
+    font-family: 'SeoulNamsanM';
+}
+
+.shopping-items:hover {
+    transform: scale(1.05);
+}
+
+.item-img {
+    width: 280px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.item-title {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.item-price {
+    margin-top: 10px;
+    font-size: 19px;
+}

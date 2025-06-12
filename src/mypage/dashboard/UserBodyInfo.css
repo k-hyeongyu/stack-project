@@ -1,0 +1,23 @@
+
+#userBodyInfo{
+    margin-top: 30px;
+    width: 25%;
+    background-image: url('../../../public/images/bodyImg.jpg');
+    background-size: cover;
+    background-color: white;
+    font-size: 18px;
+}
+
+#bodyImg{
+    width: 300px;
+}
+
+.bodyInfo{
+    margin-left: 10.5rem;
+    margin-top: 8rem;
+}
+
+.bodyInfo > p{
+    margin-bottom: 3rem;
+    
+}

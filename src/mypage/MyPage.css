@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'SeoulNamsanM';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 페이지 전체 컨테이너 */
+#myPageContainer{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    font-family: 'SeoulNamsanM';
+}
+
+
+/* 헤더부분 */
+
+.cart-header {
+    margin: 20px;
+}
+
+.logo-image {
+    width: 200px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 17px;
+}
+
+.mypage-header-right {
+    position: absolute;
+    display: flex;
+    gap: 17px;
+    top: 50px;
+    right: 50px;
+    color: #f28500ee;
+}
+
+.material-symbols-outlined{
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* 마이페이지 메인(헤더 밑 전부) */
+#myPageMain{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 화면 왼쪽 탭, 로그아웃버튼 감싸는 div */
+#tabs{
+    margin-top: 30px;
+    width: 250px;
+    min-width: 250px;
+    background-color: #f28500;
+    border-radius: 0 5px 0 0;
+    
+}
+
+/* 탭 리스트들 */
+.tablist{
+    list-style-type: none;
+}
+
+.tablist > .tab:hover{
+    background-color: white;
+    color: #f28500;
+    cursor: pointer;
+}
+
+/* 개별 탭 */
+.tab{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    font-size: 1.2rem; 
+    border-bottom: 1px solid orange;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab[aria-current='page']{
+    background-color: orange;
+    color : white;
+}
+
+.tab1[aria-current='page']{
+    border-radius: 0 3px 0 0;
+}
+
+
+/* 로그아웃 버튼 */
+#logoutButton{
+    margin-top: 25rem;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 15px 77px;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    border-style: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#logoutButton:hover{
+    background-color: white;
+    color: #f28500;
+}
+
+
+.goalsMain{
+    margin-top: 2.6rem;
+}
+
+
+

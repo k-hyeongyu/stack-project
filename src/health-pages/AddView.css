@@ -1,0 +1,40 @@
+/*더보기 버튼 푸터*/
+.moreview-footer {
+    border-radius: 12px;
+    font-size: 1px;
+    line-height: 16px;
+    height: 29px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/*버튼 옆의 실선*/
+.moreview-footer::after,
+.moreview-footer::before {
+    content: '';
+    flex: 1;
+    background-color: gray; /* 여기에 배경색 추가! */
+    height: 1px;
+}
+
+/*버튼의 기본 색상*/
+.add-view {
+    background-color: #F28500;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: black;
+    height: 30px;
+    margin: 0 20px;
+    padding: 0 20px 0 20px;
+    position: relative;
+    transition: background-color 0.4s ease;
+}
+
+/*마우스 버튼에 호버링시 색상변환 및 커서변경*/
+.add-view:hover {
+    background-color: #ffc886;
+    cursor: pointer;
+}

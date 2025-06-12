@@ -1,13 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  padding: 0;
+  /* 이전: font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Gowun Batang', serif; /* Gowun Batang 폰트로 변경, serif는 fallback */ 
+  color: #333;
+  box-sizing: border-box;
 }

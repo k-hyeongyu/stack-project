@@ -1,0 +1,161 @@
+.detail-container {
+    margin: 50px 80px 0 80px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.detail-img {
+    width: 500px;
+}
+
+.detail-info {
+    margin: 5px;
+    padding: 10px;
+    font-family: 'SeoulNamsanM';
+    font-size: 23px;
+    margin-bottom: 130px;
+}
+
+.detail-info>p {
+    margin-top: 18px;
+}
+
+.detail-seperator-line {
+    width: 500px;
+    height: 1px;
+    border: 1px solid rgba(207, 207, 207, 0.76);
+    margin: 18px 0;
+}
+
+.detail-priceInfo {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.detail-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(43, 43, 43);
+}
+
+.detail-priceWon {
+    margin-left: 3px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.detail-post {
+    display: flex;
+    align-items: first baseline;
+    margin-top: 7px;
+}
+
+.detail-postInfo {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.detail-postInfo>p {
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+#freeship {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#todayship {
+    font-size: 18px;
+
+}
+
+.detail-totalPrice {
+    display: flex;
+    justify-content: right;
+    align-items: last baseline;
+    gap: 15px;
+}
+
+#detail-totalPriceText {
+    font-size: 23px;
+    color: rgb(43, 43, 43);
+}
+
+#detail-itemTotalPrice {
+    font-size: 35px;
+    color: #f25800;
+}
+
+.detail-putShoppingCart {
+    margin-top: 20px;
+    margin-left: 250px;
+
+    border: 2px solid #f28500;
+    border-radius: 7px;
+    width: 260px;
+    height: 50px;
+    font-family: 'SeoulNamsanM';
+    font-size: 25px;
+    color: rgb(43, 43, 43);
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.detail-putShoppingCart:hover {
+    background-color: #f28500;
+    color: white;
+}
+
+.detail-countButton {
+    border: 1px solid #f28500;
+    background-color: white;
+    width: 25px;
+    height: 28px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.detail-countButton:active {
+    background-color: #f28500;
+    color: white;
+}
+
+.detail-input {
+    margin: 0 2px;
+    font-size: 1rem;
+    width: 45px;
+    height: 28px;
+    text-align: center;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+.detail-itemCount {
+    display: flex;
+}
+
+/* 모달창 css */
+.detail-modal-container {
+    position: fixed;
+    border-style: none;
+    width: 400px;
+    height: 70px;
+    top: 50%;
+    background-color: #f28500f5;
+    color: white;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.detail-modal-container.show {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
