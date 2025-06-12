@@ -56,9 +56,9 @@ const BulkPage = () => {
     const videosToShow = bulkVideos.slice(0, visibleCount);
 
   return (
-    <div className="wrap page-font">
+    <div className="wrap">
       <Header />
-      <div className="page-content">
+      <div className="page-content page-font">
         <Sidebar />
         <div className='bulk-content'>
           <Theme
@@ -83,6 +83,7 @@ const BulkPage = () => {
           videoId={selectedVideoId}
         />
       </div>
+      <Footer />
     </div>
   );
 };

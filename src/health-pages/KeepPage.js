@@ -56,9 +56,9 @@ const KeepPage = () => {
     const videosToShow = keepVideos.slice(0, visibleCount);
 
   return (
-    <div className="wrap page-font">
+    <div className="wrap">
       <Header />
-      <div className="page-content">
+      <div className="page-content page-font">
         <Sidebar />
         <div className='keep-content'>
           <Theme
@@ -82,6 +82,7 @@ const KeepPage = () => {
         />
         
       </div>
+      <Footer />
     </div>
   );
 };

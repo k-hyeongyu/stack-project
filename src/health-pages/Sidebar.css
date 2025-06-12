@@ -1,8 +1,7 @@
 .app-sidebar {
-  position: fixed;
+  position: relative;
   left: 0;
   width: auto;
-  margin-left: 20px;
   flex-direction: column; /* 자식 요소들을 수직으로 쌓음 */
   height: 100vh; /* 전체 높이 차지 */
   box-sizing: border-box;
@@ -14,6 +13,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* 자식 요소(.sidebar-main-nav)를 이 공간 내에서 수직 중앙에 정렬 */
+  position: sticky;
+  top: 190px;
 }
 
 .sidebar-main-nav {
@@ -49,20 +50,3 @@
   background-color: #fd981c;
   color: white;
 }
-
-
-
-
-
-
-
-/* .app-sidebar {
-  position: fixed;
-  left: 0;         
-  width: auto;   
-  height: calc(100vh - 190px); 
-  flex-direction: column;
-  box-sizing: border-box;
-  overflow-y: auto; 
-  margin-left: 10px;
-} */

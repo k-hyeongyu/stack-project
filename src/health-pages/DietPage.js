@@ -54,9 +54,9 @@ const DietPage = () => {
 
 
   return (
-    <div className="wrap page-font">
+    <div className="wrap">
       <Header /> {/* 사이드바 렌더링 */}
-      <div className="page-content">
+      <div className="page-content page-font">
         <Sidebar /> {/* 사이드바 렌더링 */}
         <div className='diet-content'>
           <Theme
@@ -79,6 +79,7 @@ const DietPage = () => {
           videoId={selectedVideoId}
         />
       </div>
+      <Footer />
     </div>
   );
 };

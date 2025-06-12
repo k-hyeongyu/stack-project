@@ -14,6 +14,7 @@
     padding: 10px;
     font-family: 'SeoulNamsanM';
     font-size: 23px;
+    margin-bottom: 130px;
 }
 
 .detail-info>p {
@@ -53,7 +54,6 @@
 .detail-postInfo {
     margin: 5px;
     font-size: 20px;
-
 }
 
 .detail-postInfo>p {
@@ -91,6 +91,7 @@
 .detail-putShoppingCart {
     margin-top: 20px;
     margin-left: 250px;
+
     border: 2px solid #f28500;
     border-radius: 7px;
     width: 260px;
@@ -151,7 +152,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
 
 .detail-modal-container.show {

@@ -16,7 +16,7 @@ function Introduce() {
                 <span class="material-symbols-outlined" onClick={() => { navigate("/cart") }}>
                     local_mall
                 </span>
-                <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+                <span class="material-symbols-outlined" onClick={() => { navigate("/login") }}>
                     person
                 </span>
             </div>

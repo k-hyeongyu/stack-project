@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-// import '@fortawesome/fontawesome-free/css/all.min.css';
-
-
 
 // Chart.js 관련 필수 임포트 및 등록
 import {
@@ -32,8 +28,6 @@ ChartJS.register(
   Legend,
   ArcElement // 필요하다면 등록
 );
-// 전역 CSS나 폰트 임포트가 필요하면 여기에 추가
-// 예: import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

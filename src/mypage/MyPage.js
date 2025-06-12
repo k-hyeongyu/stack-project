@@ -53,7 +53,7 @@ function MyPage() {
                     </div>
 
                     <Routes>
-                        <Route path="/" element={<Navigate to="/dashboard" replace />}></Route>
+                        <Route path="/" element={<Navigate to="/mypage/dashboard" replace />}></Route>
                         <Route path="/dashboard" element={
                             <>
                                 <Charts weightData={weightData} setWeightData={setWeightData} />
