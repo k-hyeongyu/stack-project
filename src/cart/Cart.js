@@ -2,6 +2,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import './Cart.css'
 import CartItems from "./CartItems";
 import { useState } from "react";
+import Footer from "../health-pages/Footer";
 
 function Cart() {
     const navigate = useNavigate();
@@ -60,7 +61,7 @@ function Cart() {
 
             </div>
 
-
+            <Footer />
         </div>
     );
 }
