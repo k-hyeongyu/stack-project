@@ -14,31 +14,34 @@ const BulkPage = () => {
   const [visibleCount, setVisibleCount] = useState(9);//처음 보여줄 비디오 개수
 
   const bulkVideos = [
+    { id: 'iFLEWn7l-BE', title: '남자 벌크업 식단' },
+    { id: 'SgSog6JDSfc', title: '헬스업계 신성 샘술렉 식단'},
+    { id: 'QCrsY_Hd_sQ', title: '남궁민의 벌크업 식단' },
     { id: '7KexdWwHIig', title: '벌크업 운동순서' },
-    { id: 'p4LVfPHTVNo', title: '프로가 알려주는 벌크업' },
     { id: 'DK-l1TYirbs', title: '초보자 벌크업' },
     { id: 'MJsb2rQLeTg', title: '마싸딕의 벌크업 루틴' },
-    { id: '3DWIYbtV2wE', title: '벌크업 근육량의 중요성' },
-    { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
-    { id: 't6DzxVLQUPw', title: '벌크업 전용루틴' },
-    { id: 'iNVzJ1NhyDo', title: 'FMD 식단이란' },
-    { id: 'bdLJOQfD8UE', title: '불없는 식단'},
-    { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
+    { id: 'ZjXp9b1ZbqA', title: '샤레레 자세를 잡아보자' },
+    { id: '8Yjc7gmbagE', title: '전문 프로바디빌더 닉워커 식단' },
     { id: 'NRkroeUrpaQ', title: '클린 벌크업의 조건' },//
-    { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
+    { id: '3DWIYbtV2wE', title: '벌크업 근육량의 중요성' },
+    { id: 'uH_fri6WC5I', title: '펌핑이 안되는 사람이 봐야하는 식단' },
+    { id: 't6DzxVLQUPw', title: '벌크업 전용루틴' },
+    { id: '-J0kepS7cGo', title: '란매스업 식단' },
+    { id: 'c9V2hRjzIuA', title: '등근육 자세바로잡기 상급' },
+    { id: 'gWQ0UmxnxRE', title: '효율적인 벌크업 꿀팁' },
+    { id: 'p4LVfPHTVNo', title: '프로가 알려주는 벌크업' },
     { id: 'FyrKs6NjxKw', title: '팔사이즈 펌핑방법' },
     { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
-    { id: 'DIt14OO0QgY', title: '운동' },
-    { id: 'ZjXp9b1ZbqA', title: '샤레레 자세를 잡아보자' },
-    { id: 'at6dXmJtYfY', title: '먹어도 되는 일반식' },
-    { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
-    { id: 'c9V2hRjzIuA', title: '등근육 자세바로잡기 상급' },
     { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
-    { id: '3DWIYbtV2wE', title: '벌크업 근육량의 중요성' },
+    { id: 'at6dXmJtYfY', title: '먹어도 되는 일반식' },
+    { id: 'gWQ0UmxnxRE', title: '벌크업 하드루틴' },
+    
 
   ];
-//DIt14OO0QgY 운동 - wXekeS7yoOw 식단영상
-
+//iFLEWn7l-BE
+//QCrsY_Hd_sQ
+// uH_fri6WC5I
+// -J0kepS7cGo
   const handleVideoSelect = (videoId) => {
     setSelectedVideoId(videoId);
     setIsModalOpen(true);

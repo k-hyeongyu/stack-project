@@ -16,14 +16,14 @@ const DietPage = () => {
 
   const dietVideos = [
     { id: 'v-1YO1RgDwM', title: '탄단지 식단 밸런스의 중요성' },
-    { id: 'gMaB-fG4u4g', title: '초급자를 위한 20분 유산소' },
+    { id: '5jcFYMO_aiY', title: '간혈적 식단' },
     { id: '34vahXaXSIM', title: '저탄고지' },
     { id: 'ub6cRhp2jnM', title: '초급용 식단짜기' },
     { id: 'bdLJOQfD8UE', title: '초간단 다이어트 식단' },
     { id: 'vK_HVnW-fHc', title: '현실적인 밀프랩' },
     { id: 'm3QLOhJG5YM', title: '일상속 식단' },
-    { id: 'iNVzJ1NhyDo', title: '다이어트 식단 추천' },
-    { id: '5jcFYMO_aiY', title: '간혈적 식단' },
+    { id: 'CYcLODSeC-c', title: '층간소음없는 홈트' },   
+    { id: 'gMaB-fG4u4g', title: '초급자를 위한 20분 유산소' },
     { id: 'eCpzOOhvY2k', title: '단백질 티어리스트' },
     { id: 'DQrsQiqphkg', title: '체중별 다이어트 방법' },
     { id: 'XRCibP2AlPM', title: '쿠팡 내돈내산 식단' },
@@ -32,12 +32,12 @@ const DietPage = () => {
     { id: 'yEQDR_QAZWw', title: '유지어터의 정석' },
     { id: 'OA7awLb2hjk', title: '요요없는 유지' },
     { id: 'rYaySqdbch8', title: '먹어도 되는 일반식' },
-    { id: 'iNVzJ1NhyDo', title: '먹어도 되는 일반식' },
-    { id: 'bdLJOQfD8UE', title: '먹어도 되는 일반식' },
+    { id: 'bdLJOQfD8UE', title: '1인 식단' },
     { id: 'XKzs-yRPJfA', title: '먹어도 되는 일반식' },
     { id: 'DQrsQiqphkg', title: '체중별 다이어트 방법' },
     { id: 'DK-l1TYirbs', title: '초보자루틴' },
     { id: 'at6dXmJtYfY', title: '하와이안포케 식단' },
+    { id: 'iNVzJ1NhyDo', title: '먹어도 되는 일반식' },
     { id: 'khiCIQBxbkQ', title: '포케 실전레시피' },
 
 
