@@ -19,25 +19,24 @@ const BulkPage = () => {
     { id: 'DK-l1TYirbs', title: '초보자 벌크업' },
     { id: 'MJsb2rQLeTg', title: '마싸딕의 벌크업 루틴' },
     { id: '3DWIYbtV2wE', title: '벌크업 근육량의 중요성' },
-    { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
     { id: 't6DzxVLQUPw', title: '벌크업 전용루틴' },
-    { id: 'iNVzJ1NhyDo', title: 'FMD 식단이란' },
+    { id: 'at6dXmJtYfY', title: '하와이안포케 식단' },
     { id: 'bdLJOQfD8UE', title: '불없는 식단'},
+    { id: 'ZjXp9b1ZbqA', title: '샤레레 자세를 잡아보자' },
     { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
     { id: 'NRkroeUrpaQ', title: '클린 벌크업의 조건' },//
-    { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
+    { id: 'c9V2hRjzIuA', title: '등근육 자세바로잡기 상급' },
+    { id: 'gWQ0UmxnxRE', title: '효율적인 벌크업 꿀팁' },
     { id: 'FyrKs6NjxKw', title: '팔사이즈 펌핑방법' },
     { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
     { id: 'DIt14OO0QgY', title: '운동' },
-    { id: 'ZjXp9b1ZbqA', title: '샤레레 자세를 잡아보자' },
     { id: 'at6dXmJtYfY', title: '먹어도 되는 일반식' },
-    { id: 'RMBAhdGs6Vk', title: '프레임 확장 운동 티어리스트' },
-    { id: 'c9V2hRjzIuA', title: '등근육 자세바로잡기 상급' },
+    { id: 'XKzs-yRPJfA', title: '다이소 밀프랩' },
     { id: 'gWQ0UmxnxRE', title: '프로선수의 벌크업 꿀팁' },
     { id: '3DWIYbtV2wE', title: '벌크업 근육량의 중요성' },
+    { id: 'bdLJOQfD8UE', title: '1인 식단' },
 
   ];
-//DIt14OO0QgY 운동 - wXekeS7yoOw 식단영상
 
   const handleVideoSelect = (videoId) => {
     setSelectedVideoId(videoId);
