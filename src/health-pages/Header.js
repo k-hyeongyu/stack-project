@@ -18,7 +18,7 @@ const Header = () => {
             local_mall
           </span>
 
-          <span class="material-symbols-outlined" onClick={() => { navigate("/mypage") }}>
+          <span class="material-symbols-outlined" onClick={() => { navigate("/mypage/dashboard") }}>
             person
           </span>
         </div>

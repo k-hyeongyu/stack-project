@@ -1,5 +1,4 @@
 import './Introduce.css';
-import React from 'react';
 import { Link, useNavigate } from 'react-router';
 
 function Introduce() {

@@ -69,8 +69,8 @@ let itemsData2 = [  //주먹밥 김밥 도시락
 let itemsData3 = [  //간식
     {
         id: 'it3_01',
-        title: '저당 쌀떡볶이',
-        price: '3,500',
+        title: '저당 쌀떡볶이 3팩',
+        price: '10,500',
         imgUrl: '/shopping-images/it3_01.png',
         detailExplain: '당류 1g의 저당 소스로 만든 쌀떡볶이'
     },

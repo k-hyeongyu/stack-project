@@ -35,7 +35,7 @@ function MessageBox() {
             name: '푸름',
             date: '25.06.04',
             content: '안녕하세요. 처음 가입했습니다. 잘부탁드려요~'
-        },        
+        },
         {
             id: '102',
             name: '가렌',
@@ -52,13 +52,31 @@ function MessageBox() {
     // 모달창 보여주기 boolean 변수
     const [showMsgWrtModal, setShowMsgWrtModal] = useState(false);
 
+    const [selectedTab, setSelectedTab] = useState('left');
+
     return (
         <div className="messageBox">
-            <ul className='messageBoxTabs'>
+            {/* <ul className='messageBoxTabs'>
                 <li className='boxTab tab1' onClick={() => { navigate('/mypage/messagebox/inbox') }}>받은쪽지함</li>
                 <li className='boxTab tab2' onClick={() => { navigate('/mypage/messagebox/sent') }}>보낸쪽지함</li>
-            </ul>
+            </ul> */}
 
+            <div className="btn-group messageBoxTabs" role="group" aria-label="Basic outlined example">
+                <button type="button" className="btn btn-outline-primary boxTab tab1"
+                    aria-current={selectedTab === 'left' ? 'page' : false}
+                    onClick={() => {
+                        setSelectedTab('left')
+                        navigate('/mypage/messagebox/inbox')  
+                    }}
+                >받은쪽지함</button>
+                <button type="button" className="btn btn-outline-primary boxTab tab2"
+                    aria-current={selectedTab === 'right' ? 'page' : false}
+                    onClick={() => {
+                        setSelectedTab('right')
+                        navigate('/mypage/messagebox/sent')
+                    }}
+                >보낸쪽지함</button>
+            </div>
             <Routes>
                 <Route index element={<Navigate to="inbox" replace />} />
 

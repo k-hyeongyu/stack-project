@@ -68,6 +68,21 @@ const BodyChart = (props) => {
                 pointHoverBorderColor: 'rgb(75, 192, 192)',
                 pointRadius: 5,
                 pointHoverRadius: 8,
+                yAxisID: 'y',
+            },
+             {
+                label: '골격근량 (kg)', // **새로운 데이터셋: 골격근량**
+                data: props.skeletalMuscleMassData, // 부모 컴포넌트로부터 받을 골격근량 데이터
+                fill: false,
+                borderColor: 'rgb(255, 99, 132)', // 골격근량을 나타내는 다른 색상
+                tension: 0.1,
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)',
+                pointRadius: 5,
+                pointHoverRadius: 8,
+                yAxisID: 'y1'
             },
         ],
     };
@@ -78,9 +93,12 @@ const BodyChart = (props) => {
         maintainAspectRatio: false,
         scales: {
             y: {
-                beginAtZero: false,
-                min: 68,
-                max: 80,
+                type: 'linear',
+                display: true,
+                position: 'left',
+                /* beginAtZero: false,
+                min: 45,
+                max: 80, */
                 title: {
                     display: true,
                     text: '',
@@ -98,6 +116,31 @@ const BodyChart = (props) => {
                 },
                 grid: {
                     color: 'rgba(0, 0, 0, 0.1)',
+                },
+            },
+             y1: { // **오른쪽 Y축 (골격근량) - 새로 추가된 축**
+                type: 'linear', // 선형 스케일
+                display: true, // 표시
+                position: 'right', // 오른쪽에 위치
+                // beginAtZero: false,
+                /* min: 15, // 골격근량 범위에 맞춰 조절
+                max: 50, // 골격근량 범위에 맞춰 조절 */
+                title: {
+                    display: true,
+                    color: 'rgb(255, 99, 132)', // 골격근량 그래프 색상과 맞춰 통일감 부여
+                    font: {
+                        size: 14,
+                        weight: 'bold',
+                    },
+                },
+                ticks: {
+                    color: '#555',
+                    callback: function (value) {
+                        return value + 'kg';
+                    }
+                },
+                grid: {
+                    drawOnChartArea: false, // 이 축의 그리드 라인은 차트 영역에 그리지 않음
                 },
             },
             x: {
@@ -164,6 +207,31 @@ const BodyChart = (props) => {
                         size: 14,
                     },
                 },
+                onClick: (e, legendItem, legend) => {
+                    const chart = legend.chart;
+                    const datasetIndex = legendItem.datasetIndex;
+
+                    // 해당 데이터셋의 현재 가시성 상태를 토글 (기본 동작)
+                    chart.isDatasetVisible(datasetIndex) ?
+                        chart.hide(datasetIndex) :
+                        chart.show(datasetIndex);
+
+                    // 이제 해당 데이터셋에 연결된 Y축의 가시성을 조절합니다.
+                    const yAxisId = chart.data.datasets[datasetIndex].yAxisID;
+                    const yAxis = chart.options.scales[yAxisId];
+
+                    // 현재 데이터셋이 숨겨질 예정이거나, 이미 숨겨져 있다면
+                    // 해당 Y축을 숨길지 결정합니다.
+                    // 주의: Chart.js는 데이터셋을 숨길 때 바로 업데이트되지 않으므로,
+                    // isDatasetVisible()의 반대 값을 사용합니다.
+                    const shouldHideYAxis = !chart.isDatasetVisible(datasetIndex); // 토글 후의 상태 예상
+
+                    // 해당 Y축의 'display' 속성 변경
+                    yAxis.display = !shouldHideYAxis; // isDatasetVisible이 true면 display true, false면 display false
+
+                    // 차트 업데이트를 트리거하여 변경사항을 반영합니다.
+                    chart.update();
+                },
             },
             tooltip: {
                 callbacks: {
@@ -172,7 +240,12 @@ const BodyChart = (props) => {
                         return context[0].label;
                     },
                     label: function (context) {
-                        return `체중: ${context.raw}kg`;
+                        if (context.dataset.label === '체중 (kg)') {
+                            return `체중: ${context.raw}kg`;
+                        } else if (context.dataset.label === '골격근량 (kg)') {
+                            return `골격근량: ${context.raw}kg`;
+                        }
+                        return '';
                     },
                 },
             },
@@ -181,7 +254,7 @@ const BodyChart = (props) => {
 
     return (
         <div style={{ width: '100%', maxWidth: '700px', height: '350px', margin: '20px auto', padding: '20px', backgroundColor: '#fff', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-            <h2>월간 체중 변화 그래프</h2>
+            <h2>월간 신체 변화 그래프</h2>
             <Line data={data} options={options} />
         </div>
     );

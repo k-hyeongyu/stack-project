@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 function EditProfile(props) {
 
     const navigate = useNavigate();
+    const [userAge, setUseAge] = useState(50);
+    const [userHeight, setUserHeight] = useState(170);
+    const [userWeight, setUserWeight] = useState(70);
+
 
     return (
         <div className="editProfileContainer">
@@ -27,7 +31,7 @@ function EditProfile(props) {
                         {
                             ...props.userInfo,
                             email: event.target.value
-                        }
+                        }       
                     );
                 }}></input>
             </div>
@@ -55,7 +59,7 @@ function EditProfile(props) {
                 }}></input>
             </div>
 
-            <hr></hr>
+            <hr></hr>                                               
             <div className='profileInfo'>
                 전화번호 <input type='tel' placeholder={props.userInfo.tel} onChange={(event) => {
                     props.setUserInfo(
@@ -70,36 +74,21 @@ function EditProfile(props) {
             <h3>신체 정보</h3>
             <hr className='topHr'></hr>
             <div className='profileInfo'>
-                나이 <input type='number' placeholder={props.userInfo.age} onChange={(event) => {
-                    props.setUserInfo(
-                        {
-                            ...props.userInfo,
-                            age: event.target.value
-                        }
-                    );
+                나이 <input type='number' placeholder={userAge} onChange={(event) => {
+                    setUseAge(event.target.value)
                 }}></input>
             </div>
             <hr></hr>
             <div className='profileInfo'>
-                키 <input type='number' placeholder={props.userInfo.height} onChange={(event) => {
-                    props.setUserInfo(
-                        {
-                            ...props.userInfo,
-                            height: event.target.value
-                        }
-                    );
+                키 <input type='number' placeholder={userHeight} onChange={(event) => {                    
+                    setUserHeight(event.target.value);
                 }}></input>
             </div>
             <hr></hr>
             <div className='profileInfo'>
-                몸무게 <input type='number' placeholder={props.userInfo.weight} onChange={(event) => {
-                    props.setUserInfo(
-                        {
-                            ...props.userInfo,
-                            weight: event.target.value,
+                몸무게 <input type='number' placeholder={userWeight} onChange={(event) => {
+                   setUserWeight(event.target.value);
 
-                        }
-                    );
                     let temp = [...props.weightData];
                     temp.splice(0, 1);
                     temp.unshift(event.target.value);
@@ -107,11 +96,19 @@ function EditProfile(props) {
                 }}></input>
             </div>
             <hr></hr>
-            <button onClick={() => {
-                if (props.userInfo.password != props.userInfo.passwordcheck) {
+            <button onClick={(event) => {
+                if(props.userInfo.password != props.userInfo.passwordcheck){
                     alert('비밀번호가 다릅니다')
                     return;
                 }
+                props.setUserInfo(
+                        {
+                            ...props.userInfo,
+                            age: userAge,
+                            height: userHeight,
+                            weight: userWeight
+                        }
+                );
                 navigate('/mypage/dashboard')
             }}>수정</button>
         </div>

@@ -1,0 +1,154 @@
+.cart-page-container {
+    justify-content: center;
+}
+
+
+/* 쇼핑 헤더 css */
+.cart-header {
+    margin: 20px;
+}
+
+.logo-image {
+    width: 200px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.cart-header-right {
+    position: absolute;
+    display: flex;
+    gap: 17px;
+    top: 50px;
+    right: 50px;
+    color: #f28500ee;
+}
+
+.cart-header-right>span {
+    cursor: pointer;
+}
+
+.cart-seperator-line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid rgba(226, 226, 226, 0.76);
+    margin-top: 23px;
+}
+
+.cart-content-container {
+    /* border: 1px solid black; */
+    width: 1280px;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 카트 본문 부분 */
+.cart-content {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.cart-content>h2 {
+    margin-bottom: 40px;
+}
+
+.cart-option {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 5px;
+}
+
+.cart-option>button {
+    cursor: pointer;
+}
+
+.chooseAllChkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chooseAllChkBox>span {
+    margin-left: 8px;
+}
+
+.cart-option>button {
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+
+
+.totalPriceBox {
+    display: flex;
+    width: 100%;
+    height: 130px;
+    border: 2px solid #F28500;
+    margin-top: 30px;
+}
+
+.totalPriceBox>div {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #cccccc7e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalPriceBox>div>span {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.itemPrice>img {
+    position: absolute;
+    margin-left: 16rem;
+    background-color: white;
+}
+
+.discountPrice>img {
+    position: absolute;
+    margin-left: 16rem;
+    background-color: white;
+}
+
+.shippingPrice>img {
+    position: absolute;
+    margin-left: 16rem;
+    background-color: white;
+}
+
+.cartBtns {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.cartBtns>button {
+    width: 400px;
+    height: 60px;
+    margin: 0 30px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cartBtns>.orderBtn {
+    background-color: orange;
+    color: white;
+    border-style: none;
+}
+
+.cartBtns>.continueBtn {
+    background-color: white;
+}
+
+.material-symbols-outlined {
+    font-size: 40px;
+}
