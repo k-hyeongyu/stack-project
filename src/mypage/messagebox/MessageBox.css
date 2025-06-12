@@ -22,26 +22,26 @@
     margin: 0 auto;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 50%;
-    border-bottom: 1px solid orange;
+    border-style: none;
     text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.603);
 }
 
 .messageBoxTabs>.tab1 {border-radius: 27px 0 0 0;}
 .messageBoxTabs>.tab2 {border-radius: 0 27px 0 0;}
 
-.messageBoxTabs>.boxTab:hover {
-    color: white;
-    background-color: orange;
-    cursor: pointer;
+.btn-outline-primary{
+    transition: all 0.2s ease-in-out;
 }
 
-.tab1.active{
-    color: white;
+.btn-outline-primary[aria-current="page"]{
     background-color: orange;
+    color: white;
 }
-
 
 .messages {
     border-bottom: 1px solid lightgray;

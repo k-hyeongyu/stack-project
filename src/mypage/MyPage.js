@@ -29,6 +29,7 @@ function MyPage() {
         weight: '70'
     });
 
+    const [selectedMypageTab, setSelectedMypageTab] = useState(1);
     return (
         <div id="myPageContainer" overflow="hidden">
             <div className='mypage-header'>
@@ -49,10 +50,22 @@ function MyPage() {
             <div id="myPageMain">
                 <div id="tabs">
                     <ul className="tablist">
-                        <li className="tab" onClick={() => { navigate('/mypage/dashboard') }}>대시보드</li>
-                        <li className="tab" onClick={() => { navigate('/mypage/goals') }}>목표관리</li>
-                        <li className="tab" onClick={() => { navigate('/mypage/messagebox') }}>쪽지함</li>
-                        <li className="tab" onClick={() => { navigate('/mypage/editprofile') }}>개인정보 수정</li>
+                        <li className="tab tab1" aria-current={ selectedMypageTab===1? 'page': false} onClick={() => { 
+                            navigate('/mypage/dashboard'); 
+                            setSelectedMypageTab(1);
+                            }}>대시보드</li>
+                        <li className="tab" aria-current={ selectedMypageTab===2? 'page': false} onClick={() => { 
+                            navigate('/mypage/goals') 
+                            setSelectedMypageTab(2);
+                            }}>목표관리</li>
+                        <li className="tab" aria-current={ selectedMypageTab===3? 'page': false} onClick={() => {
+                             navigate('/mypage/messagebox') 
+                             setSelectedMypageTab(3);
+                             }}>쪽지함</li>
+                        <li className="tab" aria-current={ selectedMypageTab===4? 'page': false} onClick={() => {
+                             navigate('/mypage/editprofile') 
+                             setSelectedMypageTab(4);
+                             }}>개인정보 수정</li>
                     </ul>
 
                     <button id="logoutButton" onClick={() => { navigate('/main') }}>Logout</button>
