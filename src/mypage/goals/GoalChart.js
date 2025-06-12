@@ -48,7 +48,7 @@ function GoalChart(props) {
             },
             title: {
                 display: true,
-                text: '목표체중 달성률',
+                text: `목표체중 [${targetWeight}kg] 달성률`,
                 font: {
                     size: 35,
                     family: 'SeoulNamsanM'
@@ -64,9 +64,7 @@ function GoalChart(props) {
                     label: function (context) {
 
                         if (context.dataIndex === 0) {
-                            return targetWeight > props.userInfo.weight ?
-                                `목표까지 남은 몸무게: ${targetWeight - props.userInfo.weight}kg` :
-                                `목표까지 남은 몸무게: ${props.userInfo.weight - targetWeight}kg`
+                            return `목표까지 남은 몸무게: ${targetWeight - props.userInfo.weight}kg`
                         } else if (context.dataIndex === 1) {
                             return `현재몸무게:  ${props.userInfo.weight}kg`;
                         }
