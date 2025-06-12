@@ -12,6 +12,13 @@
     border-radius: 30px;
 }
 
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .messageBoxTabs {
     width: 100%;
     display: flex;
@@ -31,8 +38,16 @@
     border-bottom: 1px solid rgba(211, 211, 211, 0.603);
 }
 
-.messageBoxTabs>.tab1 {border-radius: 27px 0 0 0;}
-.messageBoxTabs>.tab2 {border-radius: 0 27px 0 0;}
+.messageBoxTabs>.tab1 {
+    border-radius: 27px 0 0 0;
+    font-family: 'SeoulNamsanM';
+    font-size: 1.5rem;
+}
+.messageBoxTabs>.tab2 {
+    border-radius: 0 27px 0 0;
+    font-family: 'SeoulNamsanM';
+    font-size: 1.5rem;
+}
 
 .btn-outline-primary{
     transition: all 0.2s ease-in-out;

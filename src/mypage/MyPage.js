@@ -87,9 +87,7 @@ function MyPage() {
                             </div>
                             <UserBodyInfo userInfo={userInfo} setUserInfo={setUserInfo} />
                         </>
-                    }></Route>
-
-                    <button id="logoutButton" onClick={() => { navigate('/') }}>Logout</button>
+                    }></Route>                    
 
                     <Route path="/messagebox/*" element={<MessageBox />} />
 
