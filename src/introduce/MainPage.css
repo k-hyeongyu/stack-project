@@ -40,6 +40,7 @@
     right: 35px;
     font-size: 30px;
     color: #ffffff;
+    z-index: 1000;
 }
 .material-symbols-outlined{
     font-size: 40px;

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "./MainPage.css";
+import 'animate.css'
 
 function MainPage() {
 
@@ -28,7 +29,7 @@ function MainPage() {
                 </header>
 
                 {/* 카드 버튼 영역 */}
-                <div className="card-container">
+                <div className="card-container animate__animated animate__zoomIn animate__fast">
                     {/* 벌크업 카드를 Link 컴포넌트로 감쌉니다 */}
                     <Link to="/diet" className="health-card">
                         <div className="card-text">
