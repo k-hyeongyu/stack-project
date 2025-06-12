@@ -54,7 +54,7 @@ function Cart() {
                         <button className="continueBtn" onClick={() => { navigate('/shopping') }}>쇼핑계속하기</button>
                         <button className="orderBtn" onClick={() => {
                             alert('주문이 완료되었습니다.')
-                            navigate('/main')
+                            navigate('/shopping')
                         }}>주문하기</button>
                     </div>
                 </div>
