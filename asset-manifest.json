@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/stack-project/static/css/main.865f471f.css",
+    "main.js": "/stack-project/static/js/main.ccc1687c.js",
+    "static/media/bodyImg.jpg": "/stack-project/static/media/bodyImg.af35a278aad77730e2a1.jpg",
+    "index.html": "/stack-project/index.html",
+    "main.865f471f.css.map": "/stack-project/static/css/main.865f471f.css.map",
+    "main.ccc1687c.js.map": "/stack-project/static/js/main.ccc1687c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.865f471f.css",
+    "static/js/main.ccc1687c.js"
+  ]
+}
