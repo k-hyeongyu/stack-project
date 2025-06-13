@@ -33,7 +33,7 @@ function MyPage() {
     return (
         <div id="myPageContainer" overflow="hidden">
             <div className='mypage-header'>
-                <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
+                <img src={process.env.PUBLIC_URL+"/images/BalancEat_logo.png"} className='logo-image' alt='로고 이미지' onClick={() => { navigate('/') }}></img>
                 <div className='mypage-header-right'>
                     <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
                         storefront

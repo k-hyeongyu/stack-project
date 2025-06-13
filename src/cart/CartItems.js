@@ -55,7 +55,7 @@ function CartItems({ itemData, setItemData }) {
                     <div className="cart-items">
                         <div className="imgAndInfo">
                             <input type="checkbox" checked={item.isChecked} onChange={()=>{handleItemCheck(item.id)}} />
-                            <img src={item.imgPath} alt="상품이미지"></img>
+                            <img src={process.env.PUBLIC_URL + item.imgPath} alt="상품이미지"></img>
                             <div className="itemInfo">
                                 <h4>{item.title}</h4>
                                 <span>{item.price.toLocaleString()}원</span>
@@ -85,17 +85,17 @@ function CartItems({ itemData, setItemData }) {
                     <h2>{
                         itemData.reduce((acc, item) => acc + (item.price * item.qty), 0).toLocaleString()
                     }원</h2>
-                    <img src="/images/cart-icons/plus_icon.png"></img>
+                    <img src={process.env.PUBLIC_URL + "/images/cart-icons/plus_icon.png"}></img>
                 </div>
                 <div className="discountPrice">
                     <span>할인금액</span>
                     <h2>0원</h2>
-                    <img src="/images/cart-icons/minus_icon.png"></img>
+                    <img src={process.env.PUBLIC_URL + "/images/cart-icons/minus_icon.png"}></img>
                 </div>
                 <div className="shippingPrice">
                     <span>배송비</span>
                     <h2>무료</h2>
-                    <img src="/images/cart-icons/eqaul_icon.png"></img>
+                    <img src={process.env.PUBLIC_URL + "/images/cart-icons/eqaul_icon.png"}></img>
                 </div>
                 <div className="cart-totalPrice">
                     <span>총 결제금액</span>

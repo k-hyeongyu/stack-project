@@ -9,7 +9,7 @@ const Header = () => {
 
       <div className='health-header'>
 
-        <img src='/images/BalancEat_logo.png' className='logo-image' alt='로고 이미지' onClick={() => { navigate('/main') }}></img>
+        <img src={process.env.PUBLIC_URL+"/images/BalancEat_logo.png"} className='logo-image' alt='로고 이미지' onClick={() => { navigate('/main') }}></img>
         <div className='health-header-right'>
           <span class="material-symbols-outlined" onClick={() => { navigate("/shopping") }}>
             storefront
